@@ -187,106 +187,106 @@
             </div>
 
             <!-- Add display:block to make the <a> tag behave as a block-level element -->
-            <a href="product_details.html" class="text-decoration-none text-black row-link">
-                <div class="row align-items-center border p-3 my-3">
-                    <div class="col-1">
-                        <img src="public/images/books/science.jpg" class="w-100 h-inherit" alt="Book Image">
+            <div class="row align-items-center border p-3 my-3">
+                <a href="product_details.html" class="col-9 text-decoration-none text-black">
+                    <div class="row align-items-center">
+                        <div class="col-2 px-2">
+                            <img src="public/images/books/science.jpg" class="w-100 h-inherit" alt="Book Image">
+                        </div>
+                        <div class="col-4">
+                            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nobis?</h5>
+                        </div>
+                        <div class="col-6 text-center">
+                            <p class="fs-5"> <i class="fa-solid fa-truck text-primary"></i> Delivery expected Mon, 12 24
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-3">
-                        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nobis?</h5>
-                    </div>
-                    <div class="col-5">
-                        <p class="fs-5"> <i class="fa-solid fa-truck text-primary"></i> Delivery expected Mon, 12 24</p>
-                    </div>
-                    <div class="col-3">
-                        <p> ₹100.00 </p>
-                        <!-- Use a span or button instead of an <a> tag inside the <a> tag -->
-                        <a href="cancel_order.html" class="text-decoration-none fs-5" data-bs-toggle="modal"
-                            data-bs-target="#cancelModal" data-bs-whatever="@mdo">Cancel order</a>
-                    </div>
+                </a>
+                <div class="col-3">
+                    <p> ₹100.00 </p>
+                    <!-- Use a span or button instead of an <a> tag inside the <a> tag -->
+                    <button class="btn btn-color fs-5" data-bs-toggle="modal" data-bs-target="#cancelModal"
+                        data-bs-whatever="@mdo">Cancel order</button>
                 </div>
-            </a>
+            </div>
 
 
             <!-- Anchor tag for wrapping the entire row, make sure it behaves like a block-level element -->
-            <a href="product_details.html" class="text-decoration-none text-black row-link">
-                <div class="row align-items-center border p-3 my-3">
-                    <div class="col-1">
-                        <img src="public/images/books/science.jpg" class="w-100 h-inherit" alt="Product Image">
-                    </div>
-                    <div class="col-3">
-                        <h5>Product name</h5>
-                    </div>
-                    <div class="col-5">
-                        <div class="tracking-container">
-                            <div class="tracking-steps">
-                                <div class="progress-line">
-                                    <span></span>
-                                </div>
-                                <div class="step" id="step1">
-                                    <div class="circle"></div>
-                                    <span>Order Placed</span>
-                                </div>
-                                <div class="step" id="step2">
-                                    <div class="circle"></div>
-                                    <span>Shipped</span>
-                                </div>
-                                <div class="step" id="step3">
-                                    <div class="circle"></div>
-                                    <span>Out for Delivery</span>
-                                </div>
-                                <div class="step" id="step4">
-                                    <div class="circle"></div>
-                                    <span>Delivered</span>
-                                </div>
-                            </div>
-                            <button id="nextStep">Next Step</button>
+            <div class="row align-items-center border p-3 my-3">
+                <a href="product_details.html" class="col-9 text-decoration-none text-black">
+                    <div class="row align-items-center">
+                        <div class="col-2 px-2">
+                            <img src="public/images/books/science.jpg" class="w-100 h-inherit" alt="Product Image">
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <p> ₹100.00 </p>
-                        <!-- Use a span or button for "Cancel order" instead of nested <a> -->
-                        <a href="cancel_order.html" class="text-decoration-none fs-5 cancel-order-link"
-                            data-bs-toggle="modal" data-bs-target="#cancelModal" data-bs-whatever="@mdo">Cancel
-                            order</a>
-
-                        <!-- Modal content remains unchanged -->
-                        <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm Cancellation</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                        <div class="col-4">
+                            <h5>Product name</h5>
+                        </div>
+                        <div class="col-6 text-center">
+                            <div class="tracking-container">
+                                <div class="tracking-steps">
+                                    <div class="progress-line">
+                                        <span></span>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-10">
-                                                <p>You saved ₹300 on this product</p>
-                                            </div>
-                                            <div class="col-2">
-                                                <img src="public/images/books/maths.jpg" class="w-100 h-inherit"
-                                                    alt="Product Image">
-                                            </div>
-                                        </div>
-                                        <p>If you cancel now, you will not be able to avail this deal again. Do you
-                                            still want to cancel?</p>
+                                    <div class="step" id="step1">
+                                        <div class="circle"></div>
+                                        <span>Order Placed</span>
                                     </div>
-                                    <div class="modal-footer d-flex justify-content-start">
-                                        <a href="cancel_order.html" class="btn btn-color">Cancel Order</a>
-                                        <button class="btn btn-color">Don't cancel</button>
+                                    <div class="step" id="step2">
+                                        <div class="circle"></div>
+                                        <span>Shipped</span>
+                                    </div>
+                                    <div class="step" id="step3">
+                                        <div class="circle"></div>
+                                        <span>Out for Delivery</span>
+                                    </div>
+                                    <div class="step" id="step4">
+                                        <div class="circle"></div>
+                                        <span>Delivered</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </a>
+                <div class="col-3">
+                    <button id="nextStep">Next Step</button>
+                    <p> ₹100.00 </p>
+                    <!-- Use a span or button for "Cancel order" instead of nested <a> -->
+                    <button class="btn btn-color fs-5" data-bs-toggle="modal" data-bs-target="#cancelModal"
+                    data-bs-whatever="@mdo">Cancel order</button>
                 </div>
-            </a>
+            </div>
 
         </div>
 
     </main>
+    <!-- Modal content remains unchanged -->
+    <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm Cancellation</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-10">
+                            <p>You saved ₹300 on this product</p>
+                        </div>
+                        <div class="col-2">
+                            <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="Product Image">
+                        </div>
+                    </div>
+                    <p>If you cancel now, you will not be able to avail this deal again. Do you
+                        still want to cancel?</p>
+                </div>
+                <div class="modal-footer d-flex justify-content-start">
+                    <a href="cancel_order.html" class="btn btn-color">Cancel Order</a>
+                    <button class="btn btn-color" type="button" data-bs-dismiss="modal" aria-label="Close">Don't cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container-fluid">
