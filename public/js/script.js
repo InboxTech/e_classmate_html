@@ -29,33 +29,37 @@ document.addEventListener("DOMContentLoaded", function () {
   var number = document.getElementById("number");
   var items = document.querySelector(".items-qua");
 
+  if (!minusBtn || !plusBtn || !number || !items) {
+    // console.error("One or more elements are missing.");
+    return;
+  }
+
   // Retrieve the saved number from localStorage or default to 1
-  var num = localStorage.getItem("quantity") ? parseInt(localStorage.getItem("quantity")) : 1;
+  var num = parseInt(localStorage.getItem("quantity"));
+  num = 1;
+  num = isNaN(num) ? 1 : num;
   number.innerText = num;
 
-  // Set the initial visibility of controls based on the saved number
-  if (num > 0) {
-    items.style.display = "flex";
-  } else {
-    items.style.display = "none";
-  }
+  // Set the initial visibility of controls
+  items.style.display = num > 0 ? "flex" : "none";
 
   // Minus button decreases the number
   minusBtn.addEventListener("click", function () {
     if (num > 1) {
       num -= 1;
     } else if (num === 1) {
+      // num = 0;
       items.style.display = "none"; // Hide the quantity controls
     }
     number.innerText = num;
-    localStorage.setItem("quantity", num); // Save the updated number
+    localStorage.setItem("quantity", num);
   });
 
   // Plus button increases the number
   plusBtn.addEventListener("click", function () {
     num += 1;
-    number.innerText = num; // Fix typo here
-    localStorage.setItem("quantity", num); // Save the updated number
+    number.innerText = num;
+    localStorage.setItem("quantity", num);
 
     if (num > 0) {
       items.style.display = "flex"; // Show the quantity controls
@@ -118,7 +122,6 @@ var swiper = new Swiper(".myStationarySwiper", {
   },
 });
 
-
 // let currentIndex = 0;
 // const slides = document.querySelectorAll('.offer-slide');
 // const totalSlides = slides.length;
@@ -144,14 +147,17 @@ var swiper = new Swiper(".myStationarySwiper", {
 // // Change slide every 3 seconds
 // setInterval(nextSlide, 3000);
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.getElementById("slider");
   const thumbLeft = document.getElementById("thumb-left");
   const thumbRight = document.getElementById("thumb-right");
   const priceLeft = document.getElementById("price-left");
   const priceRight = document.getElementById("price-right");
+
+  if (!slider || !thumbLeft || !thumbRight || !priceLeft || !priceRight) {
+    console.error("One or more required elements are missing from the DOM.");
+    return;
+  }
 
   const minPrice = 0;
   const maxPrice = 2000;
@@ -221,13 +227,99 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const filterByPrice = () => {
-    const minSelectedPrice = parseInt(priceLeft.innerText.replace("₹", "").trim());
-    const maxSelectedPrice = parseInt(priceRight.innerText.replace("₹", "").trim());
-    console.log("Filtered price range:", { minSelectedPrice, maxSelectedPrice });
+    const minSelectedPrice = parseInt(
+      priceLeft.innerText.replace("₹", "").trim()
+    );
+    const maxSelectedPrice = parseInt(
+      priceRight.innerText.replace("₹", "").trim()
+    );
+    console.log("Filtered price range:", {
+      minSelectedPrice,
+      maxSelectedPrice,
+    });
 
     // Add AJAX or filtering logic if needed
   };
 
   // Initialize slider
   updateSliderColor();
+});
+
+//order tracking
+document.addEventListener("DOMContentLoaded", () => {
+  let currentStep = 0;
+
+  let updateSteps = () => {
+    let steps = document.querySelectorAll(".step");
+    let progressBar = document.querySelector(".progress-line span");
+
+    steps.forEach((step, index) => {
+      if (index < currentStep) {
+        step.classList.add("completed");
+        step.classList.remove("active");
+      } else if (index === currentStep) {
+        step.classList.add("completed");
+        step.classList.remove("active");
+      } else {
+        step.classList.remove("active");
+        step.classList.remove("completed");
+      }
+    });
+
+    const progressPercentage = Math.min(
+      (currentStep / (steps.length - 1)) * 100,
+      100
+    );
+    progressBar.style.width = `${progressPercentage}%`;
+  };
+
+  document.getElementById("nextStep").addEventListener("click", () => {
+    const steps = document.querySelectorAll(".step");
+    if (currentStep < steps.length - 1) {
+      currentStep++;
+      updateSteps();
+    } else {
+      alert("All steps are completed!");
+    }
+  });
+
+  updateSteps();
+});
+
+// document.getElementById('continueButton').addEventListener('click', function () {
+//   // Collapse Easy Cancellation section
+//   document.getElementById('easyCancellation').classList.add('collapse');
+
+//   // Expand Refund Modes section
+//   document.getElementById('refundModes').classList.remove('collapse');
+// });
+
+// // Ensure Refund Modes is collapsed by default
+// window.onload = function () {
+//   document.getElementById('refundModes').classList.add('collapse');
+// };
+
+document.addEventListener("DOMContentLoaded", function () {
+  var continue_btn = document.querySelector("#continue");
+  var change_btn = document.querySelector("#change");
+  var refund = document.querySelector(".refund-new");
+  var cancel_reason = document.querySelector(".cancel-reason");
+  var selected_reason = document.querySelector("#selected-reason");
+
+  // Hide change button by default
+
+  continue_btn.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevents the form from submitting
+    refund.style.display = "block";
+    cancel_reason.style.display = "none";
+    change_btn.style.display = "block";
+    selected_reason.style.display = "block";
+  });
+
+  change_btn.addEventListener("click", function () {
+    cancel_reason.style.display = "block";
+    refund.style.display = "none";
+    change_btn.style.display = "none";
+    selected_reason.style.display = "none";
+  });
 });
