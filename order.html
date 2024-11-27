@@ -86,10 +86,10 @@
                                 </a>
                             </li> -->
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="#"> Books </a>
+                                <a class="nav-link fs-4" href="book.html"> Books </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="#"> Stationary </a>
+                                <a class="nav-link fs-4" href="stationary.html"> Stationary </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fs-4" href="#"> Contact Us </a>
@@ -208,44 +208,11 @@
                                     <p> <i class="fa-regular fa-circle text-success fs-6"></i> Delivered on Oct 13 </p>
                                     <p> Your items has been delivered </p>
 
-                                    <span data-bs-toggle="modal" class="text-color fs-5" data-bs-target="#reviewModal"
-                                        data-bs-whatever="@mdo">
-                                        <i class="fa-solid fa-star text-color"></i> Rate and review product </span>
+                                    <button data-bs-toggle="modal" class="btn btn-color fs-5"
+                                        data-bs-target="#reviewModal" data-bs-whatever="@mdo">
+                                        <i class="fa-solid fa-star text-white"></i> Rate and review product </button>
 
-                                    <div class="modal fade" id="reviewModal" tabindex="-1"
-                                        aria-labelledby="reviewModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Write A Review
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p class="fs-5"> Ratings
-                                                        <i class="fa-solid fa-star fs-5"></i>
-                                                        <i class="fa-solid fa-star fs-5"></i>
-                                                        <i class="fa-solid fa-star fs-5"></i>
-                                                        <i class="fa-solid fa-star fs-5"></i>
-                                                        <i class="fa-regular fa-star fs-5"></i>
-                                                    </p>
-                                                    <form>
-                                                        <div class="mb-3">
-                                                            <label for="exampleFormControlTextarea1" class="form-label">
-                                                                Your Question <span> * </span></label>
-                                                            <textarea class="form-control"
-                                                                placeholder="Write your question"
-                                                                id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer d-flex justify-content-start">
-                                                    <button type="button" class="btn btn-color"> Save </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
 
@@ -394,33 +361,70 @@
             </div>
         </div>
     </main>
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Write A Review
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fs-5"> Ratings
+                        <i class="fa-solid fa-star fs-5"></i>
+                        <i class="fa-solid fa-star fs-5"></i>
+                        <i class="fa-solid fa-star fs-5"></i>
+                        <i class="fa-solid fa-star fs-5"></i>
+                        <i class="fa-regular fa-star fs-5"></i>
+                    </p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">
+                                Your Question <span> * </span></label>
+                            <textarea class="form-control" placeholder="Write your question"
+                                id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-start">
+                    <button type="button" class="btn btn-color"> Save </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+   
     <footer>
         <div class="container-fluid">
             <div class="footer-links border-bottom border-5">
                 <div class="row justify-content-center align-content-center">
-                    <div class="col-lg-3 my-2 ">
+                    <div class="col-lg-2 my-2 ">
                         <a href="#" class="text-decoration-none">
                             <img src="public/images/logo/logo.png" alt="" />
                         </a>
                     </div>
-                    <div class="col-lg-3 my-2  d-flex flex-column">
-                        <h4 class="text-black">Links</h4>
-                        <a href="#" class="text-decoration-none"> Home </a>
-                        <a href="#" class="text-decoration-none"> Books </a>
-                        <a href="#" class="text-decoration-none"> Stationary</a>
-                        <a href="#" class="text-decoration-none"> Contact Us </a>
+                    <div class="col-lg-2 my-2  d-flex flex-column">
+                        <h4 class="text-black fw-bold">Links</h4>
+                        <!-- <a href="#" class="text-decoration-none"> Home </a> -->
+                        <a href="book.html" class="text-decoration-none fs-5"> Books </a>
+                        <a href="stationary.html" class="text-decoration-none fs-5"> Stationary</a>
+                        <a href="#" class="text-decoration-none fs-5"> Contact Us </a>
                     </div>
-                    <div class="col-lg-3 my-2  d-flex flex-column">
-                        <h4 class="text-black">Useful Links</h4>
-                        <a href="#" class="text-decoration-none"> Your Orders </a>
-                        <a href="#" class="text-decoration-none"> Your Accounts </a>
-                        <a href="#" class="text-decoration-none"> Wishlist </a>
-                        <a href="#" class="text-decoration-none"> FAQs </a>
+                    <div class="col-lg-2 my-2  d-flex flex-column">
+                        <h4 class="text-black fw-bold">Useful Links</h4>
+                        <a href="order.html" class="text-decoration-none fs-5"> Your Orders </a>
+                        <a href="#" class="text-decoration-none fs-5"> Your Accounts </a>
+                        <a href="#" class="text-decoration-none fs-5"> Wishlist </a>
+                        
                     </div>
-                    <div class="col-lg-3 my-2 ">
-                        <h4 class="text-black">Store information</h4>
+                    <div class="col-lg-2 my-2  d-flex flex-column">
+                        <h4 class="text-black fw-bold"> Policy </h4>
+                        <a href="privacy_policy.html" class="text-decoration-none fs-5"> Privacy and policy </a>
+                        <a href="#" class="text-decoration-none fs-5"> Refund and return  </a>
+                        <a href="#" class="text-decoration-none fs-5"> FAQs </a>
+                    </div>
+                    <div class="col-lg-2 my-2 ">
+                        <h4 class="text-black fw-bold">Store information</h4>
                         <a href="#" class="text-decoration-none">
                             <div class="row">
                                 <div class="col-2">
@@ -457,8 +461,15 @@
                 </div>
             </div>
 
-            <div class="text-center my-3">
-                <p>2024 Copyright e_classmates</p>
+            <div class="row align-items-center my-3">
+                <div class="col-6">
+                    <p class="fs-4">2024 Copyright eclassmates</p>
+                </div>
+                <div class="col-6 text-end">
+                   <a href="#"> <i class="fa-brands fa-square-twitter fs-4"></i></a>  
+                 <a href="#"> <i class="fa-brands fa-square-facebook fs-4"></i></a>  
+                 <a href="#"> <i class="fa-brands fa-square-instagram fs-4"></i></a>
+                </div>
             </div>
         </div>
     </footer>

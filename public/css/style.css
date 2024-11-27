@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Public Sans",sans-serif;
 }
 
 html,
@@ -293,7 +294,9 @@ body {
     right: 8px;
     padding: 3px 10px;
 }
-
+.container p{
+    margin-bottom: 0;
+}
 /**************** main end ***********************/
 
 footer {
@@ -311,7 +314,7 @@ footer a {
 }
 
 footer a:hover {
-    font-weight: bolder;
+  color: #1991f3;
 }
 
 
@@ -366,7 +369,7 @@ footer a:hover {
 
 .pro-des-rev-faq .nav-item .nav-link:hover {
     border-bottom: 2px solid var(--text-color);
-    background-color: none;
+    background-color: white;
 }
 
 .pro-des-rev-faq .nav-item .active {
@@ -376,6 +379,11 @@ footer a:hover {
 
 .pro-des-rev-faq .nav-tabs {
     border-bottom: 0;
+}
+.pro-des-rev-faq .accordion-button,
+.checkout .accordion-button{
+    background-color: white;
+    margin: 2% 0;
 }
 
 .related-product .swiper {

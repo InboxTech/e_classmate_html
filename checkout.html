@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Cart </title>
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="public/fonts/css/all.min.css">
-    <link rel="stylesheet" href="public/css/style.css">
+    <title> Checkout </title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="public/fonts/css/all.min.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
 </head>
 <body>
     <header>
@@ -137,120 +137,203 @@
             </div>
         </nav>
     </header>
+
     <main>
         <div class="container-fluid breadcrumb-link" style="background-color: var(--bg-color); height: 13vh;">
             <div class="row align-items-center align-content-center p-3">
                 <div class="col-6">
-                    <h1 class="fs-2"> Cart </h1>
+                    <h1 class="fs-2"> Checkout </h1>
                 </div>
                 <div class="col-6">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none"> <i class="fa-solid fa-house"></i> </a></li>
-                            <li class="breadcrumb-item active" aria-current="page"> Cart </li>
+                            <li class="breadcrumb-item active" aria-current="page"> Checkout </li>
                         </ol>
                     </nav>
                 </div>
             </div>
         </div>
 
-        <section class="cart-table my-5">
-            <div class="container-fluid p-5">
-              <div class="row">
-                <div class="col-xl-9">
-                    
-                    <table class="table bg-white shadow" cellspacing="3">
-                       <tbody>
-                        <tr class="p-5 product-details"> 
-                            <td>
-                                    <div class="product-img">
-                                        <a href="product_details.html" class="text-decoration-none"> <img src="public/images/books/maths.jpg"  alt=""> </a>
-                                    </div>
-                            </td>
-                            <td>
-                                <a href="product_details.html" class="text-decoration-none text-black"> <h4 class="fs-4"> Product name </h4></a>
-                                <p class="fs-5">  Sold By :  Shop name</p>
-                                <p class="fs-5">  Quantity :  3 items </p>
-                            </td>
-                            
-                            <td>
-                                <h4 class="fs-4"> Price </h4>
-                                <p class="fs-5"> ₹100.00 <del> ₹150.00 </del></p>
-                                <p class="text-color fs-5"> You saved : ₹50.00  </p>
-                            </td>
-                            <td>
-                                <h4 class="fs-4"> Qty </h4>
-                                <div class="items-qua col-lg-3 col-md-5 d-flex justify-content-between align-items-center rounded-5">
-                                    <div class="quantity sign" id="minus-btn">
-                                        <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                    <div class="quantity mx-3" id="number"></div>
-                                    <div class="quantity sign" id="plus-btn">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+        <section class="checkout my-5">
+            <div class="container mx-auto">
+            <div class="row">
+                <div class="col-8">
+                   <div class="shadow rounded-5 p-4 my-3" style="background-color: #f8f8f8;">
+                     <h3> Delivery Address </h3>
+                    <div class="row align-items-center justify-content-between p-3">
+                        <div class="col-6">
+                            <div class=" bg-white rounded-5 my-2 p-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Username
+                                </label>
+                            </div>
+                            <p> Address: 8424 James Lane South San Francisco, CA 94080</p> 
+                            <p> Pin Code: 546789</p>
+                            <p> Phone: +91- 1234567890 </p>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-color ms-5"> Home </button>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-6">
+                            <div class=" bg-white rounded-5 my-2 p-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Username
+                                </label>
+                            </div>
+                            <p> Address: 8424 James Lane South San Francisco, CA 94080</p> 
+                            <p> Pin Code: 546789</p>
+                            <p> Phone: +91- 1234567890 </p>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-color ms-5"> Office </button>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-6">
+                            <div class=" bg-white rounded-5 my-2 p-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Username
+                                </label>
+                            </div>
+                            <p> Address: 8424 James Lane South San Francisco, CA 94080</p> 
+                            <p> Pin Code: 546789</p>
+                            <p> Phone: +91- 1234567890 </p>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-color ms-5"> Home2 </button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                   </div>
+
+                   <div class="shadow rounded-5 p-4 my-2" style="background-color: #f8f8f8;">
+                     <h3> Payment Option </h3>
+                     <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      Cash On Delivery
+                                    </label>
                                 </div>
-                            </td>
-                            <td>
-                                 <h4 class="fs-4"> Total </h4>
-                                 <p class="fs-4"> ₹100.00 </p>
-                            </td>
-                            <td class="action">
-                               <h4 class="fs-4"> Action </h4>
-                               <i class="fa-regular fa-heart"></i>
-                               <i class="fa-solid fa-trash text-danger"></i>
-                            </td>
-                        </tr>
-                        
-                       </tbody>
-                    </table>
-                
-                </div>
-                <div class="col-xl-3 bg-white shadow">
-                   <h4 class="fs-4 border-bottom pb-3"> Cart total </h4>
-                   <p> Coupen Apply </p>
-                   <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Enter Coupen Code Here" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <span class="input-group-text btn-color" id="basic-addon2"> Apply</span>
-                  </div>
-                  
-                  <ul class="border-bottom pb-3">
-                    <li>
-                        <p> Subtotal: </p>
-                        <p>₹100.00 </p>
-                    </li>
-                    <li>
-                        <p> GST(18%): </p>
-                        <p>₹40.00 </p> 
-                    </li>
-                    <li>
-                        <p> Coupen Discount: </p>
-                        <p> (-) 0.00 </p> 
-                    </li>
-                    <li>
-                        <p> Shipping: </p>
-                        <p> ₹7.00 </p> 
-                    </li>
-                  </ul>
-
-                  <ul>
-                    <li>
-                        <h4> Total(USD): </h4>
-                        <h4 class="text-color"> ₹150.00  </h4>
-                    </li>
-                  </ul>
-
-                  <a href="checkout.html" class="btn btn-color w-100"> Proceed to checkout </a>
-                  <a href="index.html" class="btn btn-color w-100 my-2"> Return To Shopping </a>
-                  
-                </div>
-              </div>
-            </div>
-        </section>
-
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Pay digitally with SMS Pay Link. Cash may not be accepted in COVID restricted areas. Know more.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      Credit or Debit Card 
+                                    </label>
+                                </div>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <div class="mb-3">
+                                      <input type="email" class="form-control" placeholder="Enter Credit & Debit Card Number" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="mb-3">
+                                                <input type="email" class="form-control" placeholder="Expiry Date" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                              </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="mb-3">
+                                                <input type="email" class="form-control" placeholder="CVV Number" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                              </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="mb-3">
+                                                <input type="email" class="form-control" placeholder="Password" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                              </div>
+                                        </div>
+                                    </div>
         
+                                    <div>
+                                        <button class="btn btn-color"> Cancel </button>
+                                        <button class="btn btn-color"> Use This Card </button>
+                                    </div>
+                                  </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Net banking
+                                </label>
+                            </div>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p> Select Your Bank </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      SBI
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      HDFC
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                     BOI
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                     ICICI
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                     AXIS
+                                    </label>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+        </section>
     </main>
- 
-   
+
+
     <footer>
         <div class="container-fluid">
             <div class="footer-links border-bottom border-5">
