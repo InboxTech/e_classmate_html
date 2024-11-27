@@ -1,0 +1,41 @@
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-body {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    position: relative;
+}
+
+.book-option {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body:hover .book-option {
+    display: block;
+}
+
+.wishlist,
+.cart,
+.view {
+    margin: 0 5px;
+    color: #000;
+    font-size: 20px;
+}
+
+.wishlist:hover,
+.cart:hover,
+.view:hover {
+    color: #007bff;
+}
