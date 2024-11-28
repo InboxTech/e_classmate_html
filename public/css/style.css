@@ -40,6 +40,33 @@ body {
     background-color: red !important;
 }
 
+.modal-content{
+    border-radius: 0px !important ;
+  }
+  /* sidebar cart modal*/
+  
+  .cart-modal .modal-dialog{
+    margin: 0 0 0 auto;
+    height: calc(100% - var(--bs-modal-margin)* 0.01);
+  }
+  .cart-modal .modal.fade .modal-dialog {
+    transition: transform 0.2s ease-out;
+    transform: translate(100%, 0);
+  }
+  
+  .cart-modal .modal.fade.show .modal-dialog {
+    transform: translate(0, 0);
+  }
+  .cart-modal .modal-content{
+    height: 100% !important;
+  }
+  .modal button:hover{
+   background-color: white;
+  }
+  p{
+    margin-bottom: 0;
+}
+
 /********************************************* home page css ***************************************************************/
 /************ header start *****************/
 .bg-primary {
@@ -83,7 +110,10 @@ body {
 .navbar .offcanvas-body {
     width: 100%;
 }
-
+header .badge{
+    top: -2px;
+    right: -3px;
+}
 @media (max-width: 768px) {
 
     .location-header,
@@ -294,15 +324,15 @@ body {
     right: 8px;
     padding: 3px 10px;
 }
-.container p{
-    margin-bottom: 0;
-}
+
 /**************** main end ***********************/
 
 footer {
+    height: 42vh;
     background-color: var(--bg-color);
     padding: 20px;
     margin-top: 5%;
+    margin-bottom: 0;
 }
 
 footer a {
@@ -499,6 +529,8 @@ footer a:hover {
 ul li {
     display: flex;
     justify-content: space-between;
+    margin: 5px 0;
+  
 }
 
 /******************************************************** add to cart page css end ********************************************************/
@@ -577,8 +609,8 @@ ul li {
 .progress-line {
     position: absolute;
     top: 20px;
-    left: 60px;
-    right: 60px;
+    left: 58px;
+    right: 58px;
     height: 4px;
     background: #ccc;
     z-index: 0;
@@ -599,9 +631,9 @@ ul li {
 }
 
 .circle {
-    width: 20px;
-    height: 20px;
-    margin: 9% auto;
+    width: 22px;
+    height: 22px;
+    margin: 11% auto;
     background: #ccc;
     border-radius: 50%;
     display: flex;
@@ -662,5 +694,24 @@ button:hover {
 .cancellation #change {
     display: none;
 }
-
 /************************************************************ cancel order css end ********************************************************/
+/************************************************************ checkout css start ********************************************************/
+ .checkout .detail{
+    background-color: #f8f8f8;
+ }
+ .available-offer ul li{
+    display: list-item;
+ }
+/************************************************************ checkout css end ********************************************************/
+/************************************************************ order success css start ********************************************************/
+.true-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 0 auto;
+}
+/************************************************************ order success css end ********************************************************/

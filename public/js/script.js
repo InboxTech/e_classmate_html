@@ -97,7 +97,7 @@ var swiper = new Swiper(".myRelProSwiper", {
 
 var swiper = new Swiper(".myStationarySwiper", {
   // slidesPerView: 5,
-  spaceBetween: 3,
+  spaceBetween: 4,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -105,19 +105,19 @@ var swiper = new Swiper(".myStationarySwiper", {
   breakpoints: {
     0: {
       slidesPerView: 2,
-      spaceBetween: 5,
+      spaceBetween: 24,
     },
     768: {
-      slidesPerView: 4,
-      spaceBetween: 10,
+      slidesPerView: 3,
+      spaceBetween: 24,
     },
     1024: {
       slidesPerView: 4,
-      spaceBetween: 10,
+      spaceBetween: 24,
     },
     1440: {
       slidesPerView: 4,
-      spaceBetween: 10,
+      spaceBetween: 24,
     },
   },
 });
@@ -147,6 +147,8 @@ var swiper = new Swiper(".myStationarySwiper", {
 // // Change slide every 3 seconds
 // setInterval(nextSlide, 3000);
 
+
+//price range
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.getElementById("slider");
   const thumbLeft = document.getElementById("thumb-left");
@@ -286,25 +288,14 @@ document.addEventListener("DOMContentLoaded", () => {
   updateSteps();
 });
 
-// document.getElementById('continueButton').addEventListener('click', function () {
-//   // Collapse Easy Cancellation section
-//   document.getElementById('easyCancellation').classList.add('collapse');
-
-//   // Expand Refund Modes section
-//   document.getElementById('refundModes').classList.remove('collapse');
-// });
-
-// // Ensure Refund Modes is collapsed by default
-// window.onload = function () {
-//   document.getElementById('refundModes').classList.add('collapse');
-// };
-
+// cancel page js
 document.addEventListener("DOMContentLoaded", function () {
   var continue_btn = document.querySelector("#continue");
   var change_btn = document.querySelector("#change");
   var refund = document.querySelector(".refund-new");
   var cancel_reason = document.querySelector(".cancel-reason");
   var selected_reason = document.querySelector("#selected-reason");
+  var select_reason = document.querySelector("#select-reason");
 
   // Hide change button by default
 
@@ -314,6 +305,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cancel_reason.style.display = "none";
     change_btn.style.display = "block";
     selected_reason.style.display = "block";
+    selected_reason.innerHTML = select_reason.value; // Corrected line
   });
 
   change_btn.addEventListener("click", function () {
