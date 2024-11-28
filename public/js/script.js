@@ -105,7 +105,122 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Price Range Slider
+  // Retrieve the saved number from localStorage or default to 1
+  var num = parseInt(localStorage.getItem("quantity"));
+  num = 1;
+  num = isNaN(num) ? 1 : num;
+  number.innerText = num;
+
+  // Set the initial visibility of controls
+  items.style.display = num > 0 ? "flex" : "none";
+
+  // Minus button decreases the number
+  minusBtn.addEventListener("click", function () {
+    if (num > 1) {
+      num -= 1;
+    } else if (num === 1) {
+      // num = 0;
+      items.style.display = "none"; // Hide the quantity controls
+    }
+    number.innerText = num;
+    localStorage.setItem("quantity", num);
+  });
+
+  // Plus button increases the number
+  plusBtn.addEventListener("click", function () {
+    num += 1;
+    number.innerText = num;
+    localStorage.setItem("quantity", num);
+
+    if (num > 0) {
+      items.style.display = "flex"; // Show the quantity controls
+    }
+  });
+});
+
+//related product swiper in product detail page
+var swiper = new Swiper(".myRelProSwiper", {
+  slidesPerView: 6,
+  // spaceBetween:10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 5,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 15,
+    },
+    1440: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+  },
+});
+
+var swiper = new Swiper(".myStationarySwiper", {
+  // slidesPerView: 5,
+  spaceBetween: 4,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+  },
+});
+
+// let currentIndex = 0;
+// const slides = document.querySelectorAll('.offer-slide');
+// const totalSlides = slides.length;
+
+// function showSlide(index) {
+//   slides.forEach((slide, i) => {
+//     if (i === index) {
+//       gsap.to(slide, { y: 0, duration: 0.5, ease: "power2.out", opacity: 1 });
+//     } else {
+//       gsap.to(slide, { y: "100%", duration: 0.5, ease: "power2.out", opacity: 0 });
+//     }
+//   });
+// }
+
+// function nextSlide() {
+//   currentIndex = (currentIndex + 1) % totalSlides;
+//   showSlide(currentIndex);
+// }
+
+// // Initialize the first slide
+// showSlide(currentIndex);
+
+// // Change slide every 3 seconds
+// setInterval(nextSlide, 3000);
+
+
+//price range
+document.addEventListener("DOMContentLoaded", () => {
   const slider = document.getElementById("slider");
   const thumbLeft = document.getElementById("thumb-left");
   const thumbRight = document.getElementById("thumb-right");
@@ -230,28 +345,32 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   updateSteps();
+});
 
-  // Continue/Change buttons for refund and cancellation
-  const continueBtn = document.querySelector("#continue");
-  const changeBtn = document.querySelector("#change");
-  const refund = document.querySelector(".refund-new");
-  const cancelReason = document.querySelector(".cancel-reason");
-  const selectedReason = document.querySelector("#selected-reason");
+// cancel page js
+document.addEventListener("DOMContentLoaded", function () {
+  var continue_btn = document.querySelector("#continue");
+  var change_btn = document.querySelector("#change");
+  var refund = document.querySelector(".refund-new");
+  var cancel_reason = document.querySelector(".cancel-reason");
+  var selected_reason = document.querySelector("#selected-reason");
+  var select_reason = document.querySelector("#select-reason");
 
-  if (continueBtn && changeBtn && refund && cancelReason && selectedReason) {
-    continueBtn.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevents the form from submitting
-      refund.style.display = "block";
-      cancelReason.style.display = "none";
-      changeBtn.style.display = "block";
-      selectedReason.style.display = "block";
-    });
+  // Hide change button by default
 
-    changeBtn.addEventListener("click", function () {
-      cancelReason.style.display = "block";
-      refund.style.display = "none";
-      changeBtn.style.display = "none";
-      selectedReason.style.display = "none";
-    });
-  }
+  continue_btn.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevents the form from submitting
+    refund.style.display = "block";
+    cancel_reason.style.display = "none";
+    change_btn.style.display = "block";
+    selected_reason.style.display = "block";
+    selected_reason.innerHTML = select_reason.value; // Corrected line
+  });
+
+  change_btn.addEventListener("click", function () {
+    cancel_reason.style.display = "block";
+    refund.style.display = "none";
+    change_btn.style.display = "none";
+    selected_reason.style.display = "none";
+  });
 });

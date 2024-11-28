@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Public Sans",sans-serif;
 }
 
 html,
@@ -37,6 +38,33 @@ body {
 
 .progres-danger {
     background-color: red !important;
+}
+
+.modal-content{
+    border-radius: 0px !important ;
+  }
+  /* sidebar cart modal*/
+  
+  .cart-modal .modal-dialog{
+    margin: 0 0 0 auto;
+    height: calc(100% - var(--bs-modal-margin)* 0.01);
+  }
+  .cart-modal .modal.fade .modal-dialog {
+    transition: transform 0.2s ease-out;
+    transform: translate(100%, 0);
+  }
+  
+  .cart-modal .modal.fade.show .modal-dialog {
+    transform: translate(0, 0);
+  }
+  .cart-modal .modal-content{
+    height: 100% !important;
+  }
+  .modal button:hover{
+   background-color: white;
+  }
+  p{
+    margin-bottom: 0;
 }
 
 /********************************************* home page css ***************************************************************/
@@ -82,7 +110,10 @@ body {
 .navbar .offcanvas-body {
     width: 100%;
 }
-
+header .badge{
+    top: -2px;
+    right: -3px;
+}
 @media (max-width: 768px) {
 
     .location-header,
@@ -297,9 +328,11 @@ body {
 /**************** main end ***********************/
 
 footer {
+    height: 42vh;
     background-color: var(--bg-color);
     padding: 20px;
     margin-top: 5%;
+    margin-bottom: 0;
 }
 
 footer a {
@@ -311,10 +344,7 @@ footer a {
 }
 
 footer a:hover {
-    font-weight: 500;
-}
-footer p{
-    margin-bottom: 5px;
+  color: #1991f3;
 }
 
 
@@ -369,7 +399,7 @@ footer p{
 
 .pro-des-rev-faq .nav-item .nav-link:hover {
     border-bottom: 2px solid var(--text-color);
-    background-color: none;
+    background-color: white;
 }
 
 .pro-des-rev-faq .nav-item .active {
@@ -379,6 +409,11 @@ footer p{
 
 .pro-des-rev-faq .nav-tabs {
     border-bottom: 0;
+}
+.pro-des-rev-faq .accordion-button,
+.checkout .accordion-button{
+    background-color: white;
+    margin: 2% 0;
 }
 
 .related-product .swiper {
@@ -501,6 +536,8 @@ footer p{
 ul li {
     display: flex;
     justify-content: space-between;
+    margin: 5px 0;
+  
 }
 
 /******************************************************** add to cart page css end ********************************************************/
@@ -579,8 +616,8 @@ ul li {
 .progress-line {
     position: absolute;
     top: 20px;
-    left: 60px;
-    right: 60px;
+    left: 58px;
+    right: 58px;
     height: 4px;
     background: #ccc;
     z-index: 0;
@@ -601,9 +638,9 @@ ul li {
 }
 
 .circle {
-    width: 20px;
-    height: 20px;
-    margin: 9% auto;
+    width: 22px;
+    height: 22px;
+    margin: 11% auto;
     background: #ccc;
     border-radius: 50%;
     display: flex;
@@ -713,3 +750,24 @@ ul li {
     margin-right: 30px;
     text-align: justify;
 }
+/************************************************************ cancel order css end ********************************************************/
+/************************************************************ checkout css start ********************************************************/
+ .checkout .detail{
+    background-color: #f8f8f8;
+ }
+ .available-offer ul li{
+    display: list-item;
+ }
+/************************************************************ checkout css end ********************************************************/
+/************************************************************ order success css start ********************************************************/
+.true-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 0 auto;
+}
+/************************************************************ order success css end ********************************************************/
