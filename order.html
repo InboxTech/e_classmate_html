@@ -169,170 +169,146 @@
                     </div>
 
                     <!------------------- expected delivery div -------------->
-                    <a href="order_details.html" class="text-decoration-none text-black">
-                        <div class="ordered-product bg-white border my-3 p-2">
-
-                            <div class="row align-items-center p-3">
-                                <div class="col-1">
-                                    <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
-                                </div>
-                                <div class="col-5">
-                                    <h5 class="fs-4"> Product name </h5>
-                                </div>
-                                <div class="col-2">
-                                    <p class="fs-5"> ₹300.00 </p>
-                                </div>
-                                <div class="col-4">
-                                    <p> <i class="fa-regular fa-circle text-success fs-6"></i> Delivery expected by Mon
-                                        Oct 30 </p>
-                                    <p> Your order has been placed </p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </a>
-                    <!------------------- order delivered div -------------->
-                    <a href="order_details.html" class="text-decoration-none text-black">
-                        <div class="ordered-product bg-white border my-3 p-2">
-                            <div class="row align-items-center p-3">
-                                <div class="col-1">
-                                    <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
-                                </div>
-                                <div class="col-5">
-                                    <h5 class="fs-4"> Product name </h5>
-                                </div>
-                                <div class="col-2">
-                                    <p class="fs-5"> ₹300.00 </p>
-                                </div>
-                                <div class="col-4">
-                                    <p> <i class="fa-regular fa-circle text-success fs-6"></i> Delivered on Oct 13 </p>
-                                    <p> Your items has been delivered </p>
-
-                                    <span data-bs-toggle="modal" class="text-color fs-5" data-bs-target="#reviewModal"
-                                        data-bs-whatever="@mdo">
-                                        <i class="fa-solid fa-star text-color"></i> Rate and review product </span>
-
-                                    <div class="modal fade" id="reviewModal" tabindex="-1"
-                                        aria-labelledby="reviewModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Write A Review
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p class="fs-5"> Ratings
-                                                        <i class="fa-solid fa-star fs-5"></i>
-                                                        <i class="fa-solid fa-star fs-5"></i>
-                                                        <i class="fa-solid fa-star fs-5"></i>
-                                                        <i class="fa-solid fa-star fs-5"></i>
-                                                        <i class="fa-regular fa-star fs-5"></i>
-                                                    </p>
-                                                    <form>
-                                                        <div class="mb-3">
-                                                            <label for="exampleFormControlTextarea1" class="form-label">
-                                                                Your Question <span> * </span></label>
-                                                            <textarea class="form-control"
-                                                                placeholder="Write your question"
-                                                                id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer d-flex justify-content-start">
-                                                    <button type="button" class="btn btn-color"> Save </button>
-                                                </div>
-                                            </div>
-                                        </div>
+                    <div class="ordered-product bg-white border my-3 p-2">
+                        <div class="row align-items-center p-3">
+                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h5 class="fs-4"> Product name </h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="fs-5"> ₹300.00 </p>
                                     </div>
                                 </div>
+                            </a>
+                            <div class="col-4">
+                                <p> <i class="fa-regular fa-circle text-success fs-6"></i> Delivery expected by Mon
+                                    Oct 30 </p>
+                                <p> Your order has been placed </p>
                             </div>
-
                         </div>
-                    </a>
+
+                    </div>
+
+                    <!------------------- order delivered div -------------->
+                    <div class="ordered-product bg-white border my-3 p-2">
+                        <div class="row align-items-center p-3">
+                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h5 class="fs-4"> Product name </h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="fs-5"> ₹300.00 </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="col-4">
+                                <p> <i class="fa-regular fa-circle text-success fs-6"></i> Delivered on Oct 13 </p>
+                                <p> Your items has been delivered </p>
+
+                                <span data-bs-toggle="modal" class="text-color fs-5" data-bs-target="#reviewModal"
+                                    data-bs-whatever="@mdo">
+                                    <i class="fa-solid fa-star text-color"></i> Rate and review product </span>
+                            </div>
+                        </div>
+
+                    </div>
+
                     <!------------------ refund order div ------------------->
-                    <a href="order_details.html" class="text-decoration-none text-black">
-                        <div class="ordered-product bg-white border my-3 p-2">
-                            <div class="row align-items-center p-3 ">
-                                <div class="col-1">
-                                    <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                    <div class="ordered-product bg-white border my-3 p-2">
+                        <div class="row align-items-center p-3 ">
+                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h5 class="fs-4"> Product name </h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="fs-5"> ₹300.00 </p>
+                                    </div>
                                 </div>
-                                <div class="col-5">
-                                    <h5 class="fs-4"> Product name </h5>
-                                </div>
-                                <div class="col-2">
-                                    <p class="fs-5"> ₹300.00 </p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="fs-5"> <i class="fa-solid fa-circle text-danger fs-6"></i> Refund
-                                        completed </p>
-                                </div>
+                            </a>
+                            <div class="col-4">
+                                <p class="fs-5"> <i class="fa-solid fa-circle text-danger fs-6"></i> Refund
+                                    completed </p>
                             </div>
-
-                            <div class="bg-white border p-2 m-3">
-                                <h5 class="text-color"> Refund completed <span class="text-black"> (Refund ID:
-                                        gffrt567)</span></h5>
-                                <p> This refund was added to your account by dd/mm/yyyy </p>
-                            </div>
-
                         </div>
-                    </a>
+
+                        <div class="bg-white border p-2 m-3">
+                            <h5 class="text-color"> Refund completed <span class="text-black"> (Refund ID:
+                                    gffrt567)</span></h5>
+                            <p> This refund was added to your account by dd/mm/yyyy </p>
+                        </div>
+
+                    </div>
+
                     <!------------------------ cancelled order div -------------------->
-                    <a href="order_details.html" class="text-decoration-none text-black">
-                        <div class="ordered-product bg-white border my-3 p-2">
-                            <div class="row align-items-center p-3 ">
-                                <div class="col-1">
-                                    <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                    <div class="ordered-product bg-white border my-3 p-2">
+                        <div class="row align-items-center p-3 ">
+                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h5 class="fs-4"> Product name </h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="fs-5"> ₹300.00 </p>
+                                    </div>
                                 </div>
-                                <div class="col-5">
-                                    <h5 class="fs-4"> Product name </h5>
-                                </div>
-                                <div class="col-2">
-                                    <p class="fs-5"> ₹300.00 </p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="fs-5"> <i class="fa-solid fa-circle text-danger fs-6"></i> Cancelled
-                                        Today, Oct 22 </p>
-                                    <p> You requested cencellation because you changed your mind about product. </p>
+                            </a>
+                            <div class="col-4">
+                                <p class="fs-5"> <i class="fa-solid fa-circle text-danger fs-6"></i> Cancelled
+                                    Today, Oct 22 </p>
+                                <p> You requested cencellation because you changed your mind about product. </p>
 
-                                </div>
                             </div>
-
-                            <!-- <div class="bg-white border p-2 m-3">
-                        <h5 class="text-color"> Cancelled Today, Oct 22  </h5>
-                     </div> -->
-
                         </div>
-                    </a>
+
+                        <!-- <div class="bg-white border p-2 m-3">
+                            <h5 class="text-color"> Cancelled Today, Oct 22  </h5>
+                        </div> -->
+                    </div>
+                    
                     <!------------------------ payment not confirmed div ----------------->
-                    <a href="order_details.html" class="text-decoration-none text-black">
-                        <div class="ordered-product bg-white border my-3 p-3">
-                            <div class="row align-items-center p-3 ">
-                                <div class="col-1">
-                                    <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                    <div class="ordered-product bg-white border my-3 p-3">
+                        <div class="row align-items-center p-3 ">
+                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h5 class="fs-4"> Product name </h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="fs-5"> ₹300.00 </p>
+                                    </div>
                                 </div>
-                                <div class="col-5">
-                                    <h5 class="fs-4"> Product name </h5>
-
-                                </div>
-                                <div class="col-2">
-                                    <p class="fs-5"> ₹300.00 </p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="fs-5"> <i class="fa-regular fa-circle text-warning fs-6"></i> Payment not
-                                        yet confirmed from the bank </p>
-
-                                </div>
+                            </a>
+                            <div class="col-4">
+                                <p class="fs-5"> <i class="fa-regular fa-circle text-warning fs-6"></i> Payment not
+                                    yet confirmed from the bank </p>
                             </div>
-                            <span class="bg-warning border-warning p-2"> We are waiting for the payment confirmation.
-                                Please check again after 2 hours</span>
-                            <!-- <div class="bg-white border p-2 m-3">
-                        <h5 class="text-color"> Cancelled Today, Oct 22  </h5>
-                     </div> -->
-
                         </div>
-                    </a>
+                        <span class="bg-warning border-warning p-2"> We are waiting for the payment confirmation.
+                            Please check again after 2 hours</span>
+                        <!-- <div class="bg-white border p-2 m-3">
+                            <h5 class="text-color"> Cancelled Today, Oct 22  </h5>
+                        </div> -->
+                    </div>
+                    
+                    <!------------------------ pagination ----------------->
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
                             <li class="page-item prev-link"><a class="page-link btn-color" href="#">Previous</a></li>
@@ -389,6 +365,39 @@
                         <h4 class="border-bottom pb-3"> Payment Method </h4>
                         <p class="fs-5"> Pay on Delivery (Cash/Card). Cash on delivery (COD) available. Card/Net banking
                             acceptance subject to device availability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modals -->
+        <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"> Write A Review
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="fs-5"> Ratings
+                            <i class="fa-solid fa-star fs-5"></i>
+                            <i class="fa-solid fa-star fs-5"></i>
+                            <i class="fa-solid fa-star fs-5"></i>
+                            <i class="fa-solid fa-star fs-5"></i>
+                            <i class="fa-regular fa-star fs-5"></i>
+                        </p>
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">
+                                    Your Question <span> * </span></label>
+                                <textarea class="form-control" placeholder="Write your question"
+                                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-start">
+                        <button type="button" class="btn btn-color"> Save </button>
                     </div>
                 </div>
             </div>
