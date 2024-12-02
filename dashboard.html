@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> User dashboard</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="public/fonts/css/all.min.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <!-- header offer section -->
+        <!-- <div class="bg-primary">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-2 location-header">
+                        <i class="fa-solid fa-location-dot"></i> Location
+                    </div>
+                    <div class="col-lg-8 col-md-8 offer-header">
+                        <div class="offer-container">
+                            <div class="offer-slide">
+                                <strong class="ms-1">New Coupon Code: 123456 </strong>
+                            </div>
+                            <div class="offer-slide">
+                                Something you love is now on sale!
+                                <a href="shop-left-sidebar.html" class="text-white" tabindex="-1">Buy Now !</a>
+                            </div>
+                           <div class="offer-slide">
+                                Free Shipping on Orders Over $50!
+                            </div>
+                            <div class="offer-slide">
+                                Free Shipping on Orders Over $50!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 d-flex justify-content-end">
+                        <div class="dropdown">
+                            <button class="btn text-light border-0 dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                English
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Hindi</a></li>
+                                <li><a class="dropdown-item" href="#">Gujarati</a></li>
+                                <li><a class="dropdown-item" href="#">Language</a></li>
+                            </ul>
+                        </div>
+                        <div class="vr my-2"></div>
+                        <div class="dropdown">
+                            <button class="btn text-light border-0 dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                USD
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">IND</a></li>
+                                <li><a class="dropdown-item" href="#">ENG</a></li>
+                                <li><a class="dropdown-item" href="#">GUJ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Nav-bar here -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="public/images/logo/logo.png" alt="" />
+                </a>
+
+                <div class="offcanvas offcanvas-end navbar-collapse" id="headerSidBar">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasTopLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <!-- <li class="nav-item">
+                                <a class="nav-link active fs-4" aria-current="page" href="#"> Home </a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link fs-4" href="book.html"> Books </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-4" href="stationary.html"> Stationary </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-4" href="#"> Contact Us </a>
+                            </li>
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li> -->
+                            <!-- <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            </li> -->
+                        </ul>
+                        <ul class="navbar-nav flex-row align-items-center mb-2 mb-lg-0">
+                            <li class="nav-item px-4 position-relative">
+                                <i class="fa-solid fa-heart  fs-4"></i>
+                                <span
+                                    class="position-absolute top-1 translate-middle badge rounded-pill bg-danger">1</span>
+                            </li>
+                            <li class="nav-item px-4 position-relative">
+                                <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="#" class="text-black">
+                                    <i class="fa-solid fa-cart-shopping fs-4"></i>
+                                </a>
+                                <span
+                                    class="position-absolute top-1 translate-middle badge rounded-pill bg-danger">1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-footer">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#headerSidBar" aria-controls="headerSidBar" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="px-4">
+                        <i class="fa-solid fa-user-large fs-4"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid breadcrumb-link" style="background-color: var(--bg-color);">
+            <div class="row align-items-center align-content-center p-3">
+                <div class="col-6">
+                    <h1 class="fs-2"> Dashboard </h1>
+                </div>
+                <div class="col-6">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="index.html" class="text-decoration-none">
+                                    <i class="fa-solid fa-house"></i>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Dashboard
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <section class="dashboard my-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 p-3" style=" background-color: var(--bg-color);">
+                        <div class="border-bottom pb-4">
+                            <div class="profile-img">
+                                <img src="public/images/profilephoto.jpg" id="profile" alt="">
+                                <span class="edit-profile">
+                                    <i class="fa-solid fa-pen" onclick="triggerFileInput()"></i>
+                                    <input type="file" class="file" id="fileInput" onchange="changeProfile(this)"
+                                        style="display: none;">
+                                </span>
+                            </div>
+
+                            <h1 class="text-center"> User Name </h1>
+                            <p class="text-center"> user@gmail.com </p>
+                        </div>
+                        <div class="div">
+                            <ul class="nav nav-tabs  d-flex flex-column" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="profile-tab" data-bs-toggle="tab"
+                                        data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                        aria-controls="profile-tab-pane" aria-selected="true"> <i
+                                            class="fa-solid fa-user"></i> Profile</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="address-tab" data-bs-toggle="tab"
+                                        data-bs-target="#address-tab-pane" type="button" role="tab"
+                                        aria-controls="address-tab-pane" aria-selected="false"> <i
+                                            class="fa-solid fa-location-dot"></i> Address </button>
+                                </li>
+                                <!-- <li class="nav-item" role="presentation">
+                                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                                </li> -->
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="tab-content p-3" style=" background-color: var(--bg-color);" id="myTabContent">
+                            <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">
+                                <h1> My Profile </h1>
+
+                                <div class="bg-white ronded-3 p-3 m-3">
+                                    <h3> User name </h3>
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <p class="fs-5"> <i class="fa-solid fa-location-dot"></i> Address </p>
+                                        </div>
+                                        <div class="col-3">
+                                            <p class="fs-5"> <i class="fa-solid fa-envelope"></i> user@gmail.com</p>
+                                        </div>
+                                        <div class="col-3">
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-color" data-bs-toggle="modal"
+                                                data-bs-target="#nameEmailPhone">
+                                                Edit
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="bg-white rounded-3 p-3 m-3">
+                                    <h3> About user </h3>
+                                    <p class="fs-5"> Name: Username </p>
+                                    <p class="fs-5 my-2"> Gender: Female </p>
+                                    <p class="fs-5 "> Date Of Birth: DD/MM/YYYY </p>
+                                    <p class="fs-5 my-2"> Phone No: 1234567890 </p>
+                                    <p class=" fs-5"> Address: 549 Sulphur Springs Road, Downers, IL </p>
+
+                                    <h3 class="my-3"> Login Details </h3>
+                                    <p class="fs-5"> Email: user@gmail.com </p>
+                                    <p class="fs-5"> Password: *** <button type="button" class="btn btn-color ms-5"
+                                            data-bs-toggle="modal" data-bs-target="#password">
+                                            Edit
+                                        </button> </p>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="address-tab-pane" role="tabpanel"
+                                aria-labelledby="address-tab" tabindex="0">
+                                <h1> My Address Book  <button type="button" class="btn btn-color ms-5"
+                                    data-bs-toggle="modal" data-bs-target="#address">
+                                    Add New Address
+                                </button>  </h1>
+
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="bg-white rounded-5 my-2 p-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="add1" />
+                                                <label class="form-check-label" for="add1">
+                                                    Username
+                                                </label>
+                                            </div>
+                                            <div class="ms-4">
+                                            <p> Address: 8424 James Lane South San Francisco, CA 94080 </p>
+                                            <p>Pin Code: 546789</p>
+                                            <p>Phone: +91- 1234567890</p>
+                                        </div>
+                                            <div class="d-flex justify-content-end">
+                                                <button class="btn btn-color mx-1"> Edit </button>
+                                                <button class="btn btn-color mx-1"> Home </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="bg-white rounded-5 my-2 p-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="add2" />
+                                                <label class="form-check-label" for="add2">
+                                                    Username
+                                                </label>
+                                            </div>
+                                            <div class="ms-4">
+                                                <p> Address: 8424 James Lane South San Francisco, CA 94080 </p>
+                                                <p>Pin Code: 546789</p>
+                                                <p>Phone: +91- 1234567890</p>
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <button class="btn btn-color mx-1"> Edit </button>
+                                                <button class="btn btn-color mx-1"> Office </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="bg-white rounded-5 my-2 p-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="add3" />
+                                                <label class="form-check-label" for="add3">
+                                                    Username
+                                                </label>
+                                            </div>
+                                            <div class="ms-4">
+                                                <p> Address: 8424 James Lane South San Francisco, CA 94080 </p>
+                                                <p>Pin Code: 546789</p>
+                                                <p>Phone: +91- 1234567890</p>
+                                            </div>
+                                            
+                                            <div class="d-flex justify-content-end">
+                                                <button class="btn btn-color mx-1"> Edit </button>
+                                                <button class="btn btn-color mx-1"> Neighbour </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="bg-white rounded-5 my-2 p-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="add4" />
+                                                <label class="form-check-label" for="add4">
+                                                    Username
+                                                </label>
+                                            </div>
+                                            <div class="ms-4">
+                                            <p> Address: 8424 James Lane South San Francisco, CA 94080 </p>
+                                            <p>Pin Code: 546789</p>
+                                            <p>Phone: +91- 1234567890</p>
+                                        </div>
+                                            <div class="d-flex justify-content-end">
+                                                <button class="btn btn-color mx-1"> Edit </button>
+                                                <button class="btn btn-color mx-1"> Home2 </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- add to cart modal -->
+    <div class="cart-modal">
+        <div class="modal fade justify-content-end" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-4" id="exampleModalLabel">Shopping Cart</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center p-3">
+                            <div class="col-2">
+                                <img src="public/images/books/chemistry.jpg" class="w-100 h-inherit" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h3> Chemistry </h3>
+                                <p class="fs-5"> ICSE </p>
+                                <p> Price: ₹250.00 </p>
+                            </div>
+                            <div class="col-1">
+                                <i class="fa-solid fa-trash text-danger fs-4"></i>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center p-3">
+                            <div class="col-2">
+                                <img src="public/images/books/nursary_english.jpg" class="w-100 h-inherit" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h3> English - Nursary </h3>
+                                <p class="fs-5"> CBSE </p>
+                                <p> Price: ₹250.00 </p>
+                            </div>
+                            <div class="col-1">
+                                <i class="fa-solid fa-trash text-danger fs-4"></i>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center p-3">
+                            <div class="col-2">
+                                <img src="public/images/stationary/schoolbag.jpg" class="w-100 h-inherit" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h3> Schoolbag </h3>
+                                <p> Price: ₹200.00 </p>
+                            </div>
+                            <div class="col-1">
+                                <i class="fa-solid fa-trash text-danger fs-4"></i>
+                            </div>
+                        </div>
+                        <div class="row align-items-center p-3">
+                            <div class="col-2">
+                                <img src="public/images/stationary/color.jpg" class="w-100 h-inherit" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h3> Color </h3>
+                                <p> Price: ₹250.00 </p>
+                            </div>
+                            <div class="col-1">
+                                <i class="fa-solid fa-trash text-danger fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="cart.html" class="btn btn-color w-100">View Cart</a>
+                        <a href="checkout.html" class="btn btn-color w-100"> Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for edit profile details ------------->
+    <div class="modal fade" id="nameEmailPhone" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel"> Edit Profile
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="formValidate">
+                        <div class="mb-3">
+                            <label for=""> User name</label>
+                            <input type="text" placeholder="Enter your full name" name="username" class="form-control"
+                                id="exampleInputName" aria-describedby="nameHelp">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for=""> Email</label>
+                                    <input type="email" placeholder="Enter your email" name="email" class="form-control"
+                                        id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+        
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for=""> Phone no</label>
+                                    <input type="text" placeholder="Enter phone number" name="number" class="form-control"
+                                        id="exampleInputNo" aria-describedby="noHelp">
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for=""> Birth date</label>
+                                    <input type="date" name="birth" class="form-control" id="exampleInputDate">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <p class="mt-2 mb-1"> Gender</p>
+                                <div class="mb-3">
+                                    <div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                                            <label class="form-check-label" for="male">Male</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                                            <label class="form-check-label" for="female">Female</label>
+                                        </div>
+                                    </div>
+                                    <label id="gender-error" class="error" for="gender"></label>
+                                    
+                                </div>
+                                                
+                            </div>  
+                        </div>
+                        <div class="modal-footer d-flex justify-content-start">
+                            <button type="submit" class="btn btn-color"> Change </button>
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal for edit passswod  ------------->
+    <div class="modal fade" id="password" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="password" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel"> Edit Password
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="PasswordValidate">
+                        <div class="mb-3 position-relative">
+                            <label for="old-password" class="form-label">Old Password</label>
+                            <input type="password" placeholder="Enter Old Password" name="Old_password"
+                                class="form-control InputPassword" id="old-password">
+                            <i class="fa-solid fa-eye-slash position-absolute text-secondary eye-off"
+                                onclick="togglePassword(event, 'old-password', 'fa-eye-slash')"></i>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label for="new-password" class="form-label">New Password</label>
+                            <input type="password" placeholder="Enter New Password" name="New_password"
+                                id="new-password" class="form-control InputPassword">
+                            <i class="fa-solid fa-eye-slash position-absolute text-secondary eye-off"
+                                onclick="togglePassword(event, 'new-password', 'fa-eye-slash')"></i>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label for="confirm-password" class="form-label">Confirm Password</label>
+                            <input type="password" placeholder="Confirm New Password" name="Confirm_New_password"
+                                id="confirm-password" class="form-control InputPassword">
+                            <i class="fa-solid fa-eye-slash position-absolute text-secondary eye-off"
+                                onclick="togglePassword(event, 'confirm-password', 'fa-eye-slash')"></i>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-start">
+                            <button type="submit" class="btn btn-color">Change Password</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--------- add new address modal ------------>
+    <div class="modal fade" id="address" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="address" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel"> Add new address
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="addressValidate">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="exampleInputFname" class="form-label"> First Name </label>
+                                    <input type="text" class="form-control" name="firstname" placeholder="Enter Firstname" id="exampleInputFname">
+                                  </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="exampleInputLname" class="form-label"> Last Name </label>
+                                    <input type="text" class="form-control" name="lastname" placeholder="Enter Lastname" id="exampleInputLname">
+                                  </div>
+                            </div>
+                        </div>
+                        
+                          <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" name="email" placeholder="Enter Email" id="exampleInputEmail1">
+                                    
+                                  </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="exampleInputPhone" class="form-label"> Phone No.</label>
+                                    <input type="text" class="form-control" name="number" placeholder="Enter Phone No" id="exampleInputPhone">
+                                  </div>
+                            </div>
+                          </div>
+                       
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label class="form-label"> Flat, House, Building, Company etc </label>
+                                <input type="text" class="form-control" name="house" placeholder="Flat,House,Building,Company,etc.">
+                              </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label class="form-label"> Area, Colony, Street, Sector, Village</label>
+                                <input type="text" class="form-control" name="area" placeholder="Area,Colony,Street,Sector,Village">
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label class="form-label"> Landmark </label>
+                                <input type="text" class="form-control" name="landmark" placeholder="Landmark">
+                              </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label class="form-label"> Country</label>
+                                <select class="form-select" name="country" aria-label="Default select example">
+                                    <option selected> Select your Country </option>
+                                    <option value="India"> India </option>
+                                    <option value="USA"> USA </option>
+                                    <option value="Canada"> Canada </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label class="form-label"> State </label>
+                                <select class="form-select" name="state" aria-label="Default select example">
+                                    <option selected> Select your State </option>
+                                    <option value="Gujarat"> Gujarat </option>
+                                    <option value="Rajasthan"> Rajasthan </option>
+                                    <option value="Maharashtra"> Maharashtra </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label class="form-label"> City </label>
+                                <select class="form-select" name="city" aria-label="Default select example">
+                                    <option selected> Select your City </option>
+                                    <option value="India"> Vadodara </option>
+                                    <option value="USA"> Ahmedabad </option>
+                                    <option value="Canada"> Surat </option>
+                                    <option value="Canada"> Anand </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"> Pincode </label>
+                        <input type="text" class="form-control w-50" name="pincode" placeholder="Enter Pincode">
+                      </div>
+                        
+                        <button type="submit" class="btn btn-color"> Change</button>
+                      </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="footer-links border-bottom border-5">
+                <div class="row justify-content-center align-content-center">
+                    <div class="col-lg-2 my-2 ">
+                        <a href="#" class="text-decoration-none">
+                            <img src="public/images/logo/logo.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="col-lg-2 my-2  d-flex flex-column">
+                        <h4 class="text-black fw-bold">Links</h4>
+                        <!-- <a href="#" class="text-decoration-none"> Home </a> -->
+                        <a href="book.html" class="text-decoration-none fs-5"> Books </a>
+                        <a href="stationary.html" class="text-decoration-none fs-5"> Stationary</a>
+                        <a href="#" class="text-decoration-none fs-5"> Contact Us </a>
+                    </div>
+                    <div class="col-lg-2 my-2  d-flex flex-column">
+                        <h4 class="text-black fw-bold">Useful Links</h4>
+                        <a href="order.html" class="text-decoration-none fs-5"> Your Orders </a>
+                        <a href="#" class="text-decoration-none fs-5"> Your Accounts </a>
+                        <a href="#" class="text-decoration-none fs-5"> Wishlist </a>
+                        <a href="#" class="text-decoration-none fs-5"> FAQs </a>
+                    </div>
+                    <div class="col-lg-2 my-2  d-flex flex-column">
+                        <h4 class="text-black fw-bold"> Policy </h4>
+                        <a href="terms_conditions.html" class="text-decoration-none fs-5"> Terms and Condition </a>
+                        <a href="privacy_policy.html" class="text-decoration-none fs-5"> Privacy and policy </a>
+                        <a href="payment_refund.html" class="text-decoration-none fs-5"> Payment and Refund </a>
+                        <a href="shipping_policy.html" class="text-decoration-none fs-5"> Shipping Policy </a>
+                    </div>
+                    <div class="col-lg-2 my-2 ">
+                        <h4 class="text-black fw-bold">Store information</h4>
+                        <a href="#" class="text-decoration-none">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fa-solid fa-location-dot fs-4"></i>
+                                </div>
+                                <div class="col-10">
+                                    <p>Address</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="text-decoration-none">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fa-solid fa-phone fs-4"></i>
+                                </div>
+                                <div class="col-10">
+                                    <p>Call Us: 1234567890</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="text-decoration-none">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fa-solid fa-envelope fs-4"></i>
+                                </div>
+                                <div class="col-10">
+                                    <p>Email Us: demo@gmail.com</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center my-3">
+                <div class="col-6">
+                    <p class="fs-4">2024 Copyright eclassmates</p>
+                </div>
+                <div class="col-6 text-end">
+                    <a href="#"> <i class="fa-brands fa-square-twitter fs-4"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-facebook fs-4"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-instagram fs-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="public/js/bootstrap.min.js"></script>
+    <script src="public/js/swiper-bundle.min.js"></script>
+    <script src="public/js/gsap.min.js"></script>
+    <script src="public/js/script.js"></script>
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/plugin/jqueryvalidation/jquery.validate.min.js"></script>
+    <script>
+        // $('.PassowrdValidate').validate({});
+        $('.PasswordValidate').validate({
+            rules: {
+                Old_password: {
+                    required: true,
+                    minlength: 8,
+                },
+                New_password: {
+                    required: true,
+                    minlength: 8
+                },
+                Confirm_New_password: {
+                    required: true,
+                    minlength: 8,
+                    equalTo: "#new-password"
+                }
+            },
+            messages: {
+                Old_password: {
+                    required: 'Please enter the old password'
+                },
+                New_password: {
+                    required: 'Please enter the new password'
+                },
+                Confirm_New_password: {
+                    required: 'Please enter the confirm password'
+                }
+            }
+        });
+        $('.formValidate').validate({
+            rules: {
+                username: {
+                    required: true,
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                number: {
+                    required: true,
+                    minlength: 8,
+                    equalTo: "#new-password"
+                },
+                birth: {
+                  required: true,
+                  date: true
+                },
+                gender: {
+                    required: true
+                },
+                firstname: {
+                    required: true
+                },
+                lastname: {
+                    required: true
+                },
+                house: {
+                    required: true
+                },
+                area: {
+                    required: true
+                },
+                landmark: {
+                    required: true
+                },
+                pincode: {
+                    required: true
+                }
+            },
+            messages: {
+                username: {
+                    required: 'Please enter full name'
+                },
+                email: {
+                    required: 'Please enter email address'
+                },
+                number: {
+                    required: 'Please enter phone number'
+                },
+                birth: {
+                  required: 'Please enter your birth date',
+                  date:"enter date only"
+            
+                },
+                gender: {
+                    required: 'Please enter your gender'
+                },
+                firstname: {
+                    required: 'Please enter first name'
+                },
+                lastname: {
+                    required: 'Please enter last name'
+                },
+                house: {
+                    required: 'Plaese enter your house no'
+                },
+                area: {
+                    required: 'Please enter your area'
+                },
+                landmark: {
+                    required: 'Please enter your landmark'
+                },
+                pincode: {
+                    required: 'Please enter your pincode'
+                }
+            }
+        });
+        $('.addressValidate').validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                number: {
+                    required: true,
+                    minlength: 8,
+                    equalTo: "#new-password"
+                },
+                firstname: {
+                    required: true
+                },
+                lastname: {
+                    required: true
+                },
+                house: {
+                    required: true
+                },
+                area: {
+                    required: true
+                },
+                landmark: {
+                    required: true
+                },
+                country: {
+                    required: true
+                },
+                state: {
+                    required: true
+                },
+                city: {
+                    required: true
+                },
+                pincode: {
+                    required: true
+                }
+            },
+            messages: {
+               
+                email: {
+                    required: 'Please enter email address'
+                },
+                number: {
+                    required: 'Please enter phone number'
+                },
+                firstname: {
+                    required: 'Please enter first name'
+                },
+                lastname: {
+                    required: 'Please enter last name'
+                },
+                house: {
+                    required: 'Plaese enter your house '
+                },
+                area: {
+                    required: 'Please enter your area'
+                },
+                landmark: {
+                    required: 'Please enter your landmark'
+                },
+                country: {
+                    required: 'Please enter country'
+                },
+                state: {
+                    required: 'Please enter state'
+                },
+                city: {
+                    required: 'Please enter city'
+                },
+                pincode: {
+                    required: 'Please enter your pincode'
+                }
+            }
+        });
+    </script>
+    </script>
+</body>
+
+</html>

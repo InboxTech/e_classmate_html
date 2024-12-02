@@ -813,3 +813,40 @@ ul li {
     margin: 0 auto;
 }
 /************************************************************ order success css end ********************************************************/
+.eye-off{
+    top:42px;
+    right: 5px;
+}
+
+/********************************************** user dashboard start ****************************************/
+.error{
+    color: red;
+}
+.profile-img{
+    width: 25%;
+    height: 25%;
+    /* border: 2px solid white; */
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+.edit-profile{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 18px;
+    right: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-img img{
+    width: 100%;
+    height: inherit;
+    /* object-fit: cover; */
+    border-radius: 50%;
+}
+
+/********************************************** user dashboard end ****************************************/

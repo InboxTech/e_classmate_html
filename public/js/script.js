@@ -450,21 +450,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //heart image change on click
 var heart_images = document.querySelectorAll(".heart");
-
-// heart_images.forEach((heart_img) => {
-//   heart_img.addEventListener("click", function() {
-//     // Get the current source path of the heart image
-//     let currentSrc = heart_img.getAttribute("src");
-    
-//     // Toggle the heart image based on the current src
-//     if (currentSrc.includes("heart.png")) {
-//       heart_img.setAttribute("src", "public/images/book/heart-fill.png");
-//     } else {
-//       heart_img.setAttribute("src", "public/images/book/heart.png");
-//     }
-//   });
-// });
-
 heart_images.forEach((heart_img) => {
   heart_img.addEventListener("click", function() {
     let currentSrc = heart_img.getAttribute("src");
@@ -477,4 +462,78 @@ heart_images.forEach((heart_img) => {
     }
   });
 });
+
+//toggle password
+function togglePassword(event, inputId, className) {
+  const icon = event.currentTarget; // The clicked icon element
+  const pass = document.getElementById(inputId); // Use ID to select the input field
+
+  if (pass) {
+      // Determine the current state of the password input field
+      const isPassword = pass.type === 'password';
+
+      // Toggle the type of the input field
+      pass.type = isPassword ? 'text' : 'password';
+
+      // Toggle the icon class (eye-open/eye-slash)
+      if (isPassword) {
+          icon.classList.remove(className); // Remove 'fa-eye-slash'
+          icon.classList.add('fa-eye'); // Add 'fa-eye'
+      } else {
+          icon.classList.remove('fa-eye'); // Remove 'fa-eye'
+          icon.classList.add(className); // Add 'fa-eye-slash'
+      }
+  }
+}
+
+// change profile photo
+function triggerFileInput() {
+  document.getElementById('fileInput').click();  // Triggers the file input dialog when pen icon is clicked
+}
+function changeProfile(input) {
+  var file = input.files[0];
+  if (file) {
+      var reader = new FileReader();
+      
+      reader.onload = function(e) {
+          // Update the src attribute of the profile image with the selected file
+          document.getElementById('profile').src = e.target.result;
+      }
+      
+      // Read the file as a data URL
+      reader.readAsDataURL(file);
+  }
+}
+// When the page is loaded, check if a profile image URL is saved in local storage
+// window.onload = function() {
+//   var savedImage = localStorage.getItem('profileImage');  // Get the saved image URL from local storage
+//   if (savedImage) {
+//       // If an image is saved, set it as the src of the profile image
+//       document.getElementById('profile').src = savedImage;
+//   }
+// };
+
+// // Trigger file input when the pen icon is clicked
+// function triggerFileInput() {
+//   document.getElementById('fileInput').click();
+// }
+
+// // Change the profile image and save the new image to local storage
+// function changeProfile(input) {
+//   var file = input.files[0];
+//   if (file) {
+//       var reader = new FileReader();
+      
+//       reader.onload = function(e) {
+//           // Update the profile image with the selected file
+//           document.getElementById('profile').src = e.target.result;
+          
+//           // Save the image URL to local storage
+//           localStorage.setItem('profileImage', e.target.result);
+//       }
+      
+//       // Read the file as a data URL
+//       reader.readAsDataURL(file);
+//   }
+// }
 
