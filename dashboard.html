@@ -179,29 +179,33 @@
                             <h1 class="text-center"> User Name </h1>
                             <p class="text-center"> user@gmail.com </p>
                         </div>
-                        <div class="div">
-                            <ul class="nav nav-tabs  d-flex flex-column" id="myTab" role="tablist">
+                        <div>
+                            <ul class="nav nav-tabs d-flex flex-column my-3" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="profile-tab" data-bs-toggle="tab"
                                         data-bs-target="#profile-tab-pane" type="button" role="tab"
                                         aria-controls="profile-tab-pane" aria-selected="true"> <i
-                                            class="fa-solid fa-user"></i> Profile</button>
+                                            class="fa-solid fa-user me-3"></i> Profile</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="address-tab" data-bs-toggle="tab"
                                         data-bs-target="#address-tab-pane" type="button" role="tab"
                                         aria-controls="address-tab-pane" aria-selected="false"> <i
-                                            class="fa-solid fa-location-dot"></i> Address </button>
+                                            class="fa-solid fa-location-dot me-3"></i> Address </button>
                                 </li>
-                                <!-- <li class="nav-item" role="presentation">
-                                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
-                                </li> -->
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link" id="wishlist-tab" data-bs-toggle="tab" data-bs-target="#wishlist-tab-pane" type="button" role="tab" aria-controls="wishlist-tab-pane" aria-selected="false">  <i class="fa-solid fa-heart me-3"></i>  Wishlist </button>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="order-tab" data-bs-toggle="tab" data-bs-target="#order-tab-pane" type="button" role="tab" aria-controls="order-tab-pane" aria-selected="false"> <i class="fa-solid fa-bag-shopping me-3"></i>  Orders </button>
+                                  </li>
 
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-9">
-                        <div class="tab-content p-3" style=" background-color: var(--bg-color);" id="myTabContent">
+                        <div class="tab-content p-4" style=" background-color: var(--bg-color);" id="myTabContent">
                             <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel"
                                 aria-labelledby="profile-tab" tabindex="0">
                                 <h1> My Profile </h1>
@@ -268,7 +272,10 @@
                                             <p>Phone: +91- 1234567890</p>
                                         </div>
                                             <div class="d-flex justify-content-end">
-                                                <button class="btn btn-color mx-1"> Edit </button>
+                                                <button type="button" class="btn btn-color ms-5"
+                                                data-bs-toggle="modal" data-bs-target="#address">
+                                                Edit
+                                            </button> 
                                                 <button class="btn btn-color mx-1"> Home </button>
                                             </div>
                                         </div>
@@ -288,7 +295,10 @@
                                                 <p>Phone: +91- 1234567890</p>
                                             </div>
                                             <div class="d-flex justify-content-end">
-                                                <button class="btn btn-color mx-1"> Edit </button>
+                                                <button type="button" class="btn btn-color ms-5"
+                                                data-bs-toggle="modal" data-bs-target="#address">
+                                               Edit
+                                            </button> 
                                                 <button class="btn btn-color mx-1"> Office </button>
                                             </div>
                                         </div>
@@ -309,7 +319,10 @@
                                             </div>
                                             
                                             <div class="d-flex justify-content-end">
-                                                <button class="btn btn-color mx-1"> Edit </button>
+                                                <button type="button" class="btn btn-color ms-5"
+                                    data-bs-toggle="modal" data-bs-target="#address">
+                                    Edit
+                                </button> 
                                                 <button class="btn btn-color mx-1"> Neighbour </button>
                                             </div>
                                         </div>
@@ -329,14 +342,220 @@
                                             <p>Phone: +91- 1234567890</p>
                                         </div>
                                             <div class="d-flex justify-content-end">
-                                                <button class="btn btn-color mx-1"> Edit </button>
+                                                <button type="button" class="btn btn-color ms-5"
+                                                data-bs-toggle="modal" data-bs-target="#address">
+                                                Edit
+                                            </button> 
                                                 <button class="btn btn-color mx-1"> Home2 </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div> -->
+                            <div class="tab-pane fade" id="wishlist-tab-pane" role="tabpanel" aria-labelledby="wishlist-tab" tabindex="0">
+                                <h1> My Wishlist History </h1>
+
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 my-2">
+                                        <a href="product_details.html">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="card-img">
+                                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
+                                                </div>
+                                                <a href="#" class="text-decoration-none wishlist">
+                                                    <img src="public/images/books/heart.png" class="heart" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="card-body">
+                                                <h5 class="card-title"> Exploring Society India and 
+                                                    Beyond Social Science Class 5 NCRT </h5>
+                                                <p class="card-text py-2"> NCRT </p>
+                                                <span class="text-color fs-4 text-color">
+                                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                                </span>
+                    
+                    
+                                                <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
+                    
+                    
+                                                <div class="items-qua ">
+                                                    <div class="quantity sign minus-btn" id="">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </div>
+                                                    <div class="quantity number" id=""> </div>
+                                                    <div class="quantity sign plus-btn" id="">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </div>
+                                                </div>
+                    
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 my-2">
+                                        <a href="product_details.html">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="card-img">
+                                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
+                                                </div>
+                                                <a href="#" class="text-decoration-none wishlist">
+                                                    <img src="public/images/books/heart.png" class="heart" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="card-body">
+                                                <h5 class="card-title"> Exploring Society India and 
+                                                    Beyond Social Science Class 5 NCRT </h5>
+                                                <p class="card-text py-2"> NCRT </p>
+                                                <span class="text-color fs-4 text-color">
+                                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                                </span>
+                    
+                    
+                                                <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
+                    
+                    
+                                                <div class="items-qua ">
+                                                    <div class="quantity sign minus-btn" id="">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </div>
+                                                    <div class="quantity number" id=""> </div>
+                                                    <div class="quantity sign plus-btn" id="">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </div>
+                                                </div>
+                    
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 my-2">
+                                        <a href="product_details.html">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="card-img">
+                                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
+                                                </div>
+                                                <a href="#" class="text-decoration-none wishlist">
+                                                    <img src="public/images/books/heart.png" class="heart" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="card-body">
+                                                <h5 class="card-title"> Exploring Society India and 
+                                                    Beyond Social Science Class 5 NCRT </h5>
+                                                <p class="card-text py-2"> NCRT </p>
+                                                <span class="text-color fs-4 text-color">
+                                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                                </span>
+                    
+                    
+                                                <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
+                    
+                    
+                                                <div class="items-qua ">
+                                                    <div class="quantity sign minus-btn" id="">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </div>
+                                                    <div class="quantity number" id=""> </div>
+                                                    <div class="quantity sign plus-btn" id="">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </div>
+                                                </div>
+                    
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 my-2">
+                                        <a href="product_details.html">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="card-img">
+                                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
+                                                </div>
+                                                <a href="#" class="text-decoration-none wishlist">
+                                                    <img src="public/images/books/heart.png" class="heart" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="card-body">
+                                                <h5 class="card-title"> Exploring Society India and 
+                                                    Beyond Social Science Class 5 NCRT </h5>
+                                                <p class="card-text py-2"> NCRT </p>
+                                                <span class="text-color fs-4 text-color">
+                                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                                </span>
+                    
+                                              
+                                                <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
+                    
+                    
+                                                <div class="items-qua ">
+                                                    <div class="quantity sign minus-btn" id="">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </div>
+                                                    <div class="quantity number" id=""> </div>
+                                                    <div class="quantity sign plus-btn" id="">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </div>
+                                                </div>
+                    
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="order-tab-pane" role="tabpanel" aria-labelledby="order-tab" tabindex="0">
+                                <h1> My Orders History </h1>
+
+                                <a href="order_details.html" class="text-decoration-none text-black">
+                                <div class="row bg-white p-3 rounded-3 my-3">
+                                    <div class="col-2">
+                                        <img src="public/images/books/anupambharti.png" class="w-100 h-inherit" alt="">
+                                    </div>
+                                    <div class="col-9">
+                                        <h3> Anupambharti </h3>
+                                         <p class="fs-5"> Price:  ₹200.00 </p>
+                                         <p class="fs-5"> Sold By :  storename </p>
+                                         <p class="fs-5"> Board:  boardname </p>
+                                         <p class="fs-5"> Quantity:  1 </p>
+                                         <p class="fs-5"> rate: 
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+
+                                         </p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="order_details.html" class="text-decoration-none text-black">
+                                <div class="row bg-white p-3 rounded-3 my-3">
+                                    <div class="col-2">
+                                        <img src="public/images/stationary/chartpaper.png" class="w-100 h-inherit" alt="">
+                                    </div>
+                                    <div class="col-9">
+                                        <h3> Anupambharti </h3>
+                                         <p class="fs-5"> Price:  ₹200.00 </p>
+                                         <p class="fs-5"> Sold By :  storename </p>
+                                         <p class="fs-5"> Quantity:  1 </p>
+                                         <p class="fs-5"> rate: 
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+
+                                         </p>
+                                    </div>
+                                </div>
+                            </a>
+                                
+                            </div>
 
                         </div>
                     </div>
@@ -603,7 +822,7 @@
                             <div class="mb-3">
                                 <label class="form-label"> Country</label>
                                 <select class="form-select" name="country" aria-label="Default select example">
-                                    <option selected> Select your Country </option>
+                                    <option value="" selected> Select your Country </option>
                                     <option value="India"> India </option>
                                     <option value="USA"> USA </option>
                                     <option value="Canada"> Canada </option>
@@ -617,7 +836,7 @@
                             <div class="mb-3">
                                 <label class="form-label"> State </label>
                                 <select class="form-select" name="state" aria-label="Default select example">
-                                    <option selected> Select your State </option>
+                                    <option value="" selected> Select your State </option>
                                     <option value="Gujarat"> Gujarat </option>
                                     <option value="Rajasthan"> Rajasthan </option>
                                     <option value="Maharashtra"> Maharashtra </option>
@@ -628,7 +847,7 @@
                             <div class="mb-3">
                                 <label class="form-label"> City </label>
                                 <select class="form-select" name="city" aria-label="Default select example">
-                                    <option selected> Select your City </option>
+                                    <option value="" selected> Select your City </option>
                                     <option value="India"> Vadodara </option>
                                     <option value="USA"> Ahmedabad </option>
                                     <option value="Canada"> Surat </option>
@@ -669,8 +888,8 @@
                     <div class="col-lg-2 my-2  d-flex flex-column">
                         <h4 class="text-black fw-bold">Useful Links</h4>
                         <a href="order.html" class="text-decoration-none fs-5"> Your Orders </a>
-                        <a href="#" class="text-decoration-none fs-5"> Your Accounts </a>
-                        <a href="#" class="text-decoration-none fs-5"> Wishlist </a>
+                        <a href="dashboard.html" class="text-decoration-none fs-5"> Your Accounts </a>
+                        <a href="wishlist.html" class="text-decoration-none fs-5"> Wishlist </a>
                         <a href="#" class="text-decoration-none fs-5"> FAQs </a>
                     </div>
                     <div class="col-lg-2 my-2  d-flex flex-column">

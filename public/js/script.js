@@ -74,36 +74,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Quantity Controls
-  var minusBtn = document.getElementById("minus-btn");
-  var plusBtn = document.getElementById("plus-btn");
-  var number = document.getElementById("number");
-  var items = document.querySelector(".items-qua");
+  // var minusBtn = document.getElementById("minus-btn");
+  // var plusBtn = document.getElementById("plus-btn");
+  // var number = document.getElementById("number");
+  // var items = document.querySelector(".items-qua");
 
-  if (minusBtn && plusBtn && number && items) {
-    let num = parseInt(localStorage.getItem("quantity")) || 1;
-    number.innerText = num;
+  // if (minusBtn && plusBtn && number && items) {
+  //   let num = parseInt(localStorage.getItem("quantity")) || 1;
+  //   number.innerText = num;
 
-    items.style.display = num > 0 ? "flex" : "none";
+  //   items.style.display = num > 0 ? "flex" : "none";
 
-    minusBtn.addEventListener("click", function () {
-      if (num > 1) {
-        num -= 1;
-      } else if (num === 1) {
-        items.style.display = "none";
-      }
-      number.innerText = num;
-      localStorage.setItem("quantity", num);
-    });
+  //   minusBtn.addEventListener("click", function () {
+  //     if (num > 1) {
+  //       num -= 1;
+  //     } else if (num === 1) {
+  //       items.style.display = "none";
+  //     }
+  //     number.innerText = num;
+  //     localStorage.setItem("quantity", num);
+  //   });
 
-    plusBtn.addEventListener("click", function () {
-      num += 1;
-      number.innerText = num;
-      localStorage.setItem("quantity", num);
-      if (num > 0) {
-        items.style.display = "flex";
-      }
-    });
-  }
+  //   plusBtn.addEventListener("click", function () {
+  //     num += 1;
+  //     number.innerText = num;
+  //     localStorage.setItem("quantity", num);
+  //     if (num > 0) {
+  //       items.style.display = "flex";
+  //     }
+  //   });
+  // }
 
   // Retrieve the saved number from localStorage or default to 1
   var num = parseInt(localStorage.getItem("quantity"));
