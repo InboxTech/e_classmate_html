@@ -99,38 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // Quantity Controls
-  var minusBtn = document.getElementById("minus-btn");
-  var plusBtn = document.getElementById("plus-btn");
-  var number = document.getElementById("number");
-  var items = document.querySelector(".items-qua");
-
-  if (minusBtn && plusBtn && number && items) {
-    let num = parseInt(localStorage.getItem("quantity")) || 1;
-    number.innerText = num;
-
-    items.style.display = num > 0 ? "flex" : "none";
-
-    minusBtn.addEventListener("click", function () {
-      if (num > 1) {
-        num -= 1;
-      } else if (num === 1) {
-        items.style.display = "none";
-      }
-      number.innerText = num;
-      localStorage.setItem("quantity", num);
-    });
-
-    plusBtn.addEventListener("click", function () {
-      num += 1;
-      number.innerText = num;
-      localStorage.setItem("quantity", num);
-      if (num > 0) {
-        items.style.display = "flex";
-      }
-    });
-  }
-
   // Retrieve the saved number from localStorage or default to 1
   var num = parseInt(localStorage.getItem("quantity"));
   num = 1;
@@ -464,21 +432,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //heart image change on click
 var heart_images = document.querySelectorAll(".heart");
-
-// heart_images.forEach((heart_img) => {
-//   heart_img.addEventListener("click", function() {
-//     // Get the current source path of the heart image
-//     let currentSrc = heart_img.getAttribute("src");
-
-//     // Toggle the heart image based on the current src
-//     if (currentSrc.includes("heart.png")) {
-//       heart_img.setAttribute("src", "public/images/book/heart-fill.png");
-//     } else {
-//       heart_img.setAttribute("src", "public/images/book/heart.png");
-//     }
-//   });
-// });
-
 heart_images.forEach((heart_img) => {
   heart_img.addEventListener("click", function () {
     let currentSrc = heart_img.getAttribute("src");
@@ -492,4 +445,44 @@ heart_images.forEach((heart_img) => {
   });
 });
 
+//toggle password
+function togglePassword(event, inputId, className) {
+  const icon = event.currentTarget; // The clicked icon element
+  const pass = document.getElementById(inputId); // Use ID to select the input field
 
+  if (pass) {
+      // Determine the current state of the password input field
+      const isPassword = pass.type === 'password';
+
+      // Toggle the type of the input field
+      pass.type = isPassword ? 'text' : 'password';
+
+      // Toggle the icon class (eye-open/eye-slash)
+      if (isPassword) {
+          icon.classList.remove(className); // Remove 'fa-eye-slash'
+          icon.classList.add('fa-eye'); // Add 'fa-eye'
+      } else {
+          icon.classList.remove('fa-eye'); // Remove 'fa-eye'
+          icon.classList.add(className); // Add 'fa-eye-slash'
+      }
+  }
+}
+
+// change profile photo
+function triggerFileInput() {
+  document.getElementById('fileInput').click();  // Triggers the file input dialog when pen icon is clicked
+}
+function changeProfile(input) {
+  var file = input.files[0];
+  if (file) {
+      var reader = new FileReader();
+      
+      reader.onload = function(e) {
+          // Update the src attribute of the profile image with the selected file
+          document.getElementById('profile').src = e.target.result;
+      }
+      
+      // Read the file as a data URL
+      reader.readAsDataURL(file);
+  }
+}
