@@ -1,3 +1,29 @@
+// navbar scrolling effect
+const header = document.querySelector(".navbar-header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 40) {
+    header.classList.add("nav-scrolled");
+  } else {
+    header.classList.remove("nav-scrolled");
+  }
+});
+
+//user icon hover js
+var user = document.querySelector(".user");
+var nav_user = document.querySelector(".nav-user");
+
+user.addEventListener("mouseenter", function () {
+  nav_user.style.display = "flex";
+});
+nav_user.addEventListener("mouseenter", function () {
+  nav_user.style.display = "flex";
+});
+
+nav_user.addEventListener("mouseleave", function () {
+  nav_user.style.display = "none";
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   // Swiper initialization for different sliders
   var swiper1 = new Swiper(".mySwiper", {
@@ -193,32 +219,6 @@ var swiper = new Swiper(".myStationarySwiper", {
   },
 });
 
-// let currentIndex = 0;
-// const slides = document.querySelectorAll('.offer-slide');
-// const totalSlides = slides.length;
-
-// function showSlide(index) {
-//   slides.forEach((slide, i) => {
-//     if (i === index) {
-//       gsap.to(slide, { y: 0, duration: 0.5, ease: "power2.out", opacity: 1 });
-//     } else {
-//       gsap.to(slide, { y: "100%", duration: 0.5, ease: "power2.out", opacity: 0 });
-//     }
-//   });
-// }
-
-// function nextSlide() {
-//   currentIndex = (currentIndex + 1) % totalSlides;
-//   showSlide(currentIndex);
-// }
-
-// // Initialize the first slide
-// showSlide(currentIndex);
-
-// // Change slide every 3 seconds
-// setInterval(nextSlide, 3000);
-
-
 //price range
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.getElementById("slider");
@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const updateThumb = (thumb, percentage, priceLabel) => {
       const price = Math.round(minPrice + (maxPrice - minPrice) * percentage);
-      thumb.style.left = `${percentage * 100}%`;
+      thumb.style.left = `${percentage * (100 - 5)}%`;
       priceLabel.innerText = `₹ ${price}`;
     };
 
@@ -295,9 +295,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const filterByPrice = () => {
-      const minSelectedPrice = parseInt(priceLeft.innerText.replace("₹", "").trim());
-      const maxSelectedPrice = parseInt(priceRight.innerText.replace("₹", "").trim());
-      console.log("Filtered price range:", { minSelectedPrice, maxSelectedPrice });
+      const minSelectedPrice = parseInt(
+        priceLeft.innerText.replace("₹", "").trim()
+      );
+      const maxSelectedPrice = parseInt(
+        priceRight.innerText.replace("₹", "").trim()
+      );
+      console.log("Filtered price range:", {
+        minSelectedPrice,
+        maxSelectedPrice,
+      });
       // Add AJAX or filtering logic if needed
     };
 
@@ -326,7 +333,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      const progressPercentage = Math.min((currentStep / (steps.length - 1)) * 100, 100);
+      const progressPercentage = Math.min(
+        (currentStep / (steps.length - 1)) * 100,
+        100
+      );
       progressBar.style.width = `${progressPercentage}%`;
     }
   };
@@ -348,35 +358,37 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // cancel page js
-document.addEventListener("DOMContentLoaded", function () {
-  var continue_btn = document.querySelector("#continue");
-  var change_btn = document.querySelector("#change");
-  var refund = document.querySelector(".refund-new");
-  var cancel_reason = document.querySelector(".cancel-reason");
-  var selected_reason = document.querySelector("#selected-reason");
-  var select_reason = document.querySelector("#select-reason");
+window.onload = function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    var continue_btn = document.querySelector("#continue");
+    var change_btn = document.querySelector("#change");
+    var refund = document.querySelector(".refund-new");
+    var cancel_reason = document.querySelector(".cancel-reason");
+    var selected_reason = document.querySelector("#selected-reason");
+    var select_reason = document.querySelector("#select-reason");
 
-  // Hide change button by default
+    // Hide change button by default
 
-  continue_btn.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevents the form from submitting
-    refund.style.display = "block";
-    cancel_reason.style.display = "none";
-    change_btn.style.display = "block";
-    selected_reason.style.display = "block";
-    selected_reason.innerHTML = select_reason.value; // Corrected line
+    continue_btn.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevents the form from submitting
+      refund.style.display = "block";
+      cancel_reason.style.display = "none";
+      change_btn.style.display = "block";
+      selected_reason.style.display = "block";
+      selected_reason.innerHTML = select_reason.value; // Corrected line
+    });
+
+    change_btn.addEventListener("click", function () {
+      cancel_reason.style.display = "block";
+      refund.style.display = "none";
+      change_btn.style.display = "none";
+      selected_reason.style.display = "none";
+    });
   });
-
-  change_btn.addEventListener("click", function () {
-    cancel_reason.style.display = "block";
-    refund.style.display = "none";
-    change_btn.style.display = "none";
-    selected_reason.style.display = "none";
-  });
-});
+};
 
 //plus minus btn an dadd to cart btn
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   var minusBtns = document.querySelectorAll(".minus-btn");
   var plusBtns = document.querySelectorAll(".plus-btn");
   var numberElements = document.querySelectorAll(".number");
@@ -385,8 +397,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Loop through each product card
   minusBtns.forEach((minusBtn, index) => {
-    let n = localStorage.getItem(`quantity-${index}`) ? parseInt(localStorage.getItem(`quantity-${index}`)) : 1;
-    let isCartVisible = localStorage.getItem(`isCartVisible-${index}`) === 'true';
+    let n = localStorage.getItem(`quantity-${index}`)
+      ? parseInt(localStorage.getItem(`quantity-${index}`))
+      : 1;
+    let isCartVisible =
+      localStorage.getItem(`isCartVisible-${index}`) === "true";
 
     if (isCartVisible) {
       items[index].style.display = "flex"; // Show quantity controls
@@ -447,7 +462,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
 //heart image change on click
 var heart_images = document.querySelectorAll(".heart");
 
@@ -455,7 +469,7 @@ var heart_images = document.querySelectorAll(".heart");
 //   heart_img.addEventListener("click", function() {
 //     // Get the current source path of the heart image
 //     let currentSrc = heart_img.getAttribute("src");
-    
+
 //     // Toggle the heart image based on the current src
 //     if (currentSrc.includes("heart.png")) {
 //       heart_img.setAttribute("src", "public/images/book/heart-fill.png");
@@ -466,9 +480,9 @@ var heart_images = document.querySelectorAll(".heart");
 // });
 
 heart_images.forEach((heart_img) => {
-  heart_img.addEventListener("click", function() {
+  heart_img.addEventListener("click", function () {
     let currentSrc = heart_img.getAttribute("src");
-    console.log("Current src: ", currentSrc);  // This will help you debug
+    console.log("Current src: ", currentSrc); // This will help you debug
 
     if (currentSrc.includes("heart.png")) {
       heart_img.setAttribute("src", "public/images/books/heart-fill.png");
@@ -477,4 +491,5 @@ heart_images.forEach((heart_img) => {
     }
   });
 });
+
 

@@ -13,77 +13,33 @@
 
 <body>
 
-    <header>
-        <!-- header offer section -->
-        <!-- <div class="bg-primary">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-2 col-md-2 location-header">
-                        <i class="fa-solid fa-location-dot"></i> Location
-                    </div>
-                    <div class="col-lg-8 col-md-8 offer-header">
-                        <div class="offer-container">
-                            <div class="offer-slide">
-                                <strong class="ms-1">New Coupon Code: 123456 </strong>
-                            </div>
-                            <div class="offer-slide">
-                                Something you love is now on sale!
-                                <a href="shop-left-sidebar.html" class="text-white" tabindex="-1">Buy Now !</a>
-                            </div>
-                           <div class="offer-slide">
-                                Free Shipping on Orders Over $50!
-                            </div>
-                            <div class="offer-slide">
-                                Free Shipping on Orders Over $50!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 d-flex justify-content-end">
-                        <div class="dropdown">
-                            <button class="btn text-light border-0 dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                English
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">Hindi</a></li>
-                                <li><a class="dropdown-item" href="#">Gujarati</a></li>
-                                <li><a class="dropdown-item" href="#">Language</a></li>
-                            </ul>
-                        </div>
-                        <div class="vr my-2"></div>
-                        <div class="dropdown">
-                            <button class="btn text-light border-0 dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                USD
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">IND</a></li>
-                                <li><a class="dropdown-item" href="#">ENG</a></li>
-                                <li><a class="dropdown-item" href="#">GUJ</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+    <header class="navbar-header">
         <!-- Nav-bar here -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-white">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="public/images/logo/logo.png" alt="" />
-                </a>
+                <div class="navbar-brand">
+                    <a class="collapse navbar-collapse" href="index.html">
+                        <img src="public/images/logo/logo.png" alt="" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#headerSidBar" aria-controls="headerSidBar" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
 
-                <div class="offcanvas offcanvas-end navbar-collapse" id="headerSidBar">
+                    </button>
+                </div>
+                <div class="navbar-toggler border-0">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="public/images/logo/logo.png" alt="" />
+                    </a>
+                </div>
+                <div class="offcanvas offcanvas-start navbar-collapse" id="headerSidBar">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasTopLabel">Menu</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                            <!-- <li class="nav-item">
-                                <a class="nav-link active fs-4" aria-current="page" href="#"> Home </a>
-                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link fs-4" href="book.html"> Books </a>
                             </li>
@@ -93,54 +49,44 @@
                             <li class="nav-item">
                                 <a class="nav-link fs-4" href="#"> Contact Us </a>
                             </li>
-                            <!-- <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li> -->
-                            <!-- <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li> -->
-                        </ul>
-                        <ul class="navbar-nav flex-row align-items-center mb-2 mb-lg-0">
-                            <li class="nav-item px-4 position-relative">
-                                <i class="fa-solid fa-heart  fs-4"></i>
-                                <span
-                                    class="position-absolute top-1 translate-middle badge rounded-pill bg-danger">1</span>
-                            </li>
-                            <li class="nav-item px-4 position-relative">
-                                <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="#" class="text-black">
-                                    <i class="fa-solid fa-cart-shopping fs-4"></i>
-                                </a>
-                                <span
-                                    class="position-absolute top-1 translate-middle badge rounded-pill bg-danger">1</span>
-                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="nav-footer">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#headerSidBar" aria-controls="headerSidBar" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="px-4">
-                        <i class="fa-solid fa-user-large fs-4"></i>
-                    </div>
+                    <ul class="navbar-nav flex-row align-items-center mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <button class="btn px-3" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                                    <i class="fa-solid fa-magnifying-glass fs-5"></i>
+                                </button>
+                            <!-- <i class="fa-solid fa-magnifying-glass fs-5"></i> -->
+                        </li>
+                        <li class="nav-item px-3 position-relative collapse navbar-collapse">
+                            <i class="fa-solid fa-heart  fs-5"></i>
+                            <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                        </li>
+                        <li class="nav-item px-3 position-relative collapse navbar-collapse">
+                            <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="#" class="text-black">
+                                <i class="fa-solid fa-cart-shopping fs-5"></i>
+                            </a>
+                            <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                        </li>
+                        <li class="nav-item px-3 position-relative">
+                            <i class="fa-solid fa-user-large fs-5 user"></i>
+                            <div class="nav-user">
+                                <span><a href="#"> Login </a> / <a href="#"> Register</a> </span>
+                                <a href="dashboard.html"> Accounts </a>
+                                <a href="order.html"> Orders </a>
+                                <a href="#"> Logout </a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
     <main>
+
         <div class="banner container-fluid p-5">
             <div class="row align-items-center">
                 <div class="col-6">
@@ -169,21 +115,8 @@
 
         <section class="categories my-5">
             <div class="container mx-auto">
-                <div class="row">
-                    <div class="col-6">
-                        <h2> Boards </h2>
-                    </div>
-                    <div class="col-6">
-
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Search Product"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                            <span class="input-group-text btn-color" id="basic-addon2">
-                                Search
-                            </span>
-                        </div>
-                    </div>
-
+                <div>
+                    <h2> Boards </h2>
                 </div>
                 <!-- swiper -->
                 <div class="swiper mySwiper ">
@@ -259,457 +192,465 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-6 my-2">
                         <a href="product_details.html">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                </div>
-                                <a href="#" class="text-decoration-none wishlist">
-                                    <img src="public/images/books/heart.png" class="heart" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"> Exploring Society India and 
-                                    Beyond Social Science Class 5 NCRT </h5>
-                                <p class="card-text py-2"> NCRT </p>
-                                <span class="text-color fs-4 text-color">
-                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                </span>
-    
-    
-                                <button id="" class="add-to-cart-btn btn btn-color" >Add to cart</button>
-    
-    
-                                <div class="items-qua ">
-                                    <div class="quantity sign minus-btn" id="">
-                                        <i class="fa-solid fa-minus"></i>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="public/images/books/joyfull mathematics class 1.png"
+                                            class="card-img-top" alt="...">
                                     </div>
-                                    <div class="quantity number" id=""> </div>
-                                    <div class="quantity sign plus-btn" id="">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+                                    <a href="#wishlist" class="text-decoration-none wishlist">
+                                        <img src="public/images/books/heart.png" class="heart" alt="">
+                                    </a>
                                 </div>
-    
+                                <div class="card-body">
+                                    <h5 class="card-title"> Exploring Society India and
+                                        Beyond Social Science Class 5 NCRT </h5>
+                                    <p class="card-text py-2"> NCRT </p>
+                                    <span class="text-color fs-4 text-color">
+                                        ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                    </span>
+
+
+                                    <button id="" class="add-to-cart-btn btn btn-color">Add to cart</button>
+
+
+                                    <div class="items-qua ">
+                                        <div class="quantity sign minus-btn" id="">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div class="quantity number" id=""> </div>
+                                        <div class="quantity sign plus-btn" id="">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6 my-2">
                         <a href="product_details.html">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                </div>
-                                <a href="#" class="text-decoration-none wishlist">
-                                    <img src="public/images/books/heart.png" class="heart" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"> Exploring Society India and 
-                                    Beyond Social Science Class 5 NCRT </h5>
-                                <p class="card-text py-2"> NCRT </p>
-                                <span class="text-color fs-4 text-color">
-                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                </span>
-    
-    
-                                <button id="" class="add-to-cart-btn btn btn-color" >Add to cart</button>
-    
-    
-                                <div class="items-qua ">
-                                    <div class="quantity sign minus-btn" id="">
-                                        <i class="fa-solid fa-minus"></i>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="public/images/books/joyfull mathematics class 1.png"
+                                            class="card-img-top" alt="...">
                                     </div>
-                                    <div class="quantity number" id=""> </div>
-                                    <div class="quantity sign plus-btn" id="">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+                                    <a href="#wishlist" class="text-decoration-none wishlist">
+                                        <img src="public/images/books/heart.png" class="heart" alt="">
+                                    </a>
                                 </div>
-    
+                                <div class="card-body">
+                                    <h5 class="card-title"> Exploring Society India and
+                                        Beyond Social Science Class 5 NCRT </h5>
+                                    <p class="card-text py-2"> NCRT </p>
+                                    <span class="text-color fs-4 text-color">
+                                        ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                    </span>
+
+
+                                    <button id="" class="add-to-cart-btn btn btn-color">Add to cart</button>
+
+
+                                    <div class="items-qua ">
+                                        <div class="quantity sign minus-btn" id="">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div class="quantity number" id=""> </div>
+                                        <div class="quantity sign plus-btn" id="">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6 my-2">
                         <a href="product_details.html">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                </div>
-                                <a href="#" class="text-decoration-none wishlist">
-                                    <img src="public/images/books/heart.png" class="heart" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"> Exploring Society India and 
-                                    Beyond Social Science Class 5 NCRT </h5>
-                                <p class="card-text py-2"> NCRT </p>
-                                <span class="text-color fs-4 text-color">
-                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                </span>
-    
-    
-                                <button id="" class="add-to-cart-btn btn btn-color" >Add to cart</button>
-    
-    
-                                <div class="items-qua ">
-                                    <div class="quantity sign minus-btn" id="">
-                                        <i class="fa-solid fa-minus"></i>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="public/images/books/joyfull mathematics class 1.png"
+                                            class="card-img-top" alt="...">
                                     </div>
-                                    <div class="quantity number" id=""> </div>
-                                    <div class="quantity sign plus-btn" id="">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+                                    <a href="#wishlist" class="text-decoration-none wishlist">
+                                        <img src="public/images/books/heart.png" class="heart" alt="">
+                                    </a>
                                 </div>
-    
+                                <div class="card-body">
+                                    <h5 class="card-title"> Exploring Society India and
+                                        Beyond Social Science Class 5 NCRT </h5>
+                                    <p class="card-text py-2"> NCRT </p>
+                                    <span class="text-color fs-4 text-color">
+                                        ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                    </span>
+
+
+                                    <button id="" class="add-to-cart-btn btn btn-color">Add to cart</button>
+
+
+                                    <div class="items-qua ">
+                                        <div class="quantity sign minus-btn" id="">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div class="quantity number" id=""> </div>
+                                        <div class="quantity sign plus-btn" id="">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6 my-2">
                         <a href="product_details.html">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                </div>
-                                <a href="#" class="text-decoration-none wishlist">
-                                    <img src="public/images/books/heart.png" class="heart" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"> Exploring Society India and 
-                                    Beyond Social Science Class 5 NCRT </h5>
-                                <p class="card-text py-2"> NCRT </p>
-                                <span class="text-color fs-4 text-color">
-                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                </span>
-    
-    
-                                <button id="" class="add-to-cart-btn btn btn-color" >Add to cart</button>
-    
-    
-                                <div class="items-qua ">
-                                    <div class="quantity sign minus-btn" id="">
-                                        <i class="fa-solid fa-minus"></i>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="public/images/books/joyfull mathematics class 1.png"
+                                            class="card-img-top" alt="...">
                                     </div>
-                                    <div class="quantity number" id=""> </div>
-                                    <div class="quantity sign plus-btn" id="">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+                                    <a href="#wishlist" class="text-decoration-none wishlist">
+                                        <img src="public/images/books/heart.png" class="heart" alt="">
+                                    </a>
                                 </div>
-    
+                                <div class="card-body">
+                                    <h5 class="card-title"> Exploring Society India and
+                                        Beyond Social Science Class 5 NCRT </h5>
+                                    <p class="card-text py-2"> NCRT </p>
+                                    <span class="text-color fs-4 text-color">
+                                        ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                    </span>
+
+
+                                    <button id="" class="add-to-cart-btn btn btn-color">Add to cart</button>
+
+
+                                    <div class="items-qua ">
+                                        <div class="quantity sign minus-btn" id="">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div class="quantity number" id=""> </div>
+                                        <div class="quantity sign plus-btn" id="">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6 my-2">
                         <a href="product_details.html">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                </div>
-                                <a href="#" class="text-decoration-none wishlist">
-                                    <img src="public/images/books/heart.png" class="heart" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"> Exploring Society India and 
-                                    Beyond Social Science Class 5 NCRT </h5>
-                                <p class="card-text py-2"> NCRT </p>
-                                <span class="text-color fs-4 text-color">
-                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                </span>
-    
-    
-                                <button id="" class="add-to-cart-btn btn btn-color" >Add to cart</button>
-    
-    
-                                <div class="items-qua ">
-                                    <div class="quantity sign minus-btn" id="">
-                                        <i class="fa-solid fa-minus"></i>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="public/images/books/joyfull mathematics class 1.png"
+                                            class="card-img-top" alt="...">
                                     </div>
-                                    <div class="quantity number" id=""> </div>
-                                    <div class="quantity sign plus-btn" id="">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+                                    <a href="#wishlist" class="text-decoration-none wishlist">
+                                        <img src="public/images/books/heart.png" class="heart" alt="">
+                                    </a>
                                 </div>
-    
+                                <div class="card-body">
+                                    <h5 class="card-title"> Exploring Society India and
+                                        Beyond Social Science Class 5 NCRT </h5>
+                                    <p class="card-text py-2"> NCRT </p>
+                                    <span class="text-color fs-4 text-color">
+                                        ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                    </span>
+
+
+                                    <button id="" class="add-to-cart-btn btn btn-color">Add to cart</button>
+
+
+                                    <div class="items-qua ">
+                                        <div class="quantity sign minus-btn" id="">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div class="quantity number" id=""> </div>
+                                        <div class="quantity sign plus-btn" id="">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6 my-2">
                         <a href="product_details.html">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                </div>
-                                <a href="#" class="text-decoration-none wishlist">
-                                    <img src="public/images/books/heart.png" class="heart" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"> Exploring Society India and 
-                                    Beyond Social Science Class 5 NCRT </h5>
-                                <p class="card-text py-2"> NCRT </p>
-                                <span class="text-color fs-4 text-color">
-                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                </span>
-    
-    
-                                <button id="" class="add-to-cart-btn btn btn-color" >Add to cart</button>
-    
-    
-                                <div class="items-qua ">
-                                    <div class="quantity sign minus-btn" id="">
-                                        <i class="fa-solid fa-minus"></i>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="public/images/books/joyfull mathematics class 1.png"
+                                            class="card-img-top" alt="...">
                                     </div>
-                                    <div class="quantity number" id=""> </div>
-                                    <div class="quantity sign plus-btn" id="">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+                                    <a href="#wishlist" class="text-decoration-none wishlist">
+                                        <img src="public/images/books/heart.png" class="heart" alt="">
+                                    </a>
                                 </div>
-    
+                                <div class="card-body">
+                                    <h5 class="card-title"> Exploring Society India and
+                                        Beyond Social Science Class 5 NCRT </h5>
+                                    <p class="card-text py-2"> NCRT </p>
+                                    <span class="text-color fs-4 text-color">
+                                        ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                    </span>
+
+
+                                    <button id="" class="add-to-cart-btn btn btn-color">Add to cart</button>
+
+
+                                    <div class="items-qua ">
+                                        <div class="quantity sign minus-btn" id="">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div class="quantity number" id=""> </div>
+                                        <div class="quantity sign plus-btn" id="">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6 my-2">
                         <a href="product_details.html">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                </div>
-                                <a href="#" class="text-decoration-none wishlist">
-                                    <img src="public/images/books/heart.png" class="heart" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"> Exploring Society India and 
-                                    Beyond Social Science Class 5 NCRT </h5>
-                                <p class="card-text py-2"> NCRT </p>
-                                <span class="text-color fs-4 text-color">
-                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                </span>
-    
-    
-                                <button id="" class="add-to-cart-btn btn btn-color" >Add to cart</button>
-    
-    
-                                <div class="items-qua ">
-                                    <div class="quantity sign minus-btn" id="">
-                                        <i class="fa-solid fa-minus"></i>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="public/images/books/joyfull mathematics class 1.png"
+                                            class="card-img-top" alt="...">
                                     </div>
-                                    <div class="quantity number" id=""> </div>
-                                    <div class="quantity sign plus-btn" id="">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+                                    <a href="#wishlist" class="text-decoration-none wishlist">
+                                        <img src="public/images/books/heart.png" class="heart" alt="">
+                                    </a>
                                 </div>
-    
+                                <div class="card-body">
+                                    <h5 class="card-title"> Exploring Society India and
+                                        Beyond Social Science Class 5 NCRT </h5>
+                                    <p class="card-text py-2"> NCRT </p>
+                                    <span class="text-color fs-4 text-color">
+                                        ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                    </span>
+
+
+                                    <button id="" class="add-to-cart-btn btn btn-color">Add to cart</button>
+
+
+                                    <div class="items-qua ">
+                                        <div class="quantity sign minus-btn" id="">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div class="quantity number" id=""> </div>
+                                        <div class="quantity sign plus-btn" id="">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6 my-2">
                         <a href="product_details.html">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                </div>
-                                <a href="#" class="text-decoration-none wishlist">
-                                    <img src="public/images/books/heart.png" class="heart" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"> Exploring Society India and 
-                                    Beyond Social Science Class 5 NCRT </h5>
-                                <p class="card-text py-2"> NCRT </p>
-                                <span class="text-color fs-4 text-color">
-                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                </span>
-    
-    
-                                <button id="" class="add-to-cart-btn btn btn-color" >Add to cart</button>
-    
-    
-                                <div class="items-qua ">
-                                    <div class="quantity sign minus-btn" id="">
-                                        <i class="fa-solid fa-minus"></i>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="public/images/books/joyfull mathematics class 1.png"
+                                            class="card-img-top" alt="...">
                                     </div>
-                                    <div class="quantity number" id=""> </div>
-                                    <div class="quantity sign plus-btn" id="">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+                                    <a href="#wishlist" class="text-decoration-none wishlist">
+                                        <img src="public/images/books/heart.png" class="heart" alt="">
+                                    </a>
                                 </div>
-    
+                                <div class="card-body">
+                                    <h5 class="card-title"> Exploring Society India and
+                                        Beyond Social Science Class 5 NCRT </h5>
+                                    <p class="card-text py-2"> NCRT </p>
+                                    <span class="text-color fs-4 text-color">
+                                        ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                    </span>
+
+
+                                    <button id="" class="add-to-cart-btn btn btn-color">Add to cart</button>
+
+
+                                    <div class="items-qua ">
+                                        <div class="quantity sign minus-btn" id="">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div class="quantity number" id=""> </div>
+                                        <div class="quantity sign plus-btn" id="">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6 my-2">
                         <a href="product_details.html">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                </div>
-                                <a href="#" class="text-decoration-none wishlist">
-                                    <img src="public/images/books/heart.png" class="heart" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"> Exploring Society India and 
-                                    Beyond Social Science Class 5 NCRT </h5>
-                                <p class="card-text py-2"> NCRT </p>
-                                <span class="text-color fs-4 text-color">
-                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                </span>
-    
-    
-                                <button id="" class="add-to-cart-btn btn btn-color" >Add to cart</button>
-    
-    
-                                <div class="items-qua ">
-                                    <div class="quantity sign minus-btn" id="">
-                                        <i class="fa-solid fa-minus"></i>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="public/images/books/joyfull mathematics class 1.png"
+                                            class="card-img-top" alt="...">
                                     </div>
-                                    <div class="quantity number" id=""> </div>
-                                    <div class="quantity sign plus-btn" id="">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+                                    <a href="#wishlist" class="text-decoration-none wishlist">
+                                        <img src="public/images/books/heart.png" class="heart" alt="">
+                                    </a>
                                 </div>
-    
+                                <div class="card-body">
+                                    <h5 class="card-title"> Exploring Society India and
+                                        Beyond Social Science Class 5 NCRT </h5>
+                                    <p class="card-text py-2"> NCRT </p>
+                                    <span class="text-color fs-4 text-color">
+                                        ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                    </span>
+
+
+                                    <button id="" class="add-to-cart-btn btn btn-color">Add to cart</button>
+
+
+                                    <div class="items-qua ">
+                                        <div class="quantity sign minus-btn" id="">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div class="quantity number" id=""> </div>
+                                        <div class="quantity sign plus-btn" id="">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6 my-2">
                         <a href="product_details.html">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                </div>
-                                <a href="#" class="text-decoration-none wishlist">
-                                    <img src="public/images/books/heart.png" class="heart" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"> Exploring Society India and 
-                                    Beyond Social Science Class 5 NCRT </h5>
-                                <p class="card-text py-2"> NCRT </p>
-                                <span class="text-color fs-4 text-color">
-                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                </span>
-    
-    
-                                <button id="" class="add-to-cart-btn btn btn-color" >Add to cart</button>
-    
-    
-                                <div class="items-qua ">
-                                    <div class="quantity sign minus-btn" id="">
-                                        <i class="fa-solid fa-minus"></i>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="public/images/books/joyfull mathematics class 1.png"
+                                            class="card-img-top" alt="...">
                                     </div>
-                                    <div class="quantity number" id=""> </div>
-                                    <div class="quantity sign plus-btn" id="">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+                                    <a href="#wishlist" class="text-decoration-none wishlist">
+                                        <img src="public/images/books/heart.png" class="heart" alt="">
+                                    </a>
                                 </div>
-    
+                                <div class="card-body">
+                                    <h5 class="card-title"> Exploring Society India and
+                                        Beyond Social Science Class 5 NCRT </h5>
+                                    <p class="card-text py-2"> NCRT </p>
+                                    <span class="text-color fs-4 text-color">
+                                        ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                    </span>
+
+
+                                    <button id="" class="add-to-cart-btn btn btn-color">Add to cart</button>
+
+
+                                    <div class="items-qua ">
+                                        <div class="quantity sign minus-btn" id="">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div class="quantity number" id=""> </div>
+                                        <div class="quantity sign plus-btn" id="">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6 my-2">
                         <a href="product_details.html">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                </div>
-                                <a href="#" class="text-decoration-none wishlist">
-                                    <img src="public/images/books/heart.png" class="heart" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"> Exploring Society India and 
-                                    Beyond Social Science Class 5 NCRT </h5>
-                                <p class="card-text py-2"> NCRT </p>
-                                <span class="text-color fs-4 text-color">
-                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                </span>
-    
-    
-                                <button id="" class="add-to-cart-btn btn btn-color" >Add to cart</button>
-    
-    
-                                <div class="items-qua ">
-                                    <div class="quantity sign minus-btn" id="">
-                                        <i class="fa-solid fa-minus"></i>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="public/images/books/joyfull mathematics class 1.png"
+                                            class="card-img-top" alt="...">
                                     </div>
-                                    <div class="quantity number" id=""> </div>
-                                    <div class="quantity sign plus-btn" id="">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+                                    <a href="#wishlist" class="text-decoration-none wishlist">
+                                        <img src="public/images/books/heart.png" class="heart" alt="">
+                                    </a>
                                 </div>
-    
+                                <div class="card-body">
+                                    <h5 class="card-title"> Exploring Society India and
+                                        Beyond Social Science Class 5 NCRT </h5>
+                                    <p class="card-text py-2"> NCRT </p>
+                                    <span class="text-color fs-4 text-color">
+                                        ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                    </span>
+
+
+                                    <button id="" class="add-to-cart-btn btn btn-color">Add to cart</button>
+
+
+                                    <div class="items-qua ">
+                                        <div class="quantity sign minus-btn" id="">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div class="quantity number" id=""> </div>
+                                        <div class="quantity sign plus-btn" id="">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-6 my-2">
                         <a href="product_details.html">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                </div>
-                                <a href="#" class="text-decoration-none wishlist">
-                                    <img src="public/images/books/heart.png" class="heart" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"> Exploring Society India and 
-                                    Beyond Social Science Class 5 NCRT </h5>
-                                <p class="card-text py-2"> NCRT </p>
-                                <span class="text-color fs-4 text-color">
-                                    ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                </span>
-    
-    
-                                <button id="" class="add-to-cart-btn btn btn-color" >Add to cart</button>
-    
-    
-                                <div class="items-qua ">
-                                    <div class="quantity sign minus-btn" id="">
-                                        <i class="fa-solid fa-minus"></i>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="public/images/books/joyfull mathematics class 1.png"
+                                            class="card-img-top" alt="...">
                                     </div>
-                                    <div class="quantity number" id=""> </div>
-                                    <div class="quantity sign plus-btn" id="">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
+                                    <a href="#wishlist" class="text-decoration-none wishlist">
+                                        <img src="public/images/books/heart.png" class="heart" alt="">
+                                    </a>
                                 </div>
-    
+                                <div class="card-body">
+                                    <h5 class="card-title"> Exploring Society India and
+                                        Beyond Social Science Class 5 NCRT </h5>
+                                    <p class="card-text py-2"> NCRT </p>
+                                    <span class="text-color fs-4 text-color">
+                                        ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                    </span>
+                                    <button id="" class="add-to-cart-btn btn btn-color">Add to cart</button>
+                                    <div class="items-qua ">
+                                        <div class="quantity sign minus-btn" id="">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <div class="quantity number" id=""> </div>
+                                        <div class="quantity sign plus-btn" id="">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </a>
                     </div>
                 </div>
@@ -721,14 +662,14 @@
         <section class="stationary my-5">
 
             <div class="container mx-auto">
-               <div class="row align-items-center my-3">
-                <div class="col-6">
-                    <h2> Stationary </h2>
+                <div class="row align-items-center my-3">
+                    <div class="col-6">
+                        <h2> Stationary </h2>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <a href="stationary.html" class="btn btn-color"> View More </a>
+                    </div>
                 </div>
-                <div class="col-6 d-flex justify-content-end">
-                    <a href="stationary.html" class="btn btn-color"> View More </a>
-                </div>
-               </div>
                 <!-- <div class="row"> -->
 
                 <div class="swiper myStationarySwiper">
@@ -738,7 +679,7 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="card-img">
-                                            <img src="public/images/stationary/ballpens.jpg"  alt="...">
+                                            <img src="public/images/stationary/ballpens.jpg" alt="...">
                                         </div>
                                         <a href="#" class="text-decoration-none wishlist">
                                             <img src="public/images/books/heart.png" class="heart" alt="">
@@ -746,21 +687,21 @@
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title"> Ballpens </h5>
-                                        
+
                                         <!-- <span class="text-color fs-4 text-color">
                                             ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
                                         </span> -->
-        
+
                                     </div>
                                 </div>
-                                </a>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="product_details.html">
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="card-img">
-                                            <img src="public/images/stationary/chartpaper.png"  alt="...">
+                                            <img src="public/images/stationary/chartpaper.png" alt="...">
                                         </div>
                                         <a href="#" class="text-decoration-none wishlist">
                                             <img src="public/images/books/heart.png" class="heart" alt="">
@@ -768,21 +709,21 @@
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title"> Chartpaper </h5>
-                                        
+
                                         <!-- <span class="text-color fs-4 text-color">
                                             ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
                                         </span> -->
-            
+
                                     </div>
                                 </div>
-                                </a>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="product_details.html">
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="card-img">
-                                            <img src="public/images/stationary/lunchbox.png"  alt="...">
+                                            <img src="public/images/stationary/lunchbox.png" alt="...">
                                         </div>
                                         <a href="#" class="text-decoration-none wishlist">
                                             <img src="public/images/books/heart.png" class="heart" alt="">
@@ -790,21 +731,21 @@
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title"> Lunchbox </h5>
-                                        
+
                                         <!-- <span class="text-color fs-4 text-color">
                                             ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
                                         </span> -->
-            
+
                                     </div>
                                 </div>
-                                </a>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="product_details.html">
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="card-img">
-                                            <img src="public/images/stationary/pencil.png"  alt="...">
+                                            <img src="public/images/stationary/pencil.png" alt="...">
                                         </div>
                                         <a href="#" class="text-decoration-none wishlist">
                                             <img src="public/images/books/heart.png" class="heart" alt="">
@@ -812,21 +753,21 @@
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title"> Pencil kit </h5>
-                                        
+
                                         <!-- <span class="text-color fs-4 text-color">
                                             ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
                                         </span> -->
-            
+
                                     </div>
                                 </div>
-                                </a>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="product_details.html">
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="card-img">
-                                            <img src="public/images/stationary/schoolbag.png"  alt="...">
+                                            <img src="public/images/stationary/schoolbag.png" alt="...">
                                         </div>
                                         <a href="#" class="text-decoration-none wishlist">
                                             <img src="public/images/books/heart.png" class="heart" alt="">
@@ -834,21 +775,21 @@
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title"> Schoolbag </h5>
-                                        
+
                                         <!-- <span class="text-color fs-4 text-color">
                                             ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
                                         </span> -->
-            
+
                                     </div>
                                 </div>
-                                </a>
+                            </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="product_details.html">
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="card-img">
-                                            <img src="public/images/stationary/Bottle.png"  alt="...">
+                                            <img src="public/images/stationary/Bottle.png" alt="...">
                                         </div>
                                         <a href="#" class="text-decoration-none wishlist">
                                             <img src="public/images/books/heart.png" class="heart" alt="">
@@ -856,16 +797,16 @@
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title"> Bottle </h5>
-                                        
+
                                         <!-- <span class="text-color fs-4 text-color">
                                             ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
                                         </span> -->
-            
+
                                     </div>
                                 </div>
-                                </a>
+                            </a>
                         </div>
-                       
+
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -874,281 +815,57 @@
             </div>
         </section>
         <!---------------------------------------------------------- Stationary section end ----------------------------------------------->
+    </main>
 
-
-        <!-- <section class="cashback-coupen my-5">
-            <div class="container mx-auto text-center p-5 rounded-5" style="background-color: var(--bg-color)">
-                <h1 class="fs-3">Get 30% cashback on order of ₹15000</h1>
-                <button class="btn-color border-0 p-2 my-2">
-                    Use coupen code : G889FR771H
-                </button>
-            </div>
-        </section> -->
-
-        <!--------------------------------------------------------- trending books section start ---------------------------------------------->
-        <!-- <section class="trending-books">
-            <div class="container mx-auto">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-4">
-                        <h4 class="position-relative">Top Selling</h4>
-
-                        <div class="book row justify-content-between mt-5 mb-3">
-                            <div class="col-3 overflow-hidden">
-                                <a href="product_details.html">
-                                    <img src="public/images/books/physics.jpg" class="w-100 h-inherit" alt="" />
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <a href="product_details.html" class="text-decoration-none">
-                                    <h5>Book name</h5>
-                                </a>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <p class="text-color fs-4">₹80.00</p>
-                            </div>
-                        </div>
-                        <div class="book row justify-content-between my-3">
-                            <div class="col-3 overflow-hidden">
-                                <a href="product_details.html">
-                                    <img src="public/images/books/physics.jpg" class="w-100 h-inherit" alt="" />
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <a href="product_details.html" class="text-decoration-none">
-                                    <h5>Book name</h5>
-                                </a>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <p class="text-color fs-4">₹80.00</p>
-                            </div>
-                        </div>
-                        <div class="book row justify-content-between my-3">
-                            <div class="col-3 overflow-hidden">
-                                <a href="product_details.html">
-                                    <img src="public/images/books/physics.jpg" class="w-100 h-inherit" alt="" />
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <a href="product_details.html" class="text-decoration-none">
-                                    <h5>Book name</h5>
-                                </a>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <p class="text-color fs-4">₹80.00</p>
-                            </div>
-                        </div>
-                        <div class="book row justify-content-between my-3">
-                            <div class="col-3 overflow-hidden">
-                                <a href="product_details.html">
-                                    <img src="public/images/books/physics.jpg" class="w-100 h-inherit" alt="" />
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <a href="product_details.html" class="text-decoration-none">
-                                    <h5>Book name</h5>
-                                </a>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <p class="text-color fs-4">₹80.00</p>
-                            </div>
+    <!-------------------------- modal for view product ---------------------->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <a class="link-body-emphasis" href="index.html">
+                            <img src="public/images/logo/logo.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="col-lg-7 col-md-5">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search Product"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                            <span class="input-group-text btn-color" id="basic-addon2">
+                                <i class="fa-solid fa-magnifying-glass  fs-5"></i>
+                            </span>
                         </div>
                     </div>
-
-                    <div class="col-lg-4">
-                        <h4 class="position-relative">Trending Products</h4>
-
-                        <div class="book row justify-content-between mt-5 mb-3">
-                            <div class="col-3 overflow-hidden">
-                                <a href="product_details.html">
-                                    <img src="public/images/books/physics.jpg" class="w-100 h-inherit" alt="" />
+                    <div class="col-2">
+                        <ul class="navbar-nav  flex-row align-items-center justify-content-end mb-2 mb-lg-0">
+                            <li class="nav-item px-3 position-relative">
+                                <i class="fa-solid fa-heart  fs-5"></i>
+                                <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                            </li>
+                            <li class="nav-item px-3 position-relative">
+                                <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="#" class="text-black">
+                                    <i class="fa-solid fa-cart-shopping fs-5"></i>
                                 </a>
-                            </div>
-                            <div class="col-8">
-                                <a href="product_details.html" class="text-decoration-none">
-                                    <h5>Book name</h5>
-                                </a>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <p class="text-color fs-4">₹80.00</p>
-                            </div>
-                        </div>
-                        <div class="book row justify-content-between my-3">
-                            <div class="col-3 overflow-hidden">
-                                <a href="product_details.html">
-                                    <img src="public/images/books/physics.jpg" class="w-100 h-inherit" alt="" />
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <a href="product_details.html" class="text-decoration-none">
-                                    <h5>Book name</h5>
-                                </a>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <p class="text-color fs-4">₹80.00</p>
-                            </div>
-                        </div>
-                        <div class="book row justify-content-between my-3">
-                            <div class="col-3 overflow-hidden">
-                                <a href="product_details.html">
-                                    <img src="public/images/books/physics.jpg" class="w-100 h-inherit" alt="" />
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <a href="product_details.html" class="text-decoration-none">
-                                    <h5>Book name</h5>
-                                </a>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <p class="text-color fs-4">₹80.00</p>
-                            </div>
-                        </div>
-                        <div class="book row justify-content-between my-3">
-                            <div class="col-3 overflow-hidden">
-                                <a href="product_details.html">
-                                    <img src="public/images/books/physics.jpg" class="w-100 h-inherit" alt="" />
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <a href="product_details.html" class="text-decoration-none">
-                                    <h5>Book name</h5>
-                                </a>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <p class="text-color fs-4">₹80.00</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <h4 class="position-relative">Recently Added</h4>
-
-                        <div class="book row justify-content-between mt-5 mb-3">
-                            <div class="col-3 overflow-hidden">
-                                <a href="product_details.html">
-                                    <img src="public/images/books/physics.jpg" class="w-100 h-inherit" alt="" />
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <a href="product_details.html" class="text-decoration-none">
-                                    <h5>Book name</h5>
-                                </a>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <p class="text-color fs-4">₹80.00</p>
-                            </div>
-                        </div>
-                        <div class="book row justify-content-between my-3">
-                            <div class="col-3 overflow-hidden">
-                                <a href="product_details.html">
-                                    <img src="public/images/books/physics.jpg" class="w-100 h-inherit" alt="" />
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <a href="product_details.html" class="text-decoration-none">
-                                    <h5>Book name</h5>
-                                </a>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <p class="text-color fs-4">₹80.00</p>
-                            </div>
-                        </div>
-                        <div class="book row justify-content-between my-3">
-                            <div class="col-3 overflow-hidden">
-                                <a href="product_details.html">
-                                    <img src="public/images/books/physics.jpg" class="w-100 h-inherit" alt="" />
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <a href="product_details.html" class="text-decoration-none">
-                                    <h5>Book name</h5>
-                                </a>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <p class="text-color fs-4">₹80.00</p>
-                            </div>
-                        </div>
-                        <div class="book row justify-content-between my-3">
-                            <div class="col-3 overflow-hidden">
-                                <a href="product_details.html">
-                                    <img src="public/images/books/physics.jpg" class="w-100 h-inherit" alt="" />
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <a href="product_details.html" class="text-decoration-none">
-                                    <h5>Book name</h5>
-                                </a>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <p class="text-color fs-4">₹80.00</p>
-                            </div>
-                        </div>
+                                <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                            </li>
+                            <li class="nav-item px-3">
+                                <i class="fa-solid fa-user-large fs-5"></i>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section> -->
-        <!--------------------------------------------------------- trending books section end ---------------------------------------------->
+        </div>
+    </div>
 
-        <!-- <section class="newsletter my-4">
-            <div class="container mx-auto rounded-5 text-center p-5" style="background-color: var(--bg-color)">
-                <h1>Join Our Newsletter and Get...</h1>
-                <p>20% discount for your first order</p>
-
-                <form class="w-50 mx-auto">
-                    <div class="mb-3">
-                        <div class="d-flex position-relative">
-                            <i class="fa-solid fa-envelope email position-absolute"></i>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                placeholder="Enter your email" aria-describedby="emailHelp" />
-                            <button class="btn-color border-0 position-absolute subscribe">
-                                Subscribe
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </section> -->
-    </main>
-
-     <!-- add to cart modal -->
-     <div class="cart-modal">
-        <div class="modal fade justify-content-end" id="exampleModal" tabindex="-1"
-            aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- add to cart modal -->
+    <div class="cart-modal">
+        <div class="modal fade justify-content-end" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -1274,6 +991,7 @@
         </div>
     </div>
 </div> -->
+
     <footer>
         <div class="container-fluid">
             <div class="footer-links border-bottom border-5">
@@ -1301,7 +1019,7 @@
                         <h4 class="text-black fw-bold"> Policy </h4>
                         <a href="terms_conditions.html" class="text-decoration-none fs-5"> Terms and Condition </a>
                         <a href="privacy_policy.html" class="text-decoration-none fs-5"> Privacy and policy </a>
-                        <a href="payment_refund.html" class="text-decoration-none fs-5"> Payment and Refund  </a>
+                        <a href="payment_refund.html" class="text-decoration-none fs-5"> Payment and Refund </a>
                         <a href="shipping_policy.html" class="text-decoration-none fs-5"> Shipping Policy </a>
                     </div>
                     <div class="col-lg-2 my-2 ">
@@ -1342,14 +1060,14 @@
                 </div>
             </div>
 
-            <div class="row align-items-center my-3">
-                <div class="col-6">
+            <div class="row align-items-center">
+                <div class="col-6 my-2">
                     <p class="fs-4">2024 Copyright eclassmates</p>
                 </div>
-                <div class="col-6 text-end">
-                   <a href="#"> <i class="fa-brands fa-square-twitter fs-4"></i></a>  
-                 <a href="#"> <i class="fa-brands fa-square-facebook fs-4"></i></a>  
-                 <a href="#"> <i class="fa-brands fa-square-instagram fs-4"></i></a>
+                <div class="col-6 text-end my-2">
+                    <a href="#"> <i class="fa-brands fa-square-twitter fs-4"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-facebook fs-4"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-instagram fs-4"></i></a>
                 </div>
             </div>
         </div>

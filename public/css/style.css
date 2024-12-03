@@ -7,7 +7,7 @@
 
 html,
 body {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
 }
 
@@ -102,6 +102,21 @@ body {
     color: white !important;
 }
 
+.navbar-header {
+    position: sticky !important;
+    z-index: 12;
+    top: 0;
+    transition: .3s ease-in-out;
+    padding: 10px 0;
+    background-color: white;
+}
+
+.nav-scrolled {
+    transition: .3s ease-in-out;
+    padding: 0 0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
 .navbar .offcanvas.offcanvas-end {
     width: 280px;
 }
@@ -125,6 +140,9 @@ header .badge{
         margin-left: auto !important;
         margin-right: auto !important;
     }
+    header .nav-user{
+        right: 10px !important;
+    }
 }
 
 .nav-footer {
@@ -132,6 +150,25 @@ header .badge{
     align-items: center;
 }
 
+header .nav-user{
+    width: 10rem;
+    background-color: white;
+    position: absolute;
+    top: 120%;
+    right: -50px;
+    /* left: -10px; */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+}
+header .nav-user a{
+    text-decoration: none;
+    color: black;
+}
 /************ header end**************/
 /************ main start ****************/
 .banner {
@@ -206,6 +243,11 @@ header .badge{
     opacity: 0.9;
 }
 
+@media (min-width: 1200px) {
+    .col-xl-20{
+        width: 20%;
+    }
+}
 .card {
     position: relative;
     overflow: hidden;
@@ -244,8 +286,15 @@ header .badge{
 }
 
 .card-body {
-    height: 30vh;
+    height: 250px;
     position: relative;
+}
+.card-title{
+    line-height: 1.5;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
 }
 .card-body .cart{
     position: absolute;
@@ -263,12 +312,13 @@ header .badge{
     position: absolute;
     opacity: 0;
     left: 50%;
-    bottom: -50px;
+    /* bottom: -50px; */
     transform: translate(-50%, -50%);
-    background: #fff;
+    /* background: #fff;
     box-shadow: 1px 1px 1px 2px rgb(247, 242, 242);
-    border-radius: 5px;
-    padding: 5px;
+    border-radius: 5px; */
+    /* padding: 5px; */
+    display: flex;
 }
 
 .card:hover .book-option {
@@ -345,9 +395,8 @@ header .badge{
 /**************** main end ***********************/
 
 footer {
-    height: 42vh;
     background-color: var(--bg-color);
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     margin-top: 5%;
     margin-bottom: 0;
 }

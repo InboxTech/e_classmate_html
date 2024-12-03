@@ -12,79 +12,33 @@
 </head>
 
 <body>
-    <header>
-        <!-- header offer section -->
-        <!-- <div class="bg-primary">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-2 col-md-2 location-header">
-                        <i class="fa-solid fa-location-dot"></i> Location
-                    </div>
-                    <div class="col-lg-8 col-md-8 offer-header">
-                        <div class="offer-container">
-                            <div class="offer-slide">
-                                <strong class="ms-1">New Coupon Code: 123456 </strong>
-                            </div>
-                            <div class="offer-slide">
-                                Something you love is now on sale!
-                                <a href="shop-left-sidebar.html" class="text-white" tabindex="-1">Buy Now !</a>
-                            </div>
-                           <div class="offer-slide">
-                                Free Shipping on Orders Over $50!
-                            </div>
-                            <div class="offer-slide">
-                                Free Shipping on Orders Over $50!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 d-flex justify-content-end">
-                        <div class="dropdown">
-                            <button class="btn text-light border-0 dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                English
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">Hindi</a></li>
-                                <li><a class="dropdown-item" href="#">Gujarati</a></li>
-                                <li><a class="dropdown-item" href="#">Language</a></li>
-                            </ul>
-                        </div>
-                        <div class="vr my-2"></div>
-                        <div class="dropdown">
-                            <button class="btn text-light border-0 dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                USD
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">IND</a></li>
-                                <li><a class="dropdown-item" href="#">ENG</a></li>
-                                <li><a class="dropdown-item" href="#">GUJ</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+    <header class="navbar-header">
         <!-- Nav-bar here -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-white">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="public/images/logo/logo.png" alt="" />
-                </a>
+                <div class="navbar-brand">
+                    <a class="collapse navbar-collapse" href="index.html">
+                        <img src="public/images/logo/logo.png" alt="" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#headerSidBar" aria-controls="headerSidBar" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
 
-                <div class="offcanvas offcanvas-end navbar-collapse" id="headerSidBar">
+                    </button>
+                </div>
+                <div class="navbar-toggler border-0">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="public/images/logo/logo.png" alt="" />
+                    </a>
+                </div>
+                <div class="offcanvas offcanvas-start navbar-collapse" id="headerSidBar">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasTopLabel">Menu</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                            <!-- <li class="nav-item">
-                                <a class="nav-link active fs-4" aria-current="page" href="#">
-                                    Home
-                                </a>
-                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link fs-4" href="book.html"> Books </a>
                             </li>
@@ -94,49 +48,38 @@
                             <li class="nav-item">
                                 <a class="nav-link fs-4" href="#"> Contact Us </a>
                             </li>
-                            <!-- <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li> -->
-                            <!-- <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li> -->
-                        </ul>
-                        <ul class="navbar-nav flex-row align-items-center mb-2 mb-lg-0">
-                            <li class="nav-item px-4 position-relative">
-                                <i class="fa-solid fa-heart  fs-4"></i>
-                                <span
-                                    class="position-absolute top-1 translate-middle badge rounded-pill bg-danger">1</span>
-                            </li>
-                            <li class="nav-item px-4 position-relative">
-                                <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="#" class="text-black">
-                                    <i class="fa-solid fa-cart-shopping fs-4"></i>
-                                </a>
-                                <span
-                                    class="position-absolute top-1 translate-middle badge rounded-pill bg-danger">1</span>
-                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="nav-footer">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#headerSidBar" aria-controls="headerSidBar" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="px-4">
-                        <i class="fa-solid fa-user-large fs-4"></i>
-                    </div>
+                    <ul class="navbar-nav flex-row align-items-center mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <button class="btn px-3" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                                    <i class="fa-solid fa-magnifying-glass fs-5"></i>
+                                </button>
+                            <!-- <i class="fa-solid fa-magnifying-glass fs-5"></i> -->
+                        </li>
+                        <li class="nav-item px-3 position-relative collapse navbar-collapse">
+                            <i class="fa-solid fa-heart  fs-5"></i>
+                            <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                        </li>
+                        <li class="nav-item px-3 position-relative collapse navbar-collapse">
+                            <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="#" class="text-black">
+                                <i class="fa-solid fa-cart-shopping fs-5"></i>
+                            </a>
+                            <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                        </li>
+                        <li class="nav-item px-3 position-relative">
+                            <i class="fa-solid fa-user-large fs-5 user"></i>
+                            <div class="nav-user">
+                                <span><a href="#"> Login </a> / <a href="#"> Register</a> </span>
+                                <a href="dashboard.html"> Accounts </a>
+                                <a href="order.html"> Orders </a>
+                                <a href="#"> Logout </a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -351,7 +294,7 @@
                         <h4 class="text-black fw-bold"> Policy </h4>
                         <a href="terms_conditions.html" class="text-decoration-none fs-5"> Terms and Condition </a>
                         <a href="privacy_policy.html" class="text-decoration-none fs-5"> Privacy and policy </a>
-                        <a href="payment_refund.html" class="text-decoration-none fs-5"> Payment and Refund  </a>
+                        <a href="payment_refund.html" class="text-decoration-none fs-5"> Payment and Refund </a>
                         <a href="shipping_policy.html" class="text-decoration-none fs-5"> Shipping Policy </a>
                     </div>
                     <div class="col-lg-2 my-2 ">
@@ -392,14 +335,14 @@
                 </div>
             </div>
 
-            <div class="row align-items-center my-3">
-                <div class="col-6">
+            <div class="row align-items-center">
+                <div class="col-6 my-2">
                     <p class="fs-4">2024 Copyright eclassmates</p>
                 </div>
-                <div class="col-6 text-end">
-                   <a href="#"> <i class="fa-brands fa-square-twitter fs-4"></i></a>  
-                 <a href="#"> <i class="fa-brands fa-square-facebook fs-4"></i></a>  
-                 <a href="#"> <i class="fa-brands fa-square-instagram fs-4"></i></a>
+                <div class="col-6 text-end my-2">
+                    <a href="#"> <i class="fa-brands fa-square-twitter fs-4"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-facebook fs-4"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-instagram fs-4"></i></a>
                 </div>
             </div>
         </div>
