@@ -326,34 +326,32 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // cancel page js
-window.onload = function () {
-  document.addEventListener("DOMContentLoaded", function () {
-    var continue_btn = document.querySelector("#continue");
-    var change_btn = document.querySelector("#change");
-    var refund = document.querySelector(".refund-new");
-    var cancel_reason = document.querySelector(".cancel-reason");
-    var selected_reason = document.querySelector("#selected-reason");
-    var select_reason = document.querySelector("#select-reason");
+document.addEventListener("DOMContentLoaded", function () {
+  var continue_btn = document.querySelector("#continue");
+  var change_btn = document.querySelector("#change");
+  var refund = document.querySelector(".refund-new");
+  var cancel_reason = document.querySelector(".cancel-reason");
+  var selected_reason = document.querySelector("#selected-reason");
+  var select_reason = document.querySelector("#select-reason");
 
-    // Hide change button by default
+  // Hide change button by default
 
-    continue_btn.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevents the form from submitting
-      refund.style.display = "block";
-      cancel_reason.style.display = "none";
-      change_btn.style.display = "block";
-      selected_reason.style.display = "block";
-      selected_reason.innerHTML = select_reason.value; // Corrected line
-    });
-
-    change_btn.addEventListener("click", function () {
-      cancel_reason.style.display = "block";
-      refund.style.display = "none";
-      change_btn.style.display = "none";
-      selected_reason.style.display = "none";
-    });
+  continue_btn.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevents the form from submitting
+    refund.style.display = "block";
+    cancel_reason.style.display = "none";
+    change_btn.style.display = "block";
+    selected_reason.style.display = "block";
+    selected_reason.innerHTML = select_reason.value; // Corrected line
   });
-};
+
+  change_btn.addEventListener("click", function () {
+    cancel_reason.style.display = "block";
+    refund.style.display = "none";
+    change_btn.style.display = "none";
+    selected_reason.style.display = "none";
+  });
+});
 
 //plus minus btn an dadd to cart btn
 document.addEventListener("DOMContentLoaded", function () {
@@ -398,12 +396,12 @@ document.addEventListener("DOMContentLoaded", function () {
     minusBtn.addEventListener("click", function () {
       if (td) {
         // If td exists, do not change quantity
-        if(n>1){
-        n -= 1;
-        numberElements[index].textContent = n;
-        localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
-        updateMinusButton();
-      }
+        if (n > 1) {
+          n -= 1;
+          numberElements[index].textContent = n;
+          localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
+          updateMinusButton();
+        }
         return;
       }
       if (n > 1) {
@@ -422,17 +420,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Button to restore item quantity controls
-    if(!td){
-    btns[index].addEventListener("click", function () {
-      n = 1; // Reset the number to default value
-      numberElements[index].textContent = n; // Update the UI
-      items[index].style.display = "flex"; // Show the quantity controls
-      btns[index].style.display = "none"; // Hide the Add to Cart button
-      localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
-      localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
-      updateMinusButton();
-    });
-  }
+    if (!td) {
+      btns[index].addEventListener("click", function () {
+        n = 1; // Reset the number to default value
+        numberElements[index].textContent = n; // Update the UI
+        items[index].style.display = "flex"; // Show the quantity controls
+        btns[index].style.display = "none"; // Hide the Add to Cart button
+        localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
+        localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
+        updateMinusButton();
+      });
+    }
     // Plus button increases the number
     plusBtns[index].addEventListener("click", function () {
       if (td) {
@@ -441,15 +439,15 @@ document.addEventListener("DOMContentLoaded", function () {
         numberElements[index].textContent = n;
         localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
         return;
-      }else{
-      n += 1;
-      numberElements[index].textContent = n;
-      btns[index].style.display = "none"; // Hide the Add to Cart button
-      items[index].style.display = "flex"; // Show the quantity controls
-      localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
-      localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
-    }
-    updateMinusButton();
+      } else {
+        n += 1;
+        numberElements[index].textContent = n;
+        btns[index].style.display = "none"; // Hide the Add to Cart button
+        items[index].style.display = "flex"; // Show the quantity controls
+        localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
+        localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
+      }
+      updateMinusButton();
     });
   });
 });
@@ -475,20 +473,20 @@ function togglePassword(event, inputId, className) {
   const pass = document.getElementById(inputId); // Use ID to select the input field
 
   if (pass) {
-      // Determine the current state of the password input field
-      const isPassword = pass.type === 'password';
+    // Determine the current state of the password input field
+    const isPassword = pass.type === 'password';
 
-      // Toggle the type of the input field
-      pass.type = isPassword ? 'text' : 'password';
+    // Toggle the type of the input field
+    pass.type = isPassword ? 'text' : 'password';
 
-      // Toggle the icon class (eye-open/eye-slash)
-      if (isPassword) {
-          icon.classList.remove(className); // Remove 'fa-eye-slash'
-          icon.classList.add('fa-eye'); // Add 'fa-eye'
-      } else {
-          icon.classList.remove('fa-eye'); // Remove 'fa-eye'
-          icon.classList.add(className); // Add 'fa-eye-slash'
-      }
+    // Toggle the icon class (eye-open/eye-slash)
+    if (isPassword) {
+      icon.classList.remove(className); // Remove 'fa-eye-slash'
+      icon.classList.add('fa-eye'); // Add 'fa-eye'
+    } else {
+      icon.classList.remove('fa-eye'); // Remove 'fa-eye'
+      icon.classList.add(className); // Add 'fa-eye-slash'
+    }
   }
 }
 
@@ -499,14 +497,14 @@ function triggerFileInput() {
 function changeProfile(input) {
   var file = input.files[0];
   if (file) {
-      var reader = new FileReader();
-      
-      reader.onload = function(e) {
-          // Update the src attribute of the profile image with the selected file
-          document.getElementById('profile').src = e.target.result;
-      }
-      
-      // Read the file as a data URL
-      reader.readAsDataURL(file);
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      // Update the src attribute of the profile image with the selected file
+      document.getElementById('profile').src = e.target.result;
+    }
+
+    // Read the file as a data URL
+    reader.readAsDataURL(file);
   }
 }

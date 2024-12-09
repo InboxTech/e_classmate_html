@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Public Sans",sans-serif;
+    font-family: "Public Sans", sans-serif;
 }
+
 html,
 body {
     /* height: 100%; */
@@ -16,49 +17,59 @@ body {
     --bg-color: #e5ecf2;
     --text-color: #83beed;
 }
-.btn-color{
-    background-color: var(--color)!important;
-    color: white!important;
+
+.btn-color {
+    background-color: var(--color) !important;
+    color: white !important;
     font-weight: 600;
     font-size: 18px;
 }
-.text-color{
-    color:#83beed !important;
+
+.text-color {
+    color: #83beed !important;
 }
-.progres-primary{
+
+.progres-primary {
     background-color: green !important;
 }
-.progres-secondary{
+
+.progres-secondary {
     background-color: orange !important;
 }
-.progres-danger{
+
+.progres-danger {
     background-color: red !important;
 }
 
-.modal-content{
-    border-radius: 0px !important ;
-  }
-  /* sidebar cart modal*/
-  
-  .cart-modal .modal-dialog{
+.modal-content {
+    border-radius: 0px !important;
+}
+
+/* sidebar cart modal*/
+
+.cart-modal .modal-dialog {
     margin: 0 0 0 auto;
     height: calc(100% - var(--bs-modal-margin)* 0.01);
-  }
-  .cart-modal .modal.fade .modal-dialog {
+}
+
+.cart-modal .modal.fade .modal-dialog {
     transition: transform 0.2s ease-out;
     transform: translate(100%, 0);
-  }
-  
-  .cart-modal .modal.fade.show .modal-dialog {
+}
+
+.cart-modal .modal.fade.show .modal-dialog {
     transform: translate(0, 0);
-  }
-  .cart-modal .modal-content{
+}
+
+.cart-modal .modal-content {
     height: 100% !important;
-  }
-  .modal button:hover{
-   background-color: white;
-  }
-  p{
+}
+
+.modal button:hover {
+    background-color: white;
+}
+
+p {
     margin-bottom: 0;
 }
 
@@ -120,10 +131,12 @@ body {
 .navbar .offcanvas-body {
     width: 100%;
 }
-header .badge{
+
+header .badge {
     top: -2px;
     right: -3px;
 }
+
 @media (max-width: 768px) {
 
     .location-header,
@@ -135,7 +148,8 @@ header .badge{
         margin-left: auto !important;
         margin-right: auto !important;
     }
-    header .nav-user{
+
+    header .nav-user {
         right: 10px !important;
     }
 }
@@ -145,7 +159,7 @@ header .badge{
     align-items: center;
 }
 
-header .nav-user{
+header .nav-user {
     width: 10rem;
     background-color: white;
     position: absolute;
@@ -160,22 +174,27 @@ header .nav-user{
     justify-content: center;
     display: none;
 }
-header .nav-user a{
+
+header .nav-user a {
     text-decoration: none;
     color: black;
 }
+
 /************ header end**************/
 /************ main start ****************/
-.banner{
+.banner {
     background-color: var(--bg-color);
 }
-.banner .book-img:nth-child(1){
-   transform: rotate(20deg);
+
+.banner .book-img:nth-child(1) {
+    transform: rotate(20deg);
 }
-.banner .book-img:nth-child(2){
+
+.banner .book-img:nth-child(2) {
     transform: rotate(-20deg);
- }
- .base{
+}
+
+.base {
     width: 100%;
     height: auto;
     border-bottom: 60px solid #5f84a3;
@@ -236,10 +255,11 @@ header .nav-user a{
 }
 
 @media (min-width: 1200px) {
-    .col-xl-20{
+    .col-xl-20 {
         width: 20%;
     }
 }
+
 .card {
     position: relative;
     overflow: hidden;
@@ -258,6 +278,7 @@ header .nav-user a{
     /* height: 50vh; */
     border: 0;
 }
+
 .card-img {
     height: 35vh;
     display: flex;
@@ -271,7 +292,8 @@ header .nav-user a{
     aspect-ratio: 16/14;
     object-fit: contain;
 }
-.wishlist{
+
+.wishlist {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -281,14 +303,16 @@ header .nav-user a{
     height: 17rem;
     position: relative;
 }
-.card-title{
+
+.card-title {
     line-height: 1.5;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
 }
-.card-body .cart{
+
+.card-body .cart {
     position: absolute;
     top: 68%;
     right: 7%;
@@ -296,6 +320,7 @@ header .nav-user a{
     text-decoration: none;
     color: black;
 }
+
 .book-option {
     text-align: center;
     width: 100%;
@@ -327,6 +352,7 @@ header .nav-user a{
     width: 100%;
     height: 100%;
 }
+
 .stationary .swiper-slide {
     text-align: left;
     font-size: 18px;
@@ -335,7 +361,8 @@ header .nav-user a{
     justify-content: center;
     align-items: center;
 }
-.stationary .card-body{
+
+.stationary .card-body {
     height: 10vh;
 }
 
@@ -401,7 +428,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #1991f3;
+    color: #1991f3;
 }
 
 
@@ -423,18 +450,20 @@ footer a:hover {
     padding: 5px;
     margin-top: 2px;
 }
+
 .items-qua {
     /* width: 30%; */
     background-color: lightgrey;
     /* border-radius: 30px; */
     margin: 5% 0;
     padding: 10px;
-    display: none ;
+    display: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 50px;
 }
+
 .sign {
     width: 30px;
     height: 30px;
@@ -446,6 +475,7 @@ footer a:hover {
     justify-content: center;
     align-items: center;
 }
+
 .add-to-cart-btn {
     display: block;
     margin: 10% 0;
@@ -455,6 +485,7 @@ footer a:hover {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .add-to-cart-btn:active {
     transform: scale(0.95);
 }
@@ -463,6 +494,7 @@ footer a:hover {
     background-color: grey;
     cursor: not-allowed;
 }
+
 .pro-des-rev-faq .nav-item {
     margin-inline: 30px;
 }
@@ -487,8 +519,9 @@ footer a:hover {
 .pro-des-rev-faq .nav-tabs {
     border-bottom: 0;
 }
+
 .pro-des-rev-faq .accordion-button,
-.checkout .accordion-button{
+.checkout .accordion-button {
     background-color: white;
     margin: 2% 0;
 }
@@ -526,7 +559,7 @@ footer a:hover {
     background-color: var(--text-color);
 }
 
-.related-product .card-body{
+.related-product .card-body {
     height: 22vh;
 }
 
@@ -558,9 +591,11 @@ footer a:hover {
     display: flex;
     justify-content: center;
 }
-.pagination .page-link{
+
+.pagination .page-link {
     color: var(--color);
 }
+
 .pagination .prev-link {
     position: absolute;
     left: 0;
@@ -570,7 +605,9 @@ footer a:hover {
     position: absolute;
     right: 0;
 }
-.active>.page-link, .page-link.active{
+
+.active>.page-link,
+.page-link.active {
     color: white;
     background-color: var(--color);
     border-color: var(--color);
@@ -616,16 +653,19 @@ ul li {
     display: flex;
     justify-content: space-between;
     margin: 5px 0;
-  
+
 }
 
 /******************************************************** add to cart page css end ********************************************************/
 
 /******************************************************** book page css start ********************************************************/
 .filter .scroll-content {
-    overflow-y: auto; /* Enables vertical scrolling */
-    overflow-x: hidden; /* Disables horizontal scrolling */
-    height: 20vh; /* Sets the height of the scrollable area */
+    overflow-y: auto;
+    /* Enables vertical scrolling */
+    overflow-x: hidden;
+    /* Disables horizontal scrolling */
+    height: 20vh;
+    /* Sets the height of the scrollable area */
 }
 
 .form-check-input:checked {
@@ -670,6 +710,7 @@ ul li {
 .price-value {
     font-size: 16px;
 }
+
 /******************************************************** book page css end ********************************************************/
 
 /******************************************************** order details page css start ********************************************************/
@@ -787,17 +828,19 @@ ul li {
 .shipping-policy h3 {
     margin-bottom: 25px;
 }
+
 .shipping-policy h4,
-.shipping-policy h5
-{
+.shipping-policy h5 {
     margin: 30px 0 25px 10px;
 }
+
 .policy p strong,
 .terms-conditions p strong,
 .payment-refunds p strong,
 .shipping-policy p strong {
     margin-left: -15px;
 }
+
 .policy p,
 .terms-conditions p,
 .payment-refunds p,
@@ -805,18 +848,21 @@ ul li {
     margin: 10px 30px;
     text-align: justify;
 }
+
 .policy ul p strong,
 .terms-conditions ul p strong,
 .payment-refunds ul p strong,
 .shipping-policy ul p strong {
     margin: 10px 30px 10px -10px;
 }
+
 .policy ul p,
 .terms-conditions ul p,
 .payment-refunds ul p,
 .shipping-policy ul p {
-    margin: 20px ;
+    margin: 20px;
 }
+
 .policy ul li,
 .terms-conditions ul li,
 .payment-refunds ul li,
@@ -826,17 +872,20 @@ ul li {
     margin-right: 30px;
     text-align: justify;
 }
+
 /************************************************************ cancel order css end ********************************************************/
 /************************************************************ checkout css start ********************************************************/
- .checkout .detail{
+.checkout .detail {
     background-color: #f8f8f8;
- }
- .available-offer ul li{
+}
+
+.available-offer ul li {
     display: list-item;
- }
+}
+
 /************************************************************ checkout css end ********************************************************/
 /************************************************************ order success css start ********************************************************/
-.true-icon{
+.true-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -846,17 +895,19 @@ ul li {
     padding: 30px;
     margin: 0 auto;
 }
+
 /************************************************************ order success css end ********************************************************/
-.eye-off{
-    top:42px;
+.eye-off {
+    top: 42px;
     right: 5px;
 }
 
 /********************************************** user dashboard start ****************************************/
-.error{
+.error {
     color: red;
 }
-.profile-img{
+
+.profile-img {
     width: 25%;
     height: 25%;
     /* border: 2px solid white; */
@@ -864,7 +915,8 @@ ul li {
     margin: 0 auto;
     position: relative;
 }
-.edit-profile{
+
+.edit-profile {
     width: 30px;
     height: 30px;
     background-color: white;
@@ -876,17 +928,19 @@ ul li {
     justify-content: center;
     align-items: center;
 }
-.profile-img img{
+
+.profile-img img {
     width: 100%;
     height: inherit;
     /* object-fit: cover; */
     border-radius: 50%;
 }
-.dashboard  .nav-link {
- color: black;
- font-size: 20px;
- border-radius: 0;
- border: 0;
+
+.dashboard .nav-link {
+    color: black;
+    font-size: 20px;
+    border-radius: 0;
+    border: 0;
 }
 
 
