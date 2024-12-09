@@ -356,12 +356,92 @@ window.onload = function () {
 };
 
 //plus minus btn an dadd to cart btn
+// document.addEventListener("DOMContentLoaded", function () {
+//   var minusBtns = document.querySelectorAll(".minus-btn");
+//   var plusBtns = document.querySelectorAll(".plus-btn");
+//   var numberElements = document.querySelectorAll(".number");
+//   var btns = document.querySelectorAll(".add-to-cart-btn");
+//   var items = document.querySelectorAll(".items-qua");
+//   var td = document.querySelector("td");
+
+//   // Loop through each product card
+//   minusBtns.forEach((minusBtn, index) => {
+//     let n = localStorage.getItem(`quantity-${index}`)
+//       ? parseInt(localStorage.getItem(`quantity-${index}`))
+//       : 1;
+//     let isCartVisible =
+//       localStorage.getItem(`isCartVisible-${index}`) === "true";
+
+//     if(td){
+//       items[index].style.display = "flex";
+//     }else{
+//       if (isCartVisible) {
+//         items[index].style.display = "flex"; // Show quantity controls
+//         btns[index].style.display = "none"; // Hide Add to Cart button
+//       } else {
+//         items[index].style.display = "none"; // Hide quantity controls
+//         btns[index].style.display = "block"; // Show Add to Cart button
+//       }
+//     }
+
+//     // Set the initial quantity
+//     numberElements[index].textContent = n;
+
+//     // Update the state of the minus button
+//     function updateMinusButton() {
+//       minusBtns[index].disabled = n <= 1;
+//     }
+
+//     updateMinusButton();
+
+//     // Minus button decreases the number
+//     minusBtn.addEventListener("click", function () {
+//       if (n > 1) {
+//         n -= 1;
+//         btns[index].style.display = "none"; // Hide the Add to Cart button
+//         items[index].style.display = "flex"; // Show quantity controls
+//       } else if (n === 1) {
+//         n -= 1;
+//         btns[index].style.display = "block"; // Show the Add to Cart button
+//         localStorage.setItem(`isCartVisible-${index}`, "false"); // Save visibility state
+//         items[index].style.display = "none"; // Hide the quantity controls
+//       }
+//       numberElements[index].textContent = n;
+//       localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
+//       updateMinusButton();
+//     });
+
+//     // Button to restore item quantity controls
+//     btns[index].addEventListener("click", function () {
+//       n = 1; // Reset the number to default value
+//       numberElements[index].textContent = n; // Update the UI
+//       items[index].style.display = "flex"; // Show the quantity controls
+//       btns[index].style.display = "none"; // Hide the Add to Cart button
+//       localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
+//       localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
+//       updateMinusButton();
+//     });
+
+//     // Plus button increases the number
+//     plusBtns[index].addEventListener("click", function () {
+//       n += 1;
+//       numberElements[index].textContent = n;
+//       btns[index].style.display = "none"; // Hide the Add to Cart button
+//       items[index].style.display = "flex"; // Show the quantity controls
+//       localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
+//       localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
+//       updateMinusButton();
+//     });
+//   });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
   var minusBtns = document.querySelectorAll(".minus-btn");
   var plusBtns = document.querySelectorAll(".plus-btn");
   var numberElements = document.querySelectorAll(".number");
   var btns = document.querySelectorAll(".add-to-cart-btn");
   var items = document.querySelectorAll(".items-qua");
+  var td = document.querySelector("td");
 
   // Loop through each product card
   minusBtns.forEach((minusBtn, index) => {
@@ -371,12 +451,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let isCartVisible =
       localStorage.getItem(`isCartVisible-${index}`) === "true";
 
-    if (isCartVisible) {
-      items[index].style.display = "flex"; // Show quantity controls
-      btns[index].style.display = "none"; // Hide Add to Cart button
+    if (td) {
+      items[index].style.display = "flex";
     } else {
-      items[index].style.display = "none"; // Hide quantity controls
-      btns[index].style.display = "block"; // Show Add to Cart button
+      if (isCartVisible) {
+        items[index].style.display = "flex"; // Show quantity controls
+        btns[index].style.display = "none"; // Hide Add to Cart button
+      } else {
+        items[index].style.display = "none"; // Hide quantity controls
+        btns[index].style.display = "block"; // Show Add to Cart button
+      }
     }
 
     // Set the initial quantity
@@ -391,6 +475,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Minus button decreases the number
     minusBtn.addEventListener("click", function () {
+      if (td) {
+        // If td exists, do not change quantity
+        if(n>1){
+        n -= 1;
+        numberElements[index].textContent = n;
+        localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
+        updateMinusButton();
+      }
+        return;
+      }
       if (n > 1) {
         n -= 1;
         btns[index].style.display = "none"; // Hide the Add to Cart button
@@ -407,6 +501,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Button to restore item quantity controls
+    if(!td){
     btns[index].addEventListener("click", function () {
       n = 1; // Reset the number to default value
       numberElements[index].textContent = n; // Update the UI
@@ -416,16 +511,24 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
       updateMinusButton();
     });
-
+  }
     // Plus button increases the number
     plusBtns[index].addEventListener("click", function () {
+      if (td) {
+        n += 1;
+        // If td exists, do not change quantity
+        numberElements[index].textContent = n;
+        localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
+        return;
+      }else{
       n += 1;
       numberElements[index].textContent = n;
       btns[index].style.display = "none"; // Hide the Add to Cart button
       items[index].style.display = "flex"; // Show the quantity controls
       localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
       localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
-      updateMinusButton();
+    }
+    updateMinusButton();
     });
   });
 });
