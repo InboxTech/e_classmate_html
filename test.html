@@ -1,184 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Tracking</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
-
-    .tracking-container {
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      text-align: center;
-      background: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    .tracking-steps {
-      display: flex;
-      justify-content: space-between;
-      margin: 20px 0;
-      position: relative;
-    }
-
-    .progress-line {
-      position: absolute;
-      top: 20px;
-      left: 50px;
-      right: 50px;
-      height: 4px;
-      background: #ccc;
-      z-index: 0;
-    }
-
-    .progress-line span {
-      display: block;
-      width: 0;
-      height: 100%;
-      background: #4CAF50;
-      transition: width 0.3s ease;
-    }
-
-    .step {
-      text-align: center;
-      flex: 1;
-      position: relative;
-    }
-
-    .circle {
-      width: 40px;
-      height: 40px;
-      margin: 0 auto;
-      background: #ccc;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      color: #fff;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .step span {
-      margin-top: 10px;
-      display: block;
-      font-size: 14px;
-      color: #666;
-    }
-
-    .step.active .circle {
-      background: #4CAF50;
-    }
-
-    .step.completed .circle {
-      background: #4CAF50;
-    }
-
-    .step.completed span {
-      color: #4CAF50;
-    }
-
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <div class="tracking-container">
-    <h1>Order Tracking</h1>
-    <div class="tracking-steps">
-      <div class="progress-line">
-        <span></span>
-      </div>
-      <div class="step" id="step1">
-        <div class="circle">1</div>
-        <span>Order Placed</span>
-      </div>
-      <div class="step" id="step2">
-        <div class="circle">2</div>
-        <span>Processing</span>
-      </div>
-      <div class="step" id="step3">
-        <div class="circle">3</div>
-        <span>Shipped</span>
-      </div>
-      <div class="step" id="step4">
-        <div class="circle">4</div>
-        <span>Out for Delivery</span>
-      </div>
-      <div class="step" id="step5">
-        <div class="circle">5</div>
-        <span>Delivered</span>
-      </div>
-    </div>
-    <button id="nextStep">Next Step</button>
-  </div>
+    
+    <h1>Welcome to our website!</h1>
+    
+    <h2>This is a test page.</h2>
+    
+    <p>This is a paragraph with some text.</p>
+    
+    <a href="https://www.google.com">Visit Google</a>
+    
+    <img src="https://www.example.com/image.svg" alt="Example Image">
 
-  <script>
-    let currentStep = 0;
-
-const updateSteps = () => {
-  const steps = document.querySelectorAll('.step');
-  const progressBar = document.querySelector('.progress-line span');
-
-  steps.forEach((step, index) => {
-    if (index < currentStep) {
-      step.classList.add('completed');
-      step.classList.remove('active');
-    } else if (index === currentStep) {
-      step.classList.add('completed');
-      step.classList.remove('active');
-    } else {
-      step.classList.remove('active');
-      step.classList.remove('completed');
-    }
-  });
-
-  // Calculate and clamp the progress bar width
-  const progressPercentage = Math.min(
-    (currentStep / (steps.length - 1)) * 100,
-    100
-  );
-  progressBar.style.width = `${progressPercentage}%`;
-};
-
-document.getElementById('nextStep').addEventListener('click', () => {
-  const steps = document.querySelectorAll('.step');
-  if (currentStep < steps.length -1) {
-    currentStep++;
-    updateSteps();
-  } else {
-    alert("All steps are completed!");
-  }
-});
-
-// Initialize steps on load
-updateSteps();
-
-  </script>
 </body>
 </html>

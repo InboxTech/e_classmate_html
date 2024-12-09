@@ -12,135 +12,80 @@
 </head>
 
 <body>
-    <header>
-        <!-- header offer section -->
-        <!-- <div class="bg-primary">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-2 col-md-2 location-header">
-                        <i class="fa-solid fa-location-dot"></i> Location
-                    </div>
-                    <div class="col-lg-8 col-md-8 offer-header">
-                        <div class="offer-container">
-                            <div class="offer-slide">
-                                <strong class="ms-1">New Coupon Code: 123456 </strong>
-                            </div>
-                            <div class="offer-slide">
-                                Something you love is now on sale!
-                                <a href="shop-left-sidebar.html" class="text-white" tabindex="-1">Buy Now !</a>
-                            </div>
-                           <div class="offer-slide">
-                                Free Shipping on Orders Over $50!
-                            </div>
-                            <div class="offer-slide">
-                                Free Shipping on Orders Over $50!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 d-flex justify-content-end">
-                        <div class="dropdown">
-                            <button class="btn text-light border-0 dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                English
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">Hindi</a></li>
-                                <li><a class="dropdown-item" href="#">Gujarati</a></li>
-                                <li><a class="dropdown-item" href="#">Language</a></li>
-                            </ul>
-                        </div>
-                        <div class="vr my-2"></div>
-                        <div class="dropdown">
-                            <button class="btn text-light border-0 dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                USD
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">IND</a></li>
-                                <li><a class="dropdown-item" href="#">ENG</a></li>
-                                <li><a class="dropdown-item" href="#">GUJ</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+    <header class="navbar-header">
         <!-- Nav-bar here -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-white">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="public/images/logo/logo.png" alt="" />
-                </a>
+                <div class="navbar-brand">
+                    <a class="collapse navbar-collapse" href="index.html">
+                        <img src="public/images/logo/logo.png" alt="" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#headerSidBar" aria-controls="headerSidBar" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
 
-                <div class="offcanvas offcanvas-end navbar-collapse" id="headerSidBar">
+                    </button>
+                </div>
+                <div class="navbar-toggler border-0">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="public/images/logo/logo.png" alt="" />
+                    </a>
+                </div>
+                <div class="offcanvas offcanvas-start navbar-collapse" id="headerSidBar">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasTopLabel">Menu</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                            <!-- <li class="nav-item">
-                                <a class="nav-link active fs-4" aria-current="page" href="#">
-                                    Home
-                                </a>
-                            </li> -->
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="#"> Books </a>
+                                <a class="nav-link fs-4" href="book.html"> Books </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="#"> Stationary </a>
+                                <a class="nav-link fs-4" href="stationary.html"> Stationary </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fs-4" href="#"> Contact Us </a>
-                            </li>
-                            <!-- <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li> -->
-                            <!-- <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li> -->
-                        </ul>
-                        <ul class="navbar-nav flex-row align-items-center mb-2 mb-lg-0">
-                            <li class="nav-item px-4">
-                                <i class="fa-solid fa-heart fs-4"></i>
-                                <span
-                                    class="position-absolute top-1 translate-middle badge rounded-pill bg-danger">1</span>
-                            </li>
-                            <li class="nav-item px-4">
-                                <i class="fa-solid fa-cart-shopping fs-4"></i>
-                                <span
-                                    class="position-absolute top-1 end-1 translate-middle badge rounded-pill bg-danger">1</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="nav-footer">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#headerSidBar" aria-controls="headerSidBar" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="px-4">
-                        <i class="fa-solid fa-user-large fs-4"></i>
-                    </div>
+                    <ul class="navbar-nav flex-row align-items-center mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <button class="btn px-3" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#searchBarTop" aria-controls="searchBarTop">
+                                    <i class="fa-solid fa-magnifying-glass fs-5"></i>
+                                </button>
+                            <!-- <i class="fa-solid fa-magnifying-glass fs-5"></i> -->
+                        </li>
+                        <li class="nav-item px-3 position-relative collapse navbar-collapse">
+                            <i class="fa-solid fa-heart  fs-5"></i>
+                            <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                        </li>
+                        <li class="nav-item px-3 position-relative collapse navbar-collapse">
+                            <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="#" class="text-black">
+                                <i class="fa-solid fa-cart-shopping fs-5"></i>
+                            </a>
+                            <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                        </li>
+                        <li class="nav-item px-3 position-relative">
+                            <i class="fa-solid fa-user-large fs-5 user"></i>
+                            <div class="nav-user">
+                                <span><a href="#"> Login </a> / <a href="#"> Register</a> </span>
+                                <a href="dashboard.html"> Accounts </a>
+                                <a href="order.html"> Orders </a>
+                                <a href="#"> Logout </a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <div class="container-fluid breadcrumb-link" style="background-color: var(--bg-color); height: 13vh;">
+        <div class="container-fluid breadcrumb-link" style="background-color: var(--bg-color);">
             <div class="row align-content-center align-items-center p-3">
                 <div class="col-6">
                     <h1 class="fs-2"> My order </h1>
@@ -148,8 +93,9 @@
                 <div class="col-6 text-end">
                     <nav aria-label="breadcrumb text-end">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
-                            <li class="breadcrumb-item" aria-current="page"> My Account</li>
+                            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none"> <i
+                                class="fa-solid fa-house"></i></a></li>
+                            <li class="breadcrumb-item" aria-current="page"> <a href="dashboard.html"> My Account </a> </li>
                             <li class="breadcrumb-item active" aria-current="page"> My Order </li>
                         </ol>
                     </nav>
@@ -169,170 +115,146 @@
                     </div>
 
                     <!------------------- expected delivery div -------------->
-                    <a href="order_details.html" class="text-decoration-none text-black">
-                        <div class="ordered-product bg-white border my-3 p-2">
-
-                            <div class="row align-items-center p-3">
-                                <div class="col-1">
-                                    <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
-                                </div>
-                                <div class="col-5">
-                                    <h5 class="fs-4"> Product name </h5>
-                                </div>
-                                <div class="col-2">
-                                    <p class="fs-5"> ₹300.00 </p>
-                                </div>
-                                <div class="col-4">
-                                    <p> <i class="fa-regular fa-circle text-success fs-6"></i> Delivery expected by Mon
-                                        Oct 30 </p>
-                                    <p> Your order has been placed </p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </a>
-                    <!------------------- order delivered div -------------->
-                    <a href="order_details.html" class="text-decoration-none text-black">
-                        <div class="ordered-product bg-white border my-3 p-2">
-                            <div class="row align-items-center p-3">
-                                <div class="col-1">
-                                    <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
-                                </div>
-                                <div class="col-5">
-                                    <h5 class="fs-4"> Product name </h5>
-                                </div>
-                                <div class="col-2">
-                                    <p class="fs-5"> ₹300.00 </p>
-                                </div>
-                                <div class="col-4">
-                                    <p> <i class="fa-regular fa-circle text-success fs-6"></i> Delivered on Oct 13 </p>
-                                    <p> Your items has been delivered </p>
-
-                                    <span data-bs-toggle="modal" class="text-color fs-5" data-bs-target="#reviewModal"
-                                        data-bs-whatever="@mdo">
-                                        <i class="fa-solid fa-star text-color"></i> Rate and review product </span>
-
-                                    <div class="modal fade" id="reviewModal" tabindex="-1"
-                                        aria-labelledby="reviewModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Write A Review
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p class="fs-5"> Ratings
-                                                        <i class="fa-solid fa-star fs-5"></i>
-                                                        <i class="fa-solid fa-star fs-5"></i>
-                                                        <i class="fa-solid fa-star fs-5"></i>
-                                                        <i class="fa-solid fa-star fs-5"></i>
-                                                        <i class="fa-regular fa-star fs-5"></i>
-                                                    </p>
-                                                    <form>
-                                                        <div class="mb-3">
-                                                            <label for="exampleFormControlTextarea1" class="form-label">
-                                                                Your Question <span> * </span></label>
-                                                            <textarea class="form-control"
-                                                                placeholder="Write your question"
-                                                                id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer d-flex justify-content-start">
-                                                    <button type="button" class="btn btn-color"> Save </button>
-                                                </div>
-                                            </div>
-                                        </div>
+                    <div class="ordered-product bg-white border my-3 p-2">
+                        <div class="row align-items-center p-3">
+                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h5 class="fs-4"> Product name </h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="fs-5"> ₹300.00 </p>
                                     </div>
                                 </div>
+                            </a>
+                            <div class="col-4">
+                                <p> <i class="fa-regular fa-circle text-success fs-6"></i> Delivery expected by Mon
+                                    Oct 30 </p>
+                                <p> Your order has been placed </p>
                             </div>
-
                         </div>
-                    </a>
+
+                    </div>
+
+                    <!------------------- order delivered div -------------->
+                    <div class="ordered-product bg-white border my-3 p-2">
+                        <div class="row align-items-center p-3">
+                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h5 class="fs-4"> Product name </h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="fs-5"> ₹300.00 </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="col-4">
+                                <p> <i class="fa-regular fa-circle text-success fs-6"></i> Delivered on Oct 13 </p>
+                                <p> Your items has been delivered </p>
+
+                                <span data-bs-toggle="modal" class="text-color fs-5" data-bs-target="#reviewModal"
+                                    data-bs-whatever="@mdo">
+                                    <i class="fa-solid fa-star text-color"></i> Rate and review product </span>
+                            </div>
+                        </div>
+
+                    </div>
+
                     <!------------------ refund order div ------------------->
-                    <a href="order_details.html" class="text-decoration-none text-black">
-                        <div class="ordered-product bg-white border my-3 p-2">
-                            <div class="row align-items-center p-3 ">
-                                <div class="col-1">
-                                    <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                    <div class="ordered-product bg-white border my-3 p-2">
+                        <div class="row align-items-center p-3 ">
+                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h5 class="fs-4"> Product name </h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="fs-5"> ₹300.00 </p>
+                                    </div>
                                 </div>
-                                <div class="col-5">
-                                    <h5 class="fs-4"> Product name </h5>
-                                </div>
-                                <div class="col-2">
-                                    <p class="fs-5"> ₹300.00 </p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="fs-5"> <i class="fa-solid fa-circle text-danger fs-6"></i> Refund
-                                        completed </p>
-                                </div>
+                            </a>
+                            <div class="col-4">
+                                <p class="fs-5"> <i class="fa-solid fa-circle text-danger fs-6"></i> Refund
+                                    completed </p>
                             </div>
-
-                            <div class="bg-white border p-2 m-3">
-                                <h5 class="text-color"> Refund completed <span class="text-black"> (Refund ID:
-                                        gffrt567)</span></h5>
-                                <p> This refund was added to your account by dd/mm/yyyy </p>
-                            </div>
-
                         </div>
-                    </a>
+
+                        <div class="bg-white border p-2 m-3">
+                            <h5 class="text-color"> Refund completed <span class="text-black"> (Refund ID:
+                                    gffrt567)</span></h5>
+                            <p> This refund was added to your account by dd/mm/yyyy </p>
+                        </div>
+
+                    </div>
+
                     <!------------------------ cancelled order div -------------------->
-                    <a href="order_details.html" class="text-decoration-none text-black">
-                        <div class="ordered-product bg-white border my-3 p-2">
-                            <div class="row align-items-center p-3 ">
-                                <div class="col-1">
-                                    <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                    <div class="ordered-product bg-white border my-3 p-2">
+                        <div class="row align-items-center p-3 ">
+                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h5 class="fs-4"> Product name </h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="fs-5"> ₹300.00 </p>
+                                    </div>
                                 </div>
-                                <div class="col-5">
-                                    <h5 class="fs-4"> Product name </h5>
-                                </div>
-                                <div class="col-2">
-                                    <p class="fs-5"> ₹300.00 </p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="fs-5"> <i class="fa-solid fa-circle text-danger fs-6"></i> Cancelled
-                                        Today, Oct 22 </p>
-                                    <p> You requested cencellation because you changed your mind about product. </p>
+                            </a>
+                            <div class="col-4">
+                                <p class="fs-5"> <i class="fa-solid fa-circle text-danger fs-6"></i> Cancelled
+                                    Today, Oct 22 </p>
+                                <p> You requested cencellation because you changed your mind about product. </p>
 
-                                </div>
                             </div>
-
-                            <!-- <div class="bg-white border p-2 m-3">
-                        <h5 class="text-color"> Cancelled Today, Oct 22  </h5>
-                     </div> -->
-
                         </div>
-                    </a>
+
+                        <!-- <div class="bg-white border p-2 m-3">
+                            <h5 class="text-color"> Cancelled Today, Oct 22  </h5>
+                        </div> -->
+                    </div>
+                    
                     <!------------------------ payment not confirmed div ----------------->
-                    <a href="order_details.html" class="text-decoration-none text-black">
-                        <div class="ordered-product bg-white border my-3 p-3">
-                            <div class="row align-items-center p-3 ">
-                                <div class="col-1">
-                                    <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                    <div class="ordered-product bg-white border my-3 p-3">
+                        <div class="row align-items-center p-3 ">
+                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h5 class="fs-4"> Product name </h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="fs-5"> ₹300.00 </p>
+                                    </div>
                                 </div>
-                                <div class="col-5">
-                                    <h5 class="fs-4"> Product name </h5>
-
-                                </div>
-                                <div class="col-2">
-                                    <p class="fs-5"> ₹300.00 </p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="fs-5"> <i class="fa-regular fa-circle text-warning fs-6"></i> Payment not
-                                        yet confirmed from the bank </p>
-
-                                </div>
+                            </a>
+                            <div class="col-4">
+                                <p class="fs-5"> <i class="fa-regular fa-circle text-warning fs-6"></i> Payment not
+                                    yet confirmed from the bank </p>
                             </div>
-                            <span class="bg-warning border-warning p-2"> We are waiting for the payment confirmation.
-                                Please check again after 2 hours</span>
-                            <!-- <div class="bg-white border p-2 m-3">
-                        <h5 class="text-color"> Cancelled Today, Oct 22  </h5>
-                     </div> -->
-
                         </div>
-                    </a>
+                        <span class="bg-warning border-warning p-2"> We are waiting for the payment confirmation.
+                            Please check again after 2 hours</span>
+                        <!-- <div class="bg-white border p-2 m-3">
+                            <h5 class="text-color"> Cancelled Today, Oct 22  </h5>
+                        </div> -->
+                    </div>
+                    
+                    <!------------------------ pagination ----------------->
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
                             <li class="page-item prev-link"><a class="page-link btn-color" href="#">Previous</a></li>
@@ -352,24 +274,25 @@
                             </li>
                         </ul>
 
-                        <ul class="border-bottom pb-3">
+                        <div class="border-bottom py-3">
+                        <ul>
                             <li>
-                                <p class="fs-5" style="margin-left:-30px;"> Total: </p>
+                                <p class="fs-5" style="margin-left:-30px;"> Total </p>
                                 <p class="fs-5"> 100.00</p>
                             </li>
                             <li>
-                                <p class="fs-5" style="margin-left:-30px;"> Saving: </p>
+                                <p class="fs-5" style="margin-left:-30px;"> Saving </p>
                                 <p class="fs-5"> ₹30.00 </p>
                             </li>
                             <li>
-                                <p class="fs-5" style="margin-left:-30px;"> Coupen Discount: </p>
+                                <p class="fs-5" style="margin-left:-30px;"> Coupen Discount </p>
                                 <p class="fs-5"> ₹7.00 </p>
                             </li>
                         </ul>
-
+                    </div>
                         <ul>
                             <li>
-                                <h4 style="margin-left:-30px;"> Total(USD): </h4>
+                                <h4 style="margin-left:-30px;"> Total </h4>
                                 <p class="fs-5"> ₹63.00 </p>
                             </li>
 
@@ -393,34 +316,224 @@
                 </div>
             </div>
         </div>
+
+        <!-- modals -->
+        <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"> Write A Review
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="fs-5"> Ratings
+                            <i class="fa-solid fa-star fs-5"></i>
+                            <i class="fa-solid fa-star fs-5"></i>
+                            <i class="fa-solid fa-star fs-5"></i>
+                            <i class="fa-solid fa-star fs-5"></i>
+                            <i class="fa-regular fa-star fs-5"></i>
+                        </p>
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">
+                                    Your Question <span> * </span></label>
+                                <textarea class="form-control" placeholder="Write your question"
+                                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-start">
+                        <button type="button" class="btn btn-color"> Save </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
+    <!-------------------------- modal for Nav search ---------------------->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="searchBarTop" aria-labelledby="searchBarTopLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <a class="link-body-emphasis" href="index.html">
+                            <img src="public/images/logo/logo.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="col-lg-7 col-md-5">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search Product"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                            <span class="input-group-text btn-color" id="basic-addon2">
+                                <i class="fa-solid fa-magnifying-glass  fs-5"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <ul class="navbar-nav  flex-row align-items-center justify-content-end mb-2 mb-lg-0">
+                            <li class="nav-item px-3 position-relative">
+                                <i class="fa-solid fa-heart  fs-5"></i>
+                                <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                            </li>
+                            <li class="nav-item px-3 position-relative">
+                                <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="#" class="text-black">
+                                    <i class="fa-solid fa-cart-shopping fs-5"></i>
+                                </a>
+                                <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                            </li>
+                            <li class="nav-item px-3">
+                                <i class="fa-solid fa-user-large fs-5"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- add to cart modal -->
+    <div class="cart-modal">
+        <div class="modal fade justify-content-end" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-4" id="exampleModalLabel">Shopping Cart</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center p-3">
+                            <div class="col-2">
+                                <img src="public/images/books/chemistry.jpg" class="w-100 h-inherit" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h3> Chemistry </h3>
+                                <p class="fs-5"> ICSE </p>
+                                <p> Price: ₹250.00 </p>
+                            </div>
+                            <div class="col-1">
+                                <i class="fa-solid fa-trash text-danger fs-4"></i>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center p-3">
+                            <div class="col-2">
+                                <img src="public/images/books/nursary_english.jpg" class="w-100 h-inherit" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h3> English - Nursary </h3>
+                                <p class="fs-5"> CBSE </p>
+                                <p> Price: ₹250.00 </p>
+                            </div>
+                            <div class="col-1">
+                                <i class="fa-solid fa-trash text-danger fs-4"></i>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center p-3">
+                            <div class="col-2">
+                                <img src="public/images/stationary/schoolbag.jpg" class="w-100 h-inherit" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h3> Schoolbag </h3>
+                                <p> Price: ₹200.00 </p>
+                            </div>
+                            <div class="col-1">
+                                <i class="fa-solid fa-trash text-danger fs-4"></i>
+                            </div>
+                        </div>
+                        <div class="row align-items-center p-3">
+                            <div class="col-2">
+                                <img src="public/images/stationary/color.jpg" class="w-100 h-inherit" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h3> Color </h3>
+                                <p> Price: ₹250.00 </p>
+                            </div>
+                            <div class="col-1">
+                                <i class="fa-solid fa-trash text-danger fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="cart.html" class="btn btn-color w-100">View Cart</a>
+                        <a href="checkout.html" class="btn btn-color w-100"> Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------- review modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Write A Review
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fs-5"> Ratings
+                        <i class="fa-solid fa-star fs-5"></i>
+                        <i class="fa-solid fa-star fs-5"></i>
+                        <i class="fa-solid fa-star fs-5"></i>
+                        <i class="fa-solid fa-star fs-5"></i>
+                        <i class="fa-regular fa-star fs-5"></i>
+                    </p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">
+                                Your Question <span> * </span></label>
+                            <textarea class="form-control" placeholder="Write your question"
+                                id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-start">
+                    <button type="button" class="btn btn-color"> Save </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container-fluid">
             <div class="footer-links border-bottom border-5">
                 <div class="row justify-content-center align-content-center">
-                    <div class="col-lg-3 my-2 ">
+                    <div class="col-lg-2 my-2 ">
                         <a href="#" class="text-decoration-none">
                             <img src="public/images/logo/logo.png" alt="" />
                         </a>
                     </div>
-                    <div class="col-lg-3 my-2  d-flex flex-column">
-                        <h4 class="text-black">Links</h4>
-                        <a href="#" class="text-decoration-none"> Home </a>
-                        <a href="#" class="text-decoration-none"> Books </a>
-                        <a href="#" class="text-decoration-none"> Stationary</a>
-                        <a href="#" class="text-decoration-none"> Contact Us </a>
+                    <div class="col-lg-2 my-2  d-flex flex-column">
+                        <h4 class="text-black fw-bold">Links</h4>
+                        <!-- <a href="#" class="text-decoration-none"> Home </a> -->
+                        <a href="book.html" class="text-decoration-none fs-5"> Books </a>
+                        <a href="stationary.html" class="text-decoration-none fs-5"> Stationary</a>
+                        <a href="#" class="text-decoration-none fs-5"> Contact Us </a>
                     </div>
-                    <div class="col-lg-3 my-2  d-flex flex-column">
-                        <h4 class="text-black">Useful Links</h4>
-                        <a href="#" class="text-decoration-none"> Your Orders </a>
-                        <a href="#" class="text-decoration-none"> Your Accounts </a>
-                        <a href="#" class="text-decoration-none"> Wishlist </a>
-                        <a href="#" class="text-decoration-none"> FAQs </a>
+                    <div class="col-lg-2 my-2  d-flex flex-column">
+                        <h4 class="text-black fw-bold">Useful Links</h4>
+                        <a href="order.html" class="text-decoration-none fs-5"> Your Orders </a>
+                        <a href="dashboard.html" class="text-decoration-none fs-5"> Your Accounts </a>
+                        <a href="wishlist.html" class="text-decoration-none fs-5"> Wishlist </a>
+                        <a href="#" class="text-decoration-none fs-5"> FAQs </a>
                     </div>
-                    <div class="col-lg-3 my-2 ">
-                        <h4 class="text-black">Store information</h4>
+                    <div class="col-lg-2 my-2  d-flex flex-column">
+                        <h4 class="text-black fw-bold"> Policy </h4>
+                        <a href="terms_conditions.html" class="text-decoration-none fs-5"> Terms and Condition </a>
+                        <a href="privacy_policy.html" class="text-decoration-none fs-5"> Privacy and policy </a>
+                        <a href="payment_refund.html" class="text-decoration-none fs-5"> Payment and Refund </a>
+                        <a href="shipping_policy.html" class="text-decoration-none fs-5"> Shipping Policy </a>
+                    </div>
+                    <div class="col-lg-2 my-2 ">
+                        <h4 class="text-black fw-bold">Store information</h4>
                         <a href="#" class="text-decoration-none">
                             <div class="row">
                                 <div class="col-2">
@@ -457,8 +570,15 @@
                 </div>
             </div>
 
-            <div class="text-center my-3">
-                <p>2024 Copyright e_classmates</p>
+            <div class="row align-items-center">
+                <div class="col-6 my-2">
+                    <p class="fs-4">2024 Copyright eclassmates</p>
+                </div>
+                <div class="col-6 text-end my-2">
+                    <a href="#"> <i class="fa-brands fa-square-twitter fs-4"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-facebook fs-4"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-instagram fs-4"></i></a>
+                </div>
             </div>
         </div>
     </footer>
