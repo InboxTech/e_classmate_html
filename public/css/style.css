@@ -9,7 +9,7 @@ body {
     width: 100%;
 }
 
-:root{
+:root {
     --color: #5f84a3;
     --bg-color: #e5ecf2;
     --text-color: #83beed;
@@ -113,8 +113,9 @@ body {
     border-left: 30px solid #fff;
     position: relative;
     top: -50px;
- }
- .base::after{
+}
+
+.base::after {
     content: '';
     width: calc(100% + 60px);
     height: 10vh;
@@ -122,37 +123,39 @@ body {
     position: absolute;
     bottom: -90px;
     left: -30px;
- }
+}
 
- .categories{
+.categories {
     height: 100%;
     width: 100%;
- }
- 
- .categories .swiper {
+}
+
+.categories .swiper {
     width: 95%;
     height: 100%;
-  }
-  .categories .swiper .swiper-wrapper{
-    margin-right: 40px;
-  }
+}
 
-  .categories .swiper-slide {
+.categories .swiper .swiper-wrapper {
+    margin-right: 40px;
+}
+
+.categories .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .categories .swiper-slide img {
+.categories .swiper-slide img {
     display: block;
     width: 100%;
     height: 20vh;
     object-fit: cover;
-  }
-  /* .book-price{
+}
+
+/* .book-price{
     color: var(--text-color);
   } */
 
@@ -166,9 +169,10 @@ body {
     overflow: hidden;
     transition: all 1s linear;
     width: 100%;
-   
+
 }
-.card-header{
+
+.card-header {
     position: relative;
     padding: 0;
     display: flex;
@@ -177,14 +181,16 @@ body {
     background-color: white;
     /* height: 50vh; */
 }
-.card-body{
+
+.card-body {
     height: 30vh;
 }
+
 .book-option {
     text-align: center;
     width: 100%;
     margin: 0 auto;
-    transition:all 0.3s linear; 
+    transition: all 0.3s linear;
     position: absolute;
     opacity: 0;
     left: 50%;
@@ -195,12 +201,13 @@ body {
     border-radius: 5px;
     padding: 5px;
 }
-.card:hover .book-option 
-{
+
+.card:hover .book-option {
     bottom: 0px;
     opacity: 1;
 }
-.fa-star{
+
+.fa-star {
     color: #ffb425;
 }
 
@@ -209,7 +216,6 @@ body {
     width: 100%;
     height: 100%;
 }
- 
 .stationary .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -218,83 +224,97 @@ body {
     justify-content: center;
     align-items: center;
 }
- 
- .card-img{
+
+.card-img {
     height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
 }
-.card-img img{
+
+.card-img img {
     width: 100%;
     aspect-ratio: 5/4;
     object-fit: contain;
 }
-.trending-books .book img{
+
+.trending-books .book img {
     transition: transform 1s linear;
 }
-.trending-books .book h5{
+
+.trending-books .book h5 {
     color: black;
     transition: color 1s linear;
 }
-.trending-books .book:hover img{
+
+.trending-books .book:hover img {
     transform: scale(1.2);
 }
-.trending-books .book:hover h5{
-  color: var(--text-color);
+
+.trending-books .book:hover h5 {
+    color: var(--text-color);
 }
-.trending-books h4::after{
+
+.trending-books h4::after {
     content: '';
     width: 70%;
     height: 3px;
     position: absolute;
     left: 0;
     bottom: -12px;
-   background-color: var(--text-color);
+    background-color: var(--text-color);
 }
-.newsletter .email{
-   bottom: 10px;
+
+.newsletter .email {
+    bottom: 10px;
     left: 5px;
 }
-.newsletter input{
+
+.newsletter input {
     padding-left: 30px;
     padding-right: 110px;
 }
-.newsletter .subscribe{
+
+.newsletter .subscribe {
     top: 4px;
     right: 8px;
     padding: 3px 10px;
 }
- /**************** main end ***********************/
 
-footer{
+/**************** main end ***********************/
+
+footer {
     background-color: var(--bg-color);
     padding: 20px;
     margin-top: 5%;
 }
-footer a{
+
+footer a {
     padding: 10px;
     color: black;
     /* opacity: 0.8; */
     font-weight: lighter;
     transition: all 0.3s ease-in-out;
 }
-footer a:hover{
+
+footer a:hover {
     font-weight: bolder;
 }
 
 
 /****************************************************************** Home page css end *************************************************************/
 /****************************************************************** product details page css start *************************************************************/
-.breadcrumb{
+.breadcrumb {
     margin-left: 38%;
 }
-.breadcrumb-link a{
+
+.breadcrumb-link a {
     color: black;
     transition: all 1s linear;
 }
-.offer{
+
+.offer {
     color: red;
     background-color: rgb(236, 174, 174);
     padding: 5px;
@@ -315,90 +335,105 @@ footer a:hover{
     cursor: pointer;
     padding: 10px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
-.pro-des-rev-faq .nav-item{
+
+.pro-des-rev-faq .nav-item {
     margin-inline: 30px;
 }
-.pro-des-rev-faq .nav-item .nav-link{
+
+.pro-des-rev-faq .nav-item .nav-link {
     font-size: 25px;
     color: black;
     border: 0;
     /* transition: all 1s linear; */
 }
-.pro-des-rev-faq .nav-item .nav-link:hover{
+
+.pro-des-rev-faq .nav-item .nav-link:hover {
     border-bottom: 2px solid var(--text-color);
     background-color: none;
 }
-.pro-des-rev-faq .nav-item .active{
+
+.pro-des-rev-faq .nav-item .active {
     border-bottom: 2px solid var(--text-color);
 
 }
-.pro-des-rev-faq .nav-tabs{
+
+.pro-des-rev-faq .nav-tabs {
     border-bottom: 0;
 }
+
 .related-product .swiper {
     width: 100%;
     height: 100%;
 }
-.related-product .swiper .swiper-wrapper{
-    overflow: visible;   
-  }
- .related-product .swiper-slide {
+
+.related-product .swiper .swiper-wrapper {
+    overflow: visible;
+}
+
+.related-product .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
- .related-product .swiper-slide img {
+.related-product .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .related-product .swiper-pagination{
+}
+
+.related-product .swiper-pagination {
     bottom: -2px;
-  }
-  .related-product .swiper-pagination-bullet-active{
+}
+
+.related-product .swiper-pagination-bullet-active {
     background-color: var(--text-color);
-  }
+}
 
 
 
-  .pro-details .nav-pills .nav-link.active{
+.pro-details .nav-pills .nav-link.active {
     background: white !important;
-    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15) ;
-  }
- 
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
 /****************************************************************** product details page css end *************************************************************/
 /******************************************************* order page css start ***********************************************************/
 
-.refund{
+.refund {
     width: 5px;
     height: 5px;
     background-color: red;
     border-radius: 50%;
 }
-.ordered-product{
+
+.ordered-product {
     transition: all 1s linear;
 }
-.ordered-product:hover{
+
+.ordered-product:hover {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
- .pagination{
+
+.pagination {
     position: relative;
     display: flex;
     justify-content: center;
 }
-.pagination .prev-link{
+
+.pagination .prev-link {
     position: absolute;
     left: 0;
 }
- .pagination .next-link{
+
+.pagination .next-link {
     position: absolute;
     right: 0;
 }
@@ -407,18 +442,21 @@ footer a:hover{
 
 /******************************************************** add to cart css start ********************************************************/
 
-.cart-table .product-img img{
+.cart-table .product-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.cart-table .table td:nth-child(1){
+
+.cart-table .table td:nth-child(1) {
     width: 10%;
 }
-.cart-table .product-img{
+
+.cart-table .product-img {
     width: 100%;
     margin: 5% auto;
 }
+
 /* .cart-table .table td:nth-child(4){
     width: 30%;
 } */
@@ -426,19 +464,21 @@ footer a:hover{
     width: 30%;
     text-align: center;
 } */
-.cart-table .items-qua{
+.cart-table .items-qua {
     width: 55%;
     margin-left: 0;
 }
-.cart-table .action i{
-   font-size: 25px;
-   margin-inline: 5px;
+
+.cart-table .action i {
+    font-size: 25px;
+    margin-inline: 5px;
 }
-ul li
-{
+
+ul li {
     display: flex;
     justify-content: space-between;
 }
+
 /******************************************************** add to cart page css end ********************************************************/
 
 /******************************************************** book page css start ********************************************************/
@@ -451,10 +491,10 @@ ul li
 .form-check-input:checked {
     background-color: var(--color);
     border-color: var(--color);
-  }
+}
 
-  /* range price for filter section*/
- .price-range-container {
+/* range price for filter section*/
+.price-range-container {
     width: 100%;
     max-width: 600px;
     margin: 15px auto;
@@ -470,7 +510,7 @@ ul li
     transition: background 0.3s ease;
 }
 
- .thumb {
+.thumb {
     position: absolute;
     top: -10px;
     width: 30px;
@@ -481,7 +521,7 @@ ul li
     transition: background-color 0.3s ease;
 }
 
- .slider-labels {
+.slider-labels {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -499,14 +539,16 @@ ul li
     max-width: 600px;
     margin: 10px auto;
     text-align: center;
-  }
-  .tracking-steps {
+}
+
+.tracking-steps {
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
     position: relative;
-  }
-  .progress-line {
+}
+
+.progress-line {
     position: absolute;
     top: 20px;
     left: 60px;
@@ -514,20 +556,23 @@ ul li
     height: 4px;
     background: #ccc;
     z-index: 0;
-  }
-  .progress-line span {
+}
+
+.progress-line span {
     display: block;
     width: 0;
     height: 100%;
     background: #4CAF50;
     transition: width 0.3s ease;
-  }
-  .step {
+}
+
+.step {
     text-align: center;
     flex: 1;
     position: relative;
-  }
-  .circle {
+}
+
+.circle {
     width: 20px;
     height: 20px;
     margin: 9% auto;
@@ -540,23 +585,28 @@ ul li
     color: #fff;
     font-weight: bold;
     transition: background 0.3s ease;
-  }
-  .step span {
+}
+
+.step span {
     margin-top: 10px;
     display: block;
     font-size: 14px;
     color: #666;
-  }
-  .step.active .circle {
+}
+
+.step.active .circle {
     background: #4CAF50;
-  }
-  .step.completed .circle {
+}
+
+.step.completed .circle {
     background: #4CAF50;
-  }
-  .step.completed span {
+}
+
+.step.completed span {
     color: #4CAF50;
-  }
-  button {
+}
+
+button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -564,20 +614,32 @@ ul li
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-  }
-  button:hover {
+}
+
+button:hover {
     background-color: #45a049;
-  }
-  .row-link {
-    display: block; /* Makes the <a> tag behave like a block element */
-    width: 100%; /* Ensures the link takes the full width of the .row */
-} 
+}
+
+.row-link {
+    display: block;
+    /* Makes the <a> tag behave like a block element */
+    width: 100%;
+    /* Ensures the link takes the full width of the .row */
+}
+
 /******************************************************** order details page css end ********************************************************/
 /************************************************************ cancel order css start ********************************************************/
-.cancellation .refund-new{
+.cancellation .refund-new {
     display: none;
 }
-.cancellation #change{
+
+.cancellation #change {
     display: none;
 }
+
 /************************************************************ cancel order css end ********************************************************/
+
+/************************************************************ Privacy and policy css ********************************************************/
+.policy ul li{
+    display: list-item;
+}
