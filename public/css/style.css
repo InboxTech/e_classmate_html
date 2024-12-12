@@ -623,13 +623,18 @@ footer a:hover {
     object-fit: cover;
 }
 
-.cart-table .table td:nth-child(1) {
+.cart-table .table td:nth-child(1),.checkout .table td:nth-child(1) {
     width: 10%;
 }
 
-.cart-table .product-img {
+.cart-table .product-img, .checkout .product-img {
     width: 100%;
     margin: 5% auto;
+}
+.cart-table .product-img img, .checkout .product-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* .cart-table .table td:nth-child(4){
@@ -882,7 +887,13 @@ ul li {
 .available-offer ul li {
     display: list-item;
 }
-
+.checkout .table th,td{
+    text-align: center;
+}
+.checkout .table .items-qua{
+    width: 80%; 
+    margin: 0 auto;
+}
 /************************************************************ checkout css end ********************************************************/
 /************************************************************ order success css start ********************************************************/
 .true-icon {
