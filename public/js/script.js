@@ -361,6 +361,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var btns = document.querySelectorAll(".add-to-cart-btn");
   var items = document.querySelectorAll(".items-qua");
   var td = document.querySelector("td");
+  var detailCheckoutQty = document.querySelectorAll(".checkout .detail");
 
   // Loop through each product card
   minusBtns.forEach((minusBtn, index) => {
@@ -394,6 +395,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Minus button decreases the number
     minusBtn.addEventListener("click", function () {
+    //   alert('minus');
       if (td) {
         // If td exists, do not change quantity
         if (n > 1) {
@@ -420,7 +422,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Button to restore item quantity controls
-    if (!td) {
+    if (!td || !detailCheckoutQty) {
       btns[index].addEventListener("click", function () {
         n = 1; // Reset the number to default value
         numberElements[index].textContent = n; // Update the UI
@@ -431,8 +433,10 @@ document.addEventListener("DOMContentLoaded", function () {
         updateMinusButton();
       });
     }
-    // Plus button increases the number
+
+    // // Plus button increases the number
     plusBtns[index].addEventListener("click", function () {
+    //   alert('plus');
       if (td) {
         n += 1;
         // If td exists, do not change quantity
@@ -449,6 +453,25 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       updateMinusButton();
     });
+
+    // plusBtns[index].addEventListener("click", function () {
+    //   if (td || detailCheckoutQty) {
+    //     // Allow updates in the .detail section
+    //     n += 1;
+    //     numberElements[index].textContent = n;
+    //     localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
+    //   } else {
+    //     // Normal case for product
+    //     n += 1;
+    //     numberElements[index].textContent = n;
+    //     btns[index].style.display = "none"; // Hide the Add to Cart button
+    //     items[index].style.display = "flex"; // Show quantity controls
+    //     localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
+    //     localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
+    //   }
+    //   updateMinusButton();
+    // });
+
   });
 });
 
@@ -504,7 +527,10 @@ function changeProfile(input) {
       document.getElementById('profile').src = e.target.result;
     }
 
+
     // Read the file as a data URL
     reader.readAsDataURL(file);
   }
 }
+
+
