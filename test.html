@@ -1,21 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <h1>Welcome to our website!</h1>
-    
-    <h2>This is a test page.</h2>
-    
-    <p>This is a paragraph with some text.</p>
-    
-    <a href="https://www.google.com">Visit Google</a>
-    
-    <img src="https://www.example.com/image.svg" alt="Example Image">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/fonts/css/all.min.css" />
+</head>
+
+<body>
+    <div class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#filter"
+                aria-controls="filter" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-filter"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="filter" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Filter</h5>
+                  <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="bg-white shadow p-3">
+                        <h3>Filter <i class="fa-solid fa-filter fs-5"></i></h3>
+   
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search Product"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                            <span class="input-group-text btn-color" id="basic-addon2">
+                                Search
+                            </span>
+                        </div>
+    
+                        <div class="border-bottom py-3 my-3">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3>Boards</h3>
+                                </div>
+                                <div class="col-4">
+                                    <h3 class="text-danger">Reset</h3>
+                                </div>
+                            </div>
+    
+                            <div class="scroll-content">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                NCERT
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                GSEB
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                CBSE
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="border-bottom py-3 my-3">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3>Standards</h3>
+                                </div>
+                                <div class="col-4">
+                                    <h3 class="text-danger">Reset</h3>
+                                </div>
+                            </div>
+    
+                            <div class="scroll-content">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Class 1
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Class 2
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Class 3
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+    
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Class 4
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+    
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Class 5
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+    
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Class 6
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+    
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Class 7
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+    
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Class 8
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+    
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Class 9
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+    
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Class 10
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+    
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Class 11
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+    
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Class 12
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="border-bottom py-3 my-3">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3>Price</h3>
+                                </div>
+                                <div class="col-4">
+                                    <h3 class="text-danger">Reset</h3>
+                                </div>
+                            </div>
+                            <div class="slider-labels">
+                                <span class="price-value" id="price-left">₹ 0</span>
+                                <span class="price-value" id="price-right">₹ 2000</span>
+                            </div>
+                            <div class="container price-range-container">
+                                <div class="slider" id="slider">
+                                    <div class="thumb" id="thumb-left" style="left: 0"></div>
+                                    <div class="thumb" id="thumb-right" style="left: 95%"></div>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+    
+                        <div class="border-bottom py-3 my-3">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3>Author</h3>
+                                </div>
+                                <div class="col-4">
+                                    <h3 class="text-danger">Reset</h3>
+                                </div>
+                            </div>
+    
+                            <div class="scroll-content">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Author 1
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Author 2
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Author 3
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <span> 2 </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <script src="public/js/bootstrap.min.js"></script>
 </body>
+
 </html>

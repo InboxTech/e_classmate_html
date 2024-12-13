@@ -26,7 +26,7 @@ nav_user.addEventListener("mouseleave", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Swiper initialization for different sliders
-  var swiper1 = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".mySwiper", {
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -47,58 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  var swiper2 = new Swiper(".myRelProSwiper", {
-    slidesPerView: 6,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-        spaceBetween: 5,
-      },
-      768: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-      1024: {
-        slidesPerView: 5,
-        spaceBetween: 15,
-      },
-      1440: {
-        slidesPerView: 5,
-        spaceBetween: 20,
-      },
-    },
-  });
-
-  var swiper3 = new Swiper(".myStationarySwiper", {
-    spaceBetween: 3,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-        spaceBetween: 5,
-      },
-      768: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-      1440: {
-        slidesPerView: 4,
-        spaceBetween: 24,
-      },
-    },
-  });
-
+ 
   // Retrieve the saved number from localStorage or default to 1
   var num = parseInt(localStorage.getItem("quantity"));
   num = 1;
@@ -177,7 +126,7 @@ var swiper = new Swiper(".myStationarySwiper", {
       spaceBetween: 24,
     },
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 24,
     },
     1440: {
