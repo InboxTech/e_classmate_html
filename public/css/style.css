@@ -107,7 +107,15 @@ p {
     width: 2px;
     color: white !important;
 }
-
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler .navbar-brand img{
+    width: 6.2rem !important;
+}
+.nav-search .offcanvas{
+    height: 45vh !important;
+}
 .navbar-header {
     position: sticky !important;
     z-index: 12;
@@ -132,7 +140,7 @@ p {
     width: 100%;
 }
 
-header .badge {
+ .badge {
     top: -2px;
     right: -3px;
 }
@@ -188,10 +196,12 @@ header .nav-user a {
 
 .banner .book-img:nth-child(1) {
     transform: rotate(20deg);
+    aspect-ratio: 16/18;
 }
 
 .banner .book-img:nth-child(2) {
     transform: rotate(-20deg);
+    aspect-ratio: 16/18;
 }
 
 .base {
@@ -438,7 +448,6 @@ footer a:hover {
 /****************************************************************** Home page css end *************************************************************/
 /****************************************************************** product details page css start *************************************************************/
 .breadcrumb {
-    margin-left: 38%;
     margin-bottom: 0;
 }
 

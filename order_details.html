@@ -93,12 +93,12 @@
                 <div class="col-6">
                     <h1 class="fs-2"> My order </h1>
                 </div>
-                <div class="col-6 text-end">
+                <div class="col-6 d-flex flex-column align-items-end">
                     <nav aria-label="breadcrumb text-end">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none"> <i
                                         class="fa-solid fa-house"></i> </a></li>
-                            <li class="breadcrumb-item" aria-current="page"> <a href="dashboard.html"> My Account </a> </li>
+                            <li class="breadcrumb-item" aria-current="page"> <a href="dashboard.html" class="text-decoration-none"> My Account </a> </li>
                             <li class="breadcrumb-item" aria-current="page"> <a href="order.html" class="text-decoration-none"> My order </a></li>
                             <li class="breadcrumb-item active" aria-current="page"> order id </li>
                         </ol>
@@ -110,24 +110,24 @@
         <div class="container mx-auto my-5">
 
             <div class="row border shadow p-3 my-3">
-                <div class="col-4">
+                <div class="col-lg-4 my-3">
                     <h4> Billing Address </h4>
                     <h5> User name </h5>
-                    <p class="fs-5"> 04 near boricha nivas Kumbharwada nari road, Sbi bank vali line Bhavnagar - 364006,
+                    <p> 04 near boricha nivas Kumbharwada nari road, Sbi bank vali line Bhavnagar - 364006,
                         Gujarat </p>
-                    <h5> Phone Number: <span class="fw-light"> 1234567890 </span></h5>
+                    <p> Phone Number: <span class="fw-light"> 1234567890 </span></p>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 my-3">
                     <h4> Shipping Address </h4>
                     <h5> User name </h5>
-                    <p class="fs-5"> 04 near boricha nivas Kumbharwada nari road, Sbi bank vali line Bhavnagar - 364006,
+                    <p> 04 near boricha nivas Kumbharwada nari road, Sbi bank vali line Bhavnagar - 364006,
                         Gujarat</p>
-                    <h5> Phone Number: <span class="fw-light"> 1234567890 </span></h5>
+                    <p> Phone Number: <span class="fw-light"> 1234567890 </span></p>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 my-3">
                     <h4> More Action </h4>
                     <div class="d-flex justify-content-between align-items-center">
-                        <p class="fs-5"><i class="fa-solid fa-file text-color me-2"></i> Download Invoice </p>
+                        <p><i class="fa-solid fa-file text-color me-2"></i> Download Invoice </p>
                         <a href="#" class="btn btn-color text-decoration-none p-2"> Download </a>
                     </div>
                 </div>
@@ -135,13 +135,13 @@
 
             <!-- Add display:block to make the <a> tag behave as a block-level element -->
             <div class="row align-items-center border p-3 my-3">
-                <a href="product_details.html" class="col-9 text-decoration-none text-black">
+                <a href="product_details.html" class="col-lg-9 text-decoration-none text-black">
                     <div class="row align-items-center">
                         <div class="col-2 px-2">
-                            <img src="public/images/books/science.jpg" class="w-100 h-inherit" alt="Book Image">
+                            <img src="public/images/books/brightmind.png" class="w-100 h-inherit" alt="Book Image">
                         </div>
                         <div class="col-4">
-                            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nobis?</h5>
+                            <h5> Brightmind </h5>
                         </div>
                         <div class="col-6 text-center">
                             <p class="fs-5"> <i class="fa-solid fa-truck text-primary"></i> Delivery expected Mon, 12 24
@@ -149,7 +149,7 @@
                         </div>
                     </div>
                 </a>
-                <div class="col-3">
+                <div class="col-lg-3">
                     <p> ₹100.00 </p>
                     <!-- Use a span or button instead of an <a> tag inside the <a> tag -->
                     <button class="btn btn-color fs-5" data-bs-toggle="modal" data-bs-target="#cancelModal"
@@ -159,15 +159,15 @@
 
             <!-- Anchor tag for wrapping the entire row, make sure it behaves like a block-level element -->
             <div class="row align-items-center border p-3 my-3">
-                <a href="product_details.html" class="col-9 text-decoration-none text-black">
+                <a href="product_details.html" class="col-lg-9 text-decoration-none text-black">
                     <div class="row align-items-center">
-                        <div class="col-2 px-2">
-                            <img src="public/images/books/science.jpg" class="w-100 h-inherit" alt="Product Image">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 px-2">
+                            <img src="public/images/books/anupambharti.png" class="w-100 h-inherit" alt="Product Image">
                         </div>
-                        <div class="col-4">
-                            <h5>Product name</h5>
+                        <div class="col-lg-4 col-md-3 col-sm-10 col-xs-10">
+                            <h5> Anupambharti </h5>
                         </div>
-                        <div class="col-6 text-center">
+                        <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12 text-center">
                             <div class="tracking-container">
                                 <div class="tracking-steps">
                                     <div class="progress-line">
@@ -195,8 +195,8 @@
                         <!-- <button id="nextStep">Next Step</button> -->
                     </div>
                 </a>
-                <div class="col-3">
-                    <button id="nextStep" class="tracking-btn">Next Step</button>
+                <div class="col-lg-3">
+                    <!-- <button id="nextStep" class="tracking-btn">Next Step</button> -->
                     <p> ₹100.00 </p>
                     <!-- Use a span or button for "Cancel order" instead of nested <a> -->
                     <button class="btn btn-color fs-5" data-bs-toggle="modal" data-bs-target="#cancelModal"
@@ -208,49 +208,55 @@
     </main>
     
     <!-------------------------- modal for Nav search ---------------------->
-    <div class="offcanvas offcanvas-top" tabindex="-1" id="searchBarTop" aria-labelledby="searchBarTopLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-3">
-                        <a class="link-body-emphasis" href="index.html">
-                            <img src="public/images/logo/logo.png" alt="" />
-                        </a>
-                    </div>
-                    <div class="col-lg-7 col-md-5">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Search Product"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                            <span class="input-group-text btn-color" id="basic-addon2">
-                                <i class="fa-solid fa-magnifying-glass  fs-5"></i>
-                            </span>
+    <!-------------------------- modal for Nav search ---------------------->
+    <div class="nav-search">
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="searchBarTop" aria-labelledby="searchBarTopLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 text-sm-center pb-4">
+                            <a class="link-body-emphasis" href="index.html">
+                                <img src="public/images/logo/logo.png" alt="" />
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <ul class="navbar-nav  flex-row align-items-center justify-content-end mb-2 mb-lg-0">
-                            <li class="nav-item px-3 position-relative">
-                                <i class="fa-solid fa-heart  fs-5"></i>
-                                <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
-                            </li>
-                            <li class="nav-item px-3 position-relative">
-                                <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="#" class="text-black">
-                                    <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <div class="col-lg-7 col-md-6 col-8">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Search Product"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                <span class="input-group-text btn-color" id="basic-addon2">
+                                    <i class="fa-solid fa-magnifying-glass  fs-5"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-4">
+                            <ul class="navbar-nav  flex-row align-items-center justify-content-end mb-2 mb-lg-0">
+                                <li class="nav-item px-3 position-relative">
+                                    <a href="wishlist.html" class="text-decoration-none text-black">
+                                    <i class="fa-solid fa-heart fs-5"></i>
                                 </a>
-                                <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
-                            </li>
-                            <li class="nav-item px-3">
-                                <i class="fa-solid fa-user-large fs-5"></i>
-                            </li>
-                        </ul>
+                                    <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                                </li>
+                                <li class="nav-item px-3 position-relative">
+                                    <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="javascript:void(0);" class="text-black">
+                                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                                    </a>
+                                    <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                                </li>
+                                <!-- <li class="nav-item px-3">
+                                    <i class="fa-solid fa-user-large fs-5"></i>
+                                </li> -->
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- add to cart modal -->
     <div class="cart-modal">

@@ -137,49 +137,55 @@
     </main>
 
     <!-------------------------- modal for Nav search ---------------------->
-    <div class="offcanvas offcanvas-top" tabindex="-1" id="searchBarTop" aria-labelledby="searchBarTopLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-3">
-                        <a class="link-body-emphasis" href="index.html">
-                            <img src="public/images/logo/logo.png" alt="" />
-                        </a>
-                    </div>
-                    <div class="col-lg-7 col-md-5">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Search Product"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                            <span class="input-group-text btn-color" id="basic-addon2">
-                                <i class="fa-solid fa-magnifying-glass  fs-5"></i>
-                            </span>
+    <!-------------------------- modal for Nav search ---------------------->
+    <div class="nav-search">
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="searchBarTop" aria-labelledby="searchBarTopLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 text-sm-center pb-4">
+                            <a class="link-body-emphasis" href="index.html">
+                                <img src="public/images/logo/logo.png" alt="" />
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <ul class="navbar-nav  flex-row align-items-center justify-content-end mb-2 mb-lg-0">
-                            <li class="nav-item px-3 position-relative">
-                                <i class="fa-solid fa-heart  fs-5"></i>
-                                <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
-                            </li>
-                            <li class="nav-item px-3 position-relative">
-                                <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="#" class="text-black">
-                                    <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <div class="col-lg-7 col-md-6 col-8">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Search Product"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                <span class="input-group-text btn-color" id="basic-addon2">
+                                    <i class="fa-solid fa-magnifying-glass  fs-5"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-4">
+                            <ul class="navbar-nav  flex-row align-items-center justify-content-end mb-2 mb-lg-0">
+                                <li class="nav-item px-3 position-relative">
+                                    <a href="wishlist.html" class="text-decoration-none text-black">
+                                    <i class="fa-solid fa-heart fs-5"></i>
                                 </a>
-                                <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
-                            </li>
-                            <li class="nav-item px-3">
-                                <i class="fa-solid fa-user-large fs-5"></i>
-                            </li>
-                        </ul>
+                                    <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                                </li>
+                                <li class="nav-item px-3 position-relative">
+                                    <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="javascript:void(0);" class="text-black">
+                                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                                    </a>
+                                    <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                                </li>
+                                <!-- <li class="nav-item px-3">
+                                    <i class="fa-solid fa-user-large fs-5"></i>
+                                </li> -->
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- add to cart modal -->
     <div class="cart-modal">

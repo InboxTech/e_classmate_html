@@ -92,15 +92,15 @@
                 <div class="col-6">
                     <h1 class="fs-2"> My order </h1>
                 </div>
-                <div class="col-6 text-end">
-                    <nav aria-label="breadcrumb text-end">
+                <div class="col-6 d-flex flex-column align-items-end">
+                    <div aria-label="breadcrumb text-end">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none"> <i
                                 class="fa-solid fa-house"></i></a></li>
-                            <li class="breadcrumb-item" aria-current="page"> <a href="dashboard.html"> My Account </a> </li>
+                            <li class="breadcrumb-item" aria-current="page"> <a href="dashboard.html" class="text-decoration-none"> My Account </a> </li>
                             <li class="breadcrumb-item active" aria-current="page"> My Order </li>
                         </ol>
-                    </nav>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,12 +119,12 @@
                     <!------------------- expected delivery div -------------->
                     <div class="ordered-product bg-white border my-3 p-2">
                         <div class="row align-items-center p-3">
-                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                            <a href="order_details.html" class="col-lg-8 text-decoration-none text-black">
                                 <div class="row align-items-center">
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
                                     </div>
-                                    <div class="col-7">
+                                    <div class="col-6">
                                         <h5 class="fs-4"> Product name </h5>
                                     </div>
                                     <div class="col-3">
@@ -132,10 +132,9 @@
                                     </div>
                                 </div>
                             </a>
-                            <div class="col-4">
+                            <div class="col-lg-4 my-3">
                                 <p> <i class="fa-regular fa-circle text-success fs-6"></i> Delivery expected by Mon
-                                    Oct 30 </p>
-                                <p> Your order has been placed </p>
+                                    Oct 30  Your order has been placed </p>
                             </div>
                         </div>
 
@@ -144,12 +143,12 @@
                     <!------------------- order delivered div -------------->
                     <div class="ordered-product bg-white border my-3 p-2">
                         <div class="row align-items-center p-3">
-                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                            <a href="order_details.html" class="col-lg-8 text-decoration-none text-black">
                                 <div class="row align-items-center">
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
                                     </div>
-                                    <div class="col-7">
+                                    <div class="col-6">
                                         <h5 class="fs-4"> Product name </h5>
                                     </div>
                                     <div class="col-3">
@@ -157,7 +156,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <div class="col-4">
+                            <div class="col-lg-4 my-3">
                                 <p> <i class="fa-regular fa-circle text-success fs-6"></i> Delivered on Oct 13 </p>
                                 <p> Your items has been delivered </p>
 
@@ -172,12 +171,12 @@
                     <!------------------ refund order div ------------------->
                     <div class="ordered-product bg-white border my-3 p-2">
                         <div class="row align-items-center p-3 ">
-                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                            <a href="order_details.html" class="col-lg-8 text-decoration-none text-black">
                                 <div class="row align-items-center">
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
                                     </div>
-                                    <div class="col-7">
+                                    <div class="col-6">
                                         <h5 class="fs-4"> Product name </h5>
                                     </div>
                                     <div class="col-3">
@@ -185,7 +184,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <div class="col-4">
+                            <div class="col-lg-4 my-3">
                                 <p class="fs-5"> <i class="fa-solid fa-circle text-danger fs-6"></i> Refund
                                     completed </p>
                             </div>
@@ -202,12 +201,12 @@
                     <!------------------------ cancelled order div -------------------->
                     <div class="ordered-product bg-white border my-3 p-2">
                         <div class="row align-items-center p-3 ">
-                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                            <a href="order_details.html" class="col-lg-8 text-decoration-none text-black">
                                 <div class="row align-items-center">
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
                                     </div>
-                                    <div class="col-7">
+                                    <div class="col-6">
                                         <h5 class="fs-4"> Product name </h5>
                                     </div>
                                     <div class="col-3">
@@ -215,7 +214,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <div class="col-4">
+                            <div class="col-lg-4 my-3">
                                 <p class="fs-5"> <i class="fa-solid fa-circle text-danger fs-6"></i> Cancelled
                                     Today, Oct 22 </p>
                                 <p> You requested cencellation because you changed your mind about product. </p>
@@ -231,12 +230,12 @@
                     <!------------------------ payment not confirmed div ----------------->
                     <div class="ordered-product bg-white border my-3 p-3">
                         <div class="row align-items-center p-3 ">
-                            <a href="order_details.html" class="col-8 text-decoration-none text-black">
+                            <a href="order_details.html" class="col-lg-8 text-decoration-none text-black">
                                 <div class="row align-items-center">
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <img src="public/images/books/maths.jpg" class="w-100 h-inherit" alt="">
                                     </div>
-                                    <div class="col-7">
+                                    <div class="col-6">
                                         <h5 class="fs-4"> Product name </h5>
                                     </div>
                                     <div class="col-3">
@@ -244,7 +243,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <div class="col-4">
+                            <div class="col-lg-4 my-3">
                                 <p class="fs-5"> <i class="fa-regular fa-circle text-warning fs-6"></i> Payment not
                                     yet confirmed from the bank </p>
                             </div>
@@ -350,49 +349,55 @@
     </main>
 
     <!-------------------------- modal for Nav search ---------------------->
-    <div class="offcanvas offcanvas-top" tabindex="-1" id="searchBarTop" aria-labelledby="searchBarTopLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-3">
-                        <a class="link-body-emphasis" href="index.html">
-                            <img src="public/images/logo/logo.png" alt="" />
-                        </a>
-                    </div>
-                    <div class="col-lg-7 col-md-5">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Search Product"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                            <span class="input-group-text btn-color" id="basic-addon2">
-                                <i class="fa-solid fa-magnifying-glass  fs-5"></i>
-                            </span>
+    <!-------------------------- modal for Nav search ---------------------->
+    <div class="nav-search">
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="searchBarTop" aria-labelledby="searchBarTopLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 text-sm-center pb-4">
+                            <a class="link-body-emphasis" href="index.html">
+                                <img src="public/images/logo/logo.png" alt="" />
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <ul class="navbar-nav  flex-row align-items-center justify-content-end mb-2 mb-lg-0">
-                            <li class="nav-item px-3 position-relative">
-                                <i class="fa-solid fa-heart  fs-5"></i>
-                                <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
-                            </li>
-                            <li class="nav-item px-3 position-relative">
-                                <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="#" class="text-black">
-                                    <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <div class="col-lg-7 col-md-6 col-8">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Search Product"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                <span class="input-group-text btn-color" id="basic-addon2">
+                                    <i class="fa-solid fa-magnifying-glass  fs-5"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-4">
+                            <ul class="navbar-nav  flex-row align-items-center justify-content-end mb-2 mb-lg-0">
+                                <li class="nav-item px-3 position-relative">
+                                    <a href="wishlist.html" class="text-decoration-none text-black">
+                                    <i class="fa-solid fa-heart fs-5"></i>
                                 </a>
-                                <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
-                            </li>
-                            <li class="nav-item px-3">
-                                <i class="fa-solid fa-user-large fs-5"></i>
-                            </li>
-                        </ul>
+                                    <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                                </li>
+                                <li class="nav-item px-3 position-relative">
+                                    <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="javascript:void(0);" class="text-black">
+                                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                                    </a>
+                                    <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                                </li>
+                                <!-- <li class="nav-item px-3">
+                                    <i class="fa-solid fa-user-large fs-5"></i>
+                                </li> -->
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- add to cart modal -->
     <div class="cart-modal">
         <div class="modal fade justify-content-end" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
