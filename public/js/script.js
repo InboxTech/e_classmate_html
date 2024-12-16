@@ -27,6 +27,10 @@ nav_user.addEventListener("mouseleave", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Swiper initialization for different sliders
   var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -85,9 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
 var swiper = new Swiper(".myRelProSwiper", {
   slidesPerView: 6,
   // spaceBetween:10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     0: {
@@ -112,10 +116,14 @@ var swiper = new Swiper(".myRelProSwiper", {
 var swiper = new Swiper(".myStationarySwiper", {
   // slidesPerView: 5,
   spaceBetween: 4,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
   breakpoints: {
     0: {
       slidesPerView: 2,
