@@ -1,371 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="public/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="public/fonts/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order List</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-image {
+    width: 50px;
+    height: auto;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .container {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+    </style>
 </head>
-
 <body>
-    <div class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#filter"
-                aria-controls="filter" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-filter"></i>
-            </button>
-
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="filter" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Filter</h5>
-                  <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <div class="bg-white shadow p-3">
-                        <h3>Filter <i class="fa-solid fa-filter fs-5"></i></h3>
-   
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Search Product"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                            <span class="input-group-text btn-color" id="basic-addon2">
-                                Search
-                            </span>
-                        </div>
-    
-                        <div class="border-bottom py-3 my-3">
-                            <div class="row align-items-center">
-                                <div class="col-8">
-                                    <h3>Boards</h3>
-                                </div>
-                                <div class="col-4">
-                                    <h3 class="text-danger">Reset</h3>
-                                </div>
-                            </div>
-    
-                            <div class="scroll-content">
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                NCERT
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                GSEB
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                CBSE
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="border-bottom py-3 my-3">
-                            <div class="row align-items-center">
-                                <div class="col-8">
-                                    <h3>Standards</h3>
-                                </div>
-                                <div class="col-4">
-                                    <h3 class="text-danger">Reset</h3>
-                                </div>
-                            </div>
-    
-                            <div class="scroll-content">
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Class 1
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Class 2
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Class 3
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-    
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Class 4
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-    
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Class 5
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-    
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Class 6
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-    
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Class 7
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-    
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Class 8
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-    
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Class 9
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-    
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Class 10
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-    
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Class 11
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-    
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Class 12
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="border-bottom py-3 my-3">
-                            <div class="row align-items-center">
-                                <div class="col-8">
-                                    <h3>Price</h3>
-                                </div>
-                                <div class="col-4">
-                                    <h3 class="text-danger">Reset</h3>
-                                </div>
-                            </div>
-                            <div class="slider-labels">
-                                <span class="price-value" id="price-left">₹ 0</span>
-                                <span class="price-value" id="price-right">₹ 2000</span>
-                            </div>
-                            <div class="container price-range-container">
-                                <div class="slider" id="slider">
-                                    <div class="thumb" id="thumb-left" style="left: 0"></div>
-                                    <div class="thumb" id="thumb-right" style="left: 95%"></div>
-                                </div>
-                            </div>
-    
-                        </div>
-    
-    
-                        <div class="border-bottom py-3 my-3">
-                            <div class="row align-items-center">
-                                <div class="col-8">
-                                    <h3>Author</h3>
-                                </div>
-                                <div class="col-4">
-                                    <h3 class="text-danger">Reset</h3>
-                                </div>
-                            </div>
-    
-                            <div class="scroll-content">
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Author 1
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Author 2
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Author 3
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <span> 2 </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">E-Commerce</h1>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
+    </nav>
+
+    <div class="container">
+        <h1>Your Order List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>ID</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="order-list">
+                <tr>
+                    <td><img src="path/to/image1.jpg" alt="Product 1" class="product-image"></td>
+                    <td>Product 1</td>
+                    <td>001</td>
+                    <td>$10.00</td>
+                    <td>2</td>
+                    <td><button class="delete-btn" onclick="deleteOrder(this)">Delete</button></td>
+                </tr>
+                <tr>
+                    <td><img src="path/to/image2.jpg" alt="Product 2" class="product-image"></td>
+                    <td>Product 2</td>
+                    <td>002</td>
+                    <td>$15.00</td>
+                    <td>1</td>
+                    <td><button class="delete-btn" onclick="deleteOrder(this)">Delete</button></td>
+                </tr>
+                <!-- Add more orders as needed -->
+            </tbody>
+        </table>
     </div>
 
-    <script src="public/js/bootstrap.min.js"></script>
-</body>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 E-Commerce. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+    </footer>
 
+    <script>
+        function deleteOrder(button) {
+    // Get the row of the button that was clicked
+    const row = button.parentElement.parentElement;
+    // Remove the row from the table
+    row.parentElement.removeChild(row);
+}
+    </script>
+</body>
 </html>

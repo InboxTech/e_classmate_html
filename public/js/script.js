@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
- 
   // Retrieve the saved number from localStorage or default to 1
   var num = parseInt(localStorage.getItem("quantity"));
   num = 1;
@@ -228,50 +227,43 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize slider
     updateSliderColor();
   }
+});
 
-  // Order Tracking
-  let currentStep = 0;
+// tracking steps
+document.addEventListener("DOMContentLoaded", () => {
+  const steps = document.querySelectorAll(".step");
+  const progressLine = document.querySelector(".progress-line");
+  let delay = 0;
 
-  const updateSteps = () => {
-    const steps = document.querySelectorAll(".step");
-    const progressBar = document.querySelector(".progress-line span");
+  // Only select done and active steps
+  const activeSteps = Array.from(steps).filter(
+      (step) =>
+          step.classList.contains("done") || step.classList.contains("active")
+  );
 
-    if (steps.length && progressBar) {
-      steps.forEach((step, index) => {
-        if (index < currentStep) {
-          step.classList.add("completed");
-          step.classList.remove("active");
-        } else if (index === currentStep) {
-          step.classList.add("completed");
-          step.classList.remove("active");
-        } else {
-          step.classList.remove("active");
-          step.classList.remove("completed");
-        }
-      });
+  activeSteps.forEach((step, index) => {
+      setTimeout(() => {
+          step.classList.add("done");
 
-      const progressPercentage = Math.min(
-        (currentStep / (steps.length - 1)) * 100,
-        100
-      );
-      progressBar.style.width = `${progressPercentage}%`;
-    }
-  };
+          // Adjust progress bar for responsive vertical layout
+          const stepHeight =
+              document.querySelector(".tracking-steps").offsetHeight /
+              steps.length;
+          const progressHeight = stepHeight * (index + 1);
 
-  const nextStepButton = document.getElementById("nextStep");
-  if (nextStepButton) {
-    nextStepButton.addEventListener("click", () => {
-      const steps = document.querySelectorAll(".step");
-      if (currentStep < steps.length - 1) {
-        currentStep++;
-        updateSteps();
-      } else {
-        alert("All steps are completed!");
-      }
-    });
-  }
+          if (window.innerWidth <= 767) {
+              progressLine.style.height = `${progressHeight}px`;
+          } else {
+              const stepWidth =
+                  document.querySelector(".tracking-steps").offsetWidth /
+                  steps.length;
+              const progressWidth = stepWidth * (index + 1) - stepWidth / 2;
+              progressLine.style.width = `${progressWidth}px`;
+          }
+      }, delay);
 
-  updateSteps();
+      delay += 500;
+  });
 });
 
 // cancel page js
@@ -344,7 +336,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Minus button decreases the number
     minusBtn.addEventListener("click", function () {
-    //   alert('minus');
+      //   alert('minus');
       if (td) {
         // If td exists, do not change quantity
         if (n > 1) {
@@ -385,7 +377,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // // Plus button increases the number
     plusBtns[index].addEventListener("click", function () {
-    //   alert('plus');
+      //   alert('plus');
       if (td) {
         n += 1;
         // If td exists, do not change quantity
@@ -420,7 +412,6 @@ document.addEventListener("DOMContentLoaded", function () {
     //   }
     //   updateMinusButton();
     // });
-
   });
 });
 
@@ -446,17 +437,17 @@ function togglePassword(event, inputId, className) {
 
   if (pass) {
     // Determine the current state of the password input field
-    const isPassword = pass.type === 'password';
+    const isPassword = pass.type === "password";
 
     // Toggle the type of the input field
-    pass.type = isPassword ? 'text' : 'password';
+    pass.type = isPassword ? "text" : "password";
 
     // Toggle the icon class (eye-open/eye-slash)
     if (isPassword) {
       icon.classList.remove(className); // Remove 'fa-eye-slash'
-      icon.classList.add('fa-eye'); // Add 'fa-eye'
+      icon.classList.add("fa-eye"); // Add 'fa-eye'
     } else {
-      icon.classList.remove('fa-eye'); // Remove 'fa-eye'
+      icon.classList.remove("fa-eye"); // Remove 'fa-eye'
       icon.classList.add(className); // Add 'fa-eye-slash'
     }
   }
@@ -464,7 +455,7 @@ function togglePassword(event, inputId, className) {
 
 // change profile photo
 function triggerFileInput() {
-  document.getElementById('fileInput').click();  // Triggers the file input dialog when pen icon is clicked
+  document.getElementById("fileInput").click(); // Triggers the file input dialog when pen icon is clicked
 }
 function changeProfile(input) {
   var file = input.files[0];
@@ -473,13 +464,10 @@ function changeProfile(input) {
 
     reader.onload = function (e) {
       // Update the src attribute of the profile image with the selected file
-      document.getElementById('profile').src = e.target.result;
-    }
-
+      document.getElementById("profile").src = e.target.result;
+    };
 
     // Read the file as a data URL
     reader.readAsDataURL(file);
   }
 }
-
-

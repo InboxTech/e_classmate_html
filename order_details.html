@@ -159,7 +159,7 @@
 
             <!-- Anchor tag for wrapping the entire row, make sure it behaves like a block-level element -->
             <div class="row align-items-center border p-3 my-3">
-                <a href="product_details.html" class="col-lg-9 text-decoration-none text-black">
+                <a href="product_details.html" class="col-lg-10 text-decoration-none text-black">
                     <div class="row align-items-center">
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 px-2">
                             <img src="public/images/books/anupambharti.png" class="w-100 h-inherit" alt="Product Image">
@@ -167,27 +167,29 @@
                         <div class="col-lg-4 col-md-3 col-sm-10 col-xs-10">
                             <h5> Anupambharti </h5>
                         </div>
-                        <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12 text-center">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
                             <div class="tracking-container">
                                 <div class="tracking-steps">
-                                    <div class="progress-line">
-                                        <span></span>
+                                    <div class="progress-line"></div>
+                                    <div class="step done">
+                                        <span class="circle"></span>
+                                        <p>Order Received<br><small>Sun, 29th Sep</small></p>
                                     </div>
-                                    <div class="step" id="step1">
-                                        <div class="circle"></div>
-                                        <span>Order Placed</span>
+                                    <div class="step done">
+                                        <span class="circle"></span>
+                                        <p>Order Confirmed<br><small>Sun, 29th Sep</small></p>
                                     </div>
-                                    <div class="step" id="step2">
-                                        <div class="circle"></div>
-                                        <span>Shipped</span>
+                                    <div class="step active">
+                                        <span class="circle"></span>
+                                        <p>Shipped<br><small>Sun, 29th Sep</small></p>
                                     </div>
-                                    <div class="step" id="step3">
-                                        <div class="circle"></div>
-                                        <span>Out for Delivery</span>
+                                    <div class="step in-active">
+                                        <span class="circle"></span>
+                                        <p>Out for delivery<br><small>Wed, 2nd Oct</small></p>
                                     </div>
-                                    <div class="step" id="step4">
-                                        <div class="circle"></div>
-                                        <span>Delivered</span>
+                                    <div class="step in-active">
+                                        <span class="circle"></span>
+                                        <p>Delivered<br><small>Thu, 3rd Oct</small></p>
                                     </div>
                                 </div>
                             </div>
@@ -195,12 +197,12 @@
                         <!-- <button id="nextStep">Next Step</button> -->
                     </div>
                 </a>
-                <div class="col-lg-3">
+                <div class="col-lg-2">
                     <!-- <button id="nextStep" class="tracking-btn">Next Step</button> -->
                     <p> ₹100.00 </p>
                     <!-- Use a span or button for "Cancel order" instead of nested <a> -->
-                    <button class="btn btn-color fs-5" data-bs-toggle="modal" data-bs-target="#cancelModal"
-                    data-bs-whatever="@mdo">Cancel order</button>
+                    <a class="text-decoration-none fs-5" data-bs-toggle="modal" data-bs-target="#cancelModal"
+                    data-bs-whatever="@mdo">Cancel order</a>
                 </div>
             </div>
         </div>
