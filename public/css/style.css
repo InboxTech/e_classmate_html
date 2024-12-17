@@ -208,8 +208,8 @@ header .nav-user a {
     width: 100%;
     height: auto;
     border-bottom: 60px solid #5f84a3;
-    border-right: 30px solid #fff;
-    border-left: 30px solid #fff;
+    border-right: 30px solid rgba(0, 0, 0, 0);
+    border-left: 30px solid rgba(0, 0, 0, 0);
     position: relative;
     top: -50px;
 }
@@ -573,9 +573,9 @@ footer a:hover {
     background-color: var(--text-color);
 }
 
-.related-product .card-body {
+/* .related-product .card-body {
     height: 22vh;
-}
+} */
 
 .pro-details .nav-pills .nav-link.active {
     background: white !important;
@@ -944,7 +944,6 @@ ul li {
 .error {
     color: red;
 }
-
 .profile-img {
     width: 25%;
     height: 25%;
@@ -953,7 +952,6 @@ ul li {
     margin: 0 auto;
     position: relative;
 }
-
 .edit-profile {
     width: 30px;
     height: 30px;
@@ -966,21 +964,18 @@ ul li {
     justify-content: center;
     align-items: center;
 }
-
 .profile-img img {
     width: 100%;
     height: inherit;
     /* object-fit: cover; */
     border-radius: 50%;
 }
-
 .dashboard .nav-link {
     color: black;
     font-size: 20px;
     border-radius: 0;
     border: 0;
 }
-
 /********************************************** user dashboard end ****************************************/
 
 /* -------------------------------------------------- Contact us page start ------------------------------------------------*/
