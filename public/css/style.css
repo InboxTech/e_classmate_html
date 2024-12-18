@@ -208,8 +208,8 @@ header .nav-user a {
     width: 100%;
     height: auto;
     border-bottom: 60px solid #5f84a3;
-    border-right: 30px solid #fff;
-    border-left: 30px solid #fff;
+    border-right: 30px solid rgba(0, 0, 0, 0);
+    border-left: 30px solid rgba(0, 0, 0, 0);
     position: relative;
     top: -50px;
 }
@@ -365,7 +365,6 @@ header .nav-user a {
     width: 100%;
     height: 100%;
 }
-
 .stationary .swiper-slide {
     text-align: left;
     font-size: 18px;
@@ -537,6 +536,9 @@ footer a:hover {
     background-color: white;
     margin: 2% 0;
 }
+.pro-des-rev-faq .fa-star{
+    font-size: 1rem;
+}
 
 .related-product .swiper {
     width: 100%;
@@ -571,9 +573,9 @@ footer a:hover {
     background-color: var(--text-color);
 }
 
-.related-product .card-body {
+/* .related-product .card-body {
     height: 22vh;
-}
+} */
 
 .pro-details .nav-pills .nav-link.active {
     background: white !important;
@@ -634,7 +636,10 @@ footer a:hover {
     height: 100%;
     object-fit: cover;
 }
-
+.cart-table .items-qua{
+    width: 100%;
+    margin: 0 auto!important;
+}
 .cart-table .table td:nth-child(1),.checkout .table td:nth-child(1) {
     width: 10%;
 }
@@ -672,7 +677,18 @@ ul li {
     margin: 5px 0;
 
 }
-
+@media screen and (max-width: 1024px) {
+    .cart-table .items-qua{
+        width: 100%!important; 
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .cart-table .items-qua{
+        width: 100%!important; 
+        margin: 0 auto;
+    }
+}
 /******************************************************** add to cart page css end ********************************************************/
 
 /******************************************************** book page css start ********************************************************/
@@ -697,7 +713,6 @@ ul li {
     margin: 15px auto;
     text-align: center;
 }
-
 .slider {
     position: relative;
     width: 100%;
@@ -706,7 +721,6 @@ ul li {
     border-radius: 5px;
     transition: background 0.3s ease;
 }
-
 .thumb {
     position: absolute;
     top: -10px;
@@ -717,13 +731,11 @@ ul li {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 .slider-labels {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
-
 .price-value {
     font-size: 16px;
 }
@@ -740,7 +752,6 @@ ul li {
     padding: 20px;
 
 }
-
 .tracking-steps {
     display: flex;
     justify-content: space-between;
@@ -772,7 +783,6 @@ ul li {
     z-index: 1;
     transition: width 1s ease;
 }
-
 .step {
     display: flex;
     flex-direction: column;
@@ -798,7 +808,6 @@ ul li {
     background-color: green;
     animation: pop 0.5s ease forwards;
 }
-
 .step.active .circle {
     background-color: orange;
     animation: pulse 1.5s infinite;
@@ -953,18 +962,33 @@ ul li {
 /************************************************************ cancel order css end ********************************************************/
 /************************************************************ checkout css start ********************************************************/
 .checkout .detail {
+    width: 100%;
     background-color: #f8f8f8;
 }
 
 .available-offer ul li {
     display: list-item;
 }
+.checkout .table {
+    width: 100%;
+}
 .checkout .table th,td{
     text-align: center;
 }
 .checkout .table .items-qua{
-    width: 80%; 
+    width: 100%; 
     margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+    .checkout .table .items-qua{
+        width: 100%; 
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 575px) {
+    .checkout .detail .table {
+        width: 100%; 
+    }
 }
 /************************************************************ checkout css end ********************************************************/
 /************************************************************ order success css start ********************************************************/
@@ -989,7 +1013,6 @@ ul li {
 .error {
     color: red;
 }
-
 .profile-img {
     width: 25%;
     height: 25%;
@@ -998,7 +1021,6 @@ ul li {
     margin: 0 auto;
     position: relative;
 }
-
 .edit-profile {
     width: 30px;
     height: 30px;
@@ -1011,22 +1033,18 @@ ul li {
     justify-content: center;
     align-items: center;
 }
-
 .profile-img img {
     width: 100%;
     height: inherit;
     /* object-fit: cover; */
     border-radius: 50%;
 }
-
 .dashboard .nav-link {
     color: black;
     font-size: 20px;
     border-radius: 0;
     border: 0;
 }
-
-
 /********************************************** user dashboard end ****************************************/
 
 /* -------------------------------------------------- Contact us page start ------------------------------------------------*/
