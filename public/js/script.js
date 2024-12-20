@@ -311,6 +311,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //plus minus btn an dadd to cart btn
+
 document.addEventListener("DOMContentLoaded", function () {
   var minusBtns = document.querySelectorAll(".minus-btn");
   var plusBtns = document.querySelectorAll(".plus-btn");
@@ -320,16 +321,25 @@ document.addEventListener("DOMContentLoaded", function () {
   var td = document.querySelector("td");
   var detailCheckoutQty = document.querySelectorAll(".checkout .detail");
 
+  // Get the current page identifier to ensure unique storage per page
+  var pageIdentifier = window.location.pathname.split('/').pop(); // Get current page name
+
   // Loop through each product card
   minusBtns.forEach((minusBtn, index) => {
-    let n = localStorage.getItem(`quantity-${index}`)
-      ? parseInt(localStorage.getItem(`quantity-${index}`))
-      : 1;
-    let isCartVisible =
-      localStorage.getItem(`isCartVisible-${index}`) === "true";
+    // Use both index and page identifier to create a unique key for each product on each page
+    let productKey = `${pageIdentifier}-quantity-${index}`;
 
+    // Retrieve quantity from sessionStorage for the specific card on the current page
+    let n = sessionStorage.getItem(productKey) 
+      ? parseInt(sessionStorage.getItem(productKey)) 
+      : 1;
+
+    // Check if cart is visible (based on sessionStorage)
+    let isCartVisible = sessionStorage.getItem(`${pageIdentifier}-isCartVisible-${index}`) === "true";
+
+    // Initial setup for visibility of quantity controls and add-to-cart button
     if (td) {
-      items[index].style.display = "flex";
+      items[index].style.display = "flex"; // Always show quantity controls in checkout page
     } else {
       if (isCartVisible) {
         items[index].style.display = "flex"; // Show quantity controls
@@ -340,7 +350,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Set the initial quantity
+    // Set initial quantity in UI
     numberElements[index].textContent = n;
 
     // Update the state of the minus button
@@ -350,86 +360,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateMinusButton();
 
-    // Minus button decreases the number
+    // Minus button functionality
     minusBtn.addEventListener("click", function () {
-      //   alert('minus');
-      if (td) {
-        // If td exists, do not change quantity
-        if (n > 1) {
-          n -= 1;
-          numberElements[index].textContent = n;
-          localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
-          updateMinusButton();
-        }
-        return;
-      }
       if (n > 1) {
         n -= 1;
-        btns[index].style.display = "none"; // Hide the Add to Cart button
-        items[index].style.display = "flex"; // Show quantity controls
-      } else if (n === 1) {
-        n -= 1;
-        btns[index].style.display = "block"; // Show the Add to Cart button
-        localStorage.setItem(`isCartVisible-${index}`, "false"); // Save visibility state
-        items[index].style.display = "none"; // Hide the quantity controls
+        numberElements[index].textContent = n;
+        sessionStorage.setItem(productKey, n); // Save updated quantity to sessionStorage
+        updateMinusButton();
       }
-      numberElements[index].textContent = n;
-      localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
-      updateMinusButton();
     });
 
     // Button to restore item quantity controls
     if (!td || !detailCheckoutQty) {
       btns[index].addEventListener("click", function () {
-        n = 1; // Reset the number to default value
-        numberElements[index].textContent = n; // Update the UI
-        items[index].style.display = "flex"; // Show the quantity controls
-        btns[index].style.display = "none"; // Hide the Add to Cart button
-        localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
-        localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
+        n = 1; // Reset quantity to default value
+        numberElements[index].textContent = n;
+        items[index].style.display = "flex"; // Show quantity controls
+        btns[index].style.display = "none"; // Hide Add to Cart button
+        sessionStorage.setItem(productKey, n); // Save to sessionStorage
+        sessionStorage.setItem(`${pageIdentifier}-isCartVisible-${index}`, "true"); // Save visibility state
         updateMinusButton();
       });
     }
 
-    // // Plus button increases the number
+    // Plus button functionality
     plusBtns[index].addEventListener("click", function () {
-      //   alert('plus');
-      if (td) {
-        n += 1;
-        // If td exists, do not change quantity
-        numberElements[index].textContent = n;
-        localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
-        return;
-      } else {
-        n += 1;
-        numberElements[index].textContent = n;
-        btns[index].style.display = "none"; // Hide the Add to Cart button
-        items[index].style.display = "flex"; // Show the quantity controls
-        localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
-        localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
-      }
+      n += 1;
+      numberElements[index].textContent = n;
+      btns[index].style.display = "none"; // Hide Add to Cart button
+      items[index].style.display = "flex"; // Show quantity controls
+      sessionStorage.setItem(productKey, n); // Save updated quantity to sessionStorage
+      sessionStorage.setItem(`${pageIdentifier}-isCartVisible-${index}`, "true"); // Save visibility state
       updateMinusButton();
     });
-
-    // plusBtns[index].addEventListener("click", function () {
-    //   if (td || detailCheckoutQty) {
-    //     // Allow updates in the .detail section
-    //     n += 1;
-    //     numberElements[index].textContent = n;
-    //     localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
-    //   } else {
-    //     // Normal case for product
-    //     n += 1;
-    //     numberElements[index].textContent = n;
-    //     btns[index].style.display = "none"; // Hide the Add to Cart button
-    //     items[index].style.display = "flex"; // Show quantity controls
-    //     localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
-    //     localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
-    //   }
-    //   updateMinusButton();
-    // });
   });
 });
+
+
 
 //heart image change on click
 var heart_images = document.querySelectorAll(".heart");
