@@ -21,7 +21,7 @@ body {
 .btn-color {
     background-color: var(--color) !important;
     color: white !important;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
 }
 
