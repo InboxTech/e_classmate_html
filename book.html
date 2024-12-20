@@ -24,10 +24,9 @@
                         data-bs-target="#headerSidBar" aria-controls="headerSidBar" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-
                     </button>
                 </div>
-                <div class="navbar-toggler border-0">
+                <div class="navbar-toggler">
                     <a class="navbar-brand" href="index.html">
                         <img src="public/images/logo/logo.png" alt="" />
                     </a>
@@ -40,42 +39,43 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="book.html"> Books </a>
+                                <a class="nav-link fs-5" href="book.html"> Books </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="stationary.html"> Stationary </a>
+                                <a class="nav-link fs-5" href="stationary.html"> Stationary </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="contactUs.html"> Contact Us </a>
+                                <a class="nav-link fs-5" href="contactUs.html"> Get In Touch </a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="nav-footer">
-                    <ul class="navbar-nav flex-row align-items-center mb-2 mb-lg-0">
+                    <ul class="navbar-nav flex-row align-items-center justify-content-center">
                         <li class="nav-item ">
                             <button class="btn px-3" type="button" data-bs-toggle="offcanvas"
                                 data-bs-target="#searchBarTop" aria-controls="searchBarTop">
-                                    <i class="fa-solid fa-magnifying-glass fs-5"></i>
-                                </button>
-                            <!-- <i class="fa-solid fa-magnifying-glass fs-5"></i> -->
+                                <i class="fa-solid fa-magnifying-glass "></i>
+                            </button>
+                            <!-- <i class="fa-solid fa-magnifying-glass "></i> -->
                         </li>
                         <li class="nav-item px-3 position-relative collapse navbar-collapse">
                             <a href="wishlist.html" class="text-decoration-none text-black">
-                            <i class="fa-solid fa-heart  fs-5"></i>
-                        </a>
+                                <i class="fa-solid fa-heart  "></i>
+                            </a>
                             <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
                         </li>
                         <li class="nav-item px-3 position-relative collapse navbar-collapse">
                             <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="#" class="text-black">
-                                <i class="fa-solid fa-cart-shopping fs-5"></i>
+                                <i class="fa-solid fa-cart-shopping "></i>
                             </a>
                             <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
                         </li>
                         <li class="nav-item px-3 position-relative">
-                            <i class="fa-solid fa-user-large fs-5 user"></i>
+                            <i class="fa-solid fa-user-large  user"></i>
                             <div class="nav-user">
-                                <span><a href="javascript:void(0);"> Login </a> / <a href="javascript:void(0);"> Register</a> </span>
+                                <span><a href="javascript:void(0);"> Login </a> / <a href="javascript:void(0);">
+                                        Register</a> </span>
                                 <a href="dashboard.html"> Accounts </a>
                                 <a href="order.html"> Orders </a>
                                 <a href="javascript:void(0);"> Logout </a>
@@ -107,26 +107,29 @@
             </div>
         </div>
 
-        <section class="my-5 filter">
+        <section class="my-5">
             <div class="container-fluid">
                 <div class="row justify-content-evenly">
-                    <div class="col-xl-3 col-lg-4">
+                    <div class="col-xl-3 col-lg-4 filter">
                         <div class="navbar navbar-expand-lg">
                             <div class="container-fluid">
-                                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#filter"
-                                    aria-controls="filter" aria-expanded="false" aria-label="Toggle navigation">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#filter" aria-controls="filter" aria-expanded="false"
+                                    aria-label="Toggle navigation">
                                     <i class="fa-solid fa-filter"></i>
                                 </button>
-                    
-                                <div class="offcanvas offcanvas-start" tabindex="-1" id="filter" aria-labelledby="offcanvasRightLabel">
+
+                                <div class="offcanvas offcanvas-start" tabindex="-1" id="filter"
+                                    aria-labelledby="offcanvasRightLabel">
                                     <div class="offcanvas-header">
-                                      <h5 class="offcanvas-title" id="offcanvasRightLabel">Filter</h5>
-                                      <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Filter</h5>
+                                        <button type="button" class="btn-close " data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
                                     </div>
                                     <div class="offcanvas-body">
                                         <div class="bg-white shadow p-5 w-100">
                                             <h3>Filter <i class="fa-solid fa-filter fs-5"></i></h3>
-                       
+
                                             <div class="input-group mb-3">
                                                 <input type="text" class="form-control" placeholder="Search Product"
                                                     aria-label="Recipient's username" aria-describedby="basic-addon2" />
@@ -134,7 +137,7 @@
                                                     Search
                                                 </span>
                                             </div>
-                        
+
                                             <div class="border-bottom py-3 my-3">
                                                 <div class="row align-items-center">
                                                     <div class="col-8">
@@ -144,7 +147,7 @@
                                                         <h3 class="text-danger">Reset</h3>
                                                     </div>
                                                 </div>
-                        
+
                                                 <div class="scroll-content">
                                                     <div class="row align-items-center">
                                                         <div class="col-8">
@@ -190,7 +193,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                        
+
                                             <div class="border-bottom py-3 my-3">
                                                 <div class="row align-items-center">
                                                     <div class="col-8">
@@ -200,7 +203,7 @@
                                                         <h3 class="text-danger">Reset</h3>
                                                     </div>
                                                 </div>
-                        
+
                                                 <div class="scroll-content">
                                                     <div class="row align-items-center">
                                                         <div class="col-8">
@@ -244,7 +247,7 @@
                                                             <span> 2 </span>
                                                         </div>
                                                     </div>
-                        
+
                                                     <div class="row align-items-center">
                                                         <div class="col-8">
                                                             <div class="form-check">
@@ -259,7 +262,7 @@
                                                             <span> 2 </span>
                                                         </div>
                                                     </div>
-                        
+
                                                     <div class="row align-items-center">
                                                         <div class="col-8">
                                                             <div class="form-check">
@@ -274,7 +277,7 @@
                                                             <span> 2 </span>
                                                         </div>
                                                     </div>
-                        
+
                                                     <div class="row align-items-center">
                                                         <div class="col-8">
                                                             <div class="form-check">
@@ -289,7 +292,7 @@
                                                             <span> 2 </span>
                                                         </div>
                                                     </div>
-                        
+
                                                     <div class="row align-items-center">
                                                         <div class="col-8">
                                                             <div class="form-check">
@@ -304,7 +307,7 @@
                                                             <span> 2 </span>
                                                         </div>
                                                     </div>
-                        
+
                                                     <div class="row align-items-center">
                                                         <div class="col-8">
                                                             <div class="form-check">
@@ -319,7 +322,7 @@
                                                             <span> 2 </span>
                                                         </div>
                                                     </div>
-                        
+
                                                     <div class="row align-items-center">
                                                         <div class="col-8">
                                                             <div class="form-check">
@@ -334,7 +337,7 @@
                                                             <span> 2 </span>
                                                         </div>
                                                     </div>
-                        
+
                                                     <div class="row align-items-center">
                                                         <div class="col-8">
                                                             <div class="form-check">
@@ -349,7 +352,7 @@
                                                             <span> 2 </span>
                                                         </div>
                                                     </div>
-                        
+
                                                     <div class="row align-items-center">
                                                         <div class="col-8">
                                                             <div class="form-check">
@@ -364,7 +367,7 @@
                                                             <span> 2 </span>
                                                         </div>
                                                     </div>
-                        
+
                                                     <div class="row align-items-center">
                                                         <div class="col-8">
                                                             <div class="form-check">
@@ -381,7 +384,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                        
+
                                             <div class="border-bottom py-3 my-3">
                                                 <div class="row align-items-center">
                                                     <div class="col-8">
@@ -401,10 +404,10 @@
                                                         <div class="thumb" id="thumb-right" style="left: 95%"></div>
                                                     </div>
                                                 </div>
-                        
+
                                             </div>
-                        
-                        
+
+
                                             <div class="border-bottom py-3 my-3">
                                                 <div class="row align-items-center">
                                                     <div class="col-8">
@@ -414,7 +417,7 @@
                                                         <h3 class="text-danger">Reset</h3>
                                                     </div>
                                                 </div>
-                        
+
                                                 <div class="scroll-content">
                                                     <div class="row align-items-center">
                                                         <div class="col-8">
@@ -462,7 +465,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                  </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -470,418 +473,441 @@
                         <div class="row">
                             <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
                                 <a href="product_details.html">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-img">
-                                            <img src="public/images/books/joyfull mathematics class 1.png" class="card-img-top" alt="...">
-                                        </div>
-                                        <a href="#wishlist" class="text-decoration-none wishlist">
-                                            <img src="public/images/books/heart.png" class="heart" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title"> Exploring Society India and 
-                                            Beyond Social Science Class 5 NCRT </h5>
-                                        <p class="card-text py-2"> NCRT </p>
-                                        <span class="text-color fs-4 text-color">
-                                            ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                        </span>
-            
-                                        <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
-            
-                                        <div class="items-qua ">
-                                            <div class="quantity sign minus-btn" id="">
-                                                <i class="fa-solid fa-minus"></i>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-img">
+                                                <img src="public/images/books/joyfull mathematics class 1.png"
+                                                    class="card-img-top" alt="...">
                                             </div>
-                                            <div class="quantity number" id=""> </div>
-                                            <div class="quantity sign plus-btn" id="">
-                                                <i class="fa-solid fa-plus"></i>
-                                            </div>
+                                            <a href="#wishlist" class="text-decoration-none wishlist">
+                                                <img src="public/images/books/heart.png" class="heart" alt="">
+                                            </a>
                                         </div>
-            
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
-                                <a href="product_details.html">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-img">
-                                            <img src="public/images/books/anupambharti.png" class="card-img-top" alt="...">
-                                        </div>
-                                        <a href="#wishlist" class="text-decoration-none wishlist">
-                                            <img src="public/images/books/heart.png" class="heart" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title"> Exploring Society India and 
-                                            Beyond Social Science Class 5 NCRT </h5>
-                                        <p class="card-text py-2"> NCRT </p>
-                                        <span class="text-color fs-4 text-color">
-                                            ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                        </span>
-            
-                                        <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
-            
-                                        <div class="items-qua ">
-                                            <div class="quantity sign minus-btn" id="">
-                                                <i class="fa-solid fa-minus"></i>
-                                            </div>
-                                            <div class="quantity number" id=""> </div>
-                                            <div class="quantity sign plus-btn" id="">
-                                                <i class="fa-solid fa-plus"></i>
-                                            </div>
-                                        </div>
-            
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
-                                <a href="product_details.html">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-img">
-                                            <img src="public/images/books/awarenesscience.png" class="card-img-top" alt="...">
-                                        </div>
-                                        <a href="#wishlist" class="text-decoration-none wishlist">
-                                            <img src="public/images/books/heart.png" class="heart" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title"> Exploring Society India and 
-                                            Beyond Social Science Class 5 NCRT </h5>
-                                        <p class="card-text py-2"> NCRT </p>
-                                        <span class="text-color fs-4 text-color">
-                                            ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                        </span>
-            
-                                        <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
-            
-                                        <div class="items-qua ">
-                                            <div class="quantity sign minus-btn" id="">
-                                                <i class="fa-solid fa-minus"></i>
-                                            </div>
-                                            <div class="quantity number" id=""> </div>
-                                            <div class="quantity sign plus-btn" id="">
-                                                <i class="fa-solid fa-plus"></i>
-                                            </div>
-                                        </div>
-            
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
-                                <a href="product_details.html">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-img">
-                                            <img src="public/images/books/brightmind.png" class="card-img-top" alt="...">
-                                        </div>
-                                        <a href="#wishlist" class="text-decoration-none wishlist">
-                                            <img src="public/images/books/heart.png" class="heart" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title"> Exploring Society India and 
-                                            Beyond Social Science Class 5 NCRT </h5>
-                                        <p class="card-text py-2"> NCRT </p>
-                                        <span class="text-color fs-4 text-color">
-                                            ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                        </span>
-            
-                                        <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
-            
-                                        <div class="items-qua ">
-                                            <div class="quantity sign minus-btn" id="">
-                                                <i class="fa-solid fa-minus"></i>
-                                            </div>
-                                            <div class="quantity number" id=""> </div>
-                                            <div class="quantity sign plus-btn" id="">
-                                                <i class="fa-solid fa-plus"></i>
-                                            </div>
-                                        </div>
-            
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
-                                <a href="product_details.html">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-img">
-                                            <img src="public/images/books/gk.png" class="card-img-top" alt="...">
-                                        </div>
-                                        <a href="#wishlist" class="text-decoration-none wishlist">
-                                            <img src="public/images/books/heart.png" class="heart" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title"> Exploring Society India and 
-                                            Beyond Social Science Class 5 NCRT </h5>
-                                        <p class="card-text py-2"> NCRT </p>
-                                        <span class="text-color fs-4 text-color">
-                                            ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                        </span>
-            
-                                        <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
-            
-                                        <div class="items-qua ">
-                                            <div class="quantity sign minus-btn" id="">
-                                                <i class="fa-solid fa-minus"></i>
-                                            </div>
-                                            <div class="quantity number" id=""> </div>
-                                            <div class="quantity sign plus-btn" id="">
-                                                <i class="fa-solid fa-plus"></i>
-                                            </div>
-                                        </div>
-            
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
-                                <a href="product_details.html">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-img">
-                                            <img src="public/images/books/gujarati.png" class="card-img-top" alt="...">
-                                        </div>
-                                        <a href="#wishlist" class="text-decoration-none wishlist">
-                                            <img src="public/images/books/heart.png" class="heart" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title"> Exploring Society India and 
-                                            Beyond Social Science Class 5 NCRT </h5>
-                                        <p class="card-text py-2"> NCRT </p>
-                                        <span class="text-color fs-4 text-color">
-                                            ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                        </span>
-            
-                                        <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
-            
-                                        <div class="items-qua ">
-                                            <div class="quantity sign minus-btn" id="">
-                                                <i class="fa-solid fa-minus"></i>
-                                            </div>
-                                            <div class="quantity number" id=""> </div>
-                                            <div class="quantity sign plus-btn" id="">
-                                                <i class="fa-solid fa-plus"></i>
-                                            </div>
-                                        </div>
-            
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
-                                <a href="product_details.html">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-img">
-                                            <img src="public/images/books/numberwiz.png" class="card-img-top" alt="...">
-                                        </div>
-                                        <a href="#wishlist" class="text-decoration-none wishlist">
-                                            <img src="public/images/books/heart.png" class="heart" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title"> Exploring Society India and 
-                                            Beyond Social Science Class 5 NCRT </h5>
-                                        <p class="card-text py-2"> NCRT </p>
-                                        <span class="text-color fs-4 text-color">
-                                            ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                        </span>
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Exploring Society India and
+                                                Beyond Social Science Class 5 NCRT </h5>
+                                            <p class="card-text py-2"> NCRT </p>
+                                            <h5 class="text-color fs-4 text-color">
+                                                ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                            </h5>
 
-                                        <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
-            
-                                        <div class="items-qua ">
-                                            <div class="quantity sign minus-btn" id="">
-                                                <i class="fa-solid fa-minus"></i>
-                                            </div>
-                                            <div class="quantity number" id=""> </div>
-                                            <div class="quantity sign plus-btn" id="">
-                                                <i class="fa-solid fa-plus"></i>
-                                            </div>
-                                        </div>
-            
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
-                                <a href="product_details.html">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-img">
-                                            <img src="public/images/books/paryavaran.png" class="card-img-top" alt="...">
-                                        </div>
-                                        <a href="#wishlist" class="text-decoration-none wishlist">
-                                            <img src="public/images/books/heart.png" class="heart" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title"> Exploring Society India and 
-                                            Beyond Social Science Class 5 NCRT </h5>
-                                        <p class="card-text py-2"> NCRT </p>
-                                        <span class="text-color fs-4 text-color">
-                                            ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                        </span>
-            
-                                        <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
-            
-                                        <div class="items-qua ">
-                                            <div class="quantity sign minus-btn" id="">
-                                                <i class="fa-solid fa-minus"></i>
-                                            </div>
-                                            <div class="quantity number" id=""> </div>
-                                            <div class="quantity sign plus-btn" id="">
-                                                <i class="fa-solid fa-plus"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
-                                <a href="product_details.html">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-img">
-                                            <img src="public/images/books/socialscience.png" class="card-img-top" alt="...">
-                                        </div>
-                                        <a href="#wishlist" class="text-decoration-none wishlist">
-                                            <img src="public/images/books/heart.png" class="heart" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title"> Exploring Society India and 
-                                            Beyond Social Science Class 5 NCRT </h5>
-                                        <p class="card-text py-2"> NCRT </p>
-                                        <span class="text-color fs-4 text-color">
-                                            ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                        </span>
-            
-                                        <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
-        
-                                        <div class="items-qua ">
-                                            <div class="quantity sign minus-btn" id="">
-                                                <i class="fa-solid fa-minus"></i>
-                                            </div>
-                                            <div class="quantity number" id=""> </div>
-                                            <div class="quantity sign plus-btn" id="">
-                                                <i class="fa-solid fa-plus"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
-                                <a href="product_details.html">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-img">
-                                            <img src="public/images/books/wondorousworld.png" class="card-img-top" alt="...">
-                                        </div>
-                                        <a href="#wishlist" class="text-decoration-none wishlist">
-                                            <img src="public/images/books/heart.png" class="heart" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title"> Exploring Society India and 
-                                            Beyond Social Science Class 5 NCRT </h5>
-                                        <p class="card-text py-2"> NCRT </p>
-                                        <span class="text-color fs-4 text-color">
-                                            ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                        </span>
-            
-                                        <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
+                                            <button id="" class="add-to-cart-btn btn btn-color w-100">Add to
+                                                cart</button>
 
-                                        <div class="items-qua ">
-                                            <div class="quantity sign minus-btn" id="">
-                                                <i class="fa-solid fa-minus"></i>
+                                            <div class="items-qua ">
+                                                <div class="quantity sign minus-btn" id="">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+                                                <div class="quantity number" id=""> </div>
+                                                <div class="quantity sign plus-btn" id="">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
                                             </div>
-                                            <div class="quantity number" id=""> </div>
-                                            <div class="quantity sign plus-btn" id="">
-                                                <i class="fa-solid fa-plus"></i>
-                                            </div>
+
                                         </div>
-            
                                     </div>
-                                </div>
                                 </a>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
                                 <a href="product_details.html">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-img">
-                                            <img src="public/images/books/sanskrit.png" class="card-img-top" alt="...">
-                                        </div>
-                                        <a href="#wishlist" class="text-decoration-none wishlist">
-                                            <img src="public/images/books/heart.png" class="heart" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title"> Exploring Society India and 
-                                            Beyond Social Science Class 5 NCRT </h5>
-                                        <p class="card-text py-2"> NCRT </p>
-                                        <span class="text-color fs-4 text-color">
-                                            ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                        </span>
-            
-                                        <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
-            
-                                        <div class="items-qua ">
-                                            <div class="quantity sign minus-btn" id="">
-                                                <i class="fa-solid fa-minus"></i>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-img">
+                                                <img src="public/images/books/anupambharti.png" class="card-img-top"
+                                                    alt="...">
                                             </div>
-                                            <div class="quantity number" id=""> </div>
-                                            <div class="quantity sign plus-btn" id="">
-                                                <i class="fa-solid fa-plus"></i>
-                                            </div>
+                                            <a href="#wishlist" class="text-decoration-none wishlist">
+                                                <img src="public/images/books/heart.png" class="heart" alt="">
+                                            </a>
                                         </div>
-            
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Exploring Society India and
+                                                Beyond Social Science Class 5 NCRT </h5>
+                                            <p class="card-text py-2"> NCRT </p>
+                                            <h5 class="text-color fs-4 text-color">
+                                                ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                            </h5>
+
+                                            <button id="" class="add-to-cart-btn btn btn-color w-100">Add to
+                                                cart</button>
+
+                                            <div class="items-qua ">
+                                                <div class="quantity sign minus-btn" id="">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+                                                <div class="quantity number" id=""> </div>
+                                                <div class="quantity sign plus-btn" id="">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                </div>
                                 </a>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
                                 <a href="product_details.html">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-img">
-                                            <img src="public/images/books/sarangi.png" class="card-img-top" alt="...">
-                                        </div>
-                                        <a href="#wishlist" class="text-decoration-none wishlist">
-                                            <img src="public/images/books/heart.png" class="heart" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title"> Exploring Society India and 
-                                            Beyond Social Science Class 5 NCRT </h5>
-                                        <p class="card-text py-2"> NCRT </p>
-                                        <span class="text-color fs-4 text-color">
-                                            ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
-                                        </span>
-            
-                                        <button id="" class="add-to-cart-btn btn btn-color w-100" >Add to cart</button>
-                                        <div class="items-qua ">
-                                            <div class="quantity sign minus-btn" id="">
-                                                <i class="fa-solid fa-minus"></i>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-img">
+                                                <img src="public/images/books/awarenesscience.png" class="card-img-top"
+                                                    alt="...">
                                             </div>
-                                            <div class="quantity number" id=""> </div>
-                                            <div class="quantity sign plus-btn" id="">
-                                                <i class="fa-solid fa-plus"></i>
+                                            <a href="#wishlist" class="text-decoration-none wishlist">
+                                                <img src="public/images/books/heart.png" class="heart" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Exploring Society India and
+                                                Beyond Social Science Class 5 NCRT </h5>
+                                            <p class="card-text py-2"> NCRT </p>
+                                            <h5 class="text-color fs-4 text-color">
+                                                ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                            </h5>
+
+                                            <button id="" class="add-to-cart-btn btn btn-color w-100">Add to
+                                                cart</button>
+
+                                            <div class="items-qua ">
+                                                <div class="quantity sign minus-btn" id="">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+                                                <div class="quantity number" id=""> </div>
+                                                <div class="quantity sign plus-btn" id="">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
+                                <a href="product_details.html">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-img">
+                                                <img src="public/images/books/brightmind.png" class="card-img-top"
+                                                    alt="...">
+                                            </div>
+                                            <a href="#wishlist" class="text-decoration-none wishlist">
+                                                <img src="public/images/books/heart.png" class="heart" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Exploring Society India and
+                                                Beyond Social Science Class 5 NCRT </h5>
+                                            <p class="card-text py-2"> NCRT </p>
+                                            <h5 class="text-color fs-4 text-color">
+                                                ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                            </h5>
+
+                                            <button id="" class="add-to-cart-btn btn btn-color w-100">Add to
+                                                cart</button>
+
+                                            <div class="items-qua ">
+                                                <div class="quantity sign minus-btn" id="">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+                                                <div class="quantity number" id=""> </div>
+                                                <div class="quantity sign plus-btn" id="">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
+                                <a href="product_details.html">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-img">
+                                                <img src="public/images/books/gk.png" class="card-img-top" alt="...">
+                                            </div>
+                                            <a href="#wishlist" class="text-decoration-none wishlist">
+                                                <img src="public/images/books/heart.png" class="heart" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Exploring Society India and
+                                                Beyond Social Science Class 5 NCRT </h5>
+                                            <p class="card-text py-2"> NCRT </p>
+                                            <h5 class="text-color fs-4 text-color">
+                                                ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                            </h5>
+
+                                            <button id="" class="add-to-cart-btn btn btn-color w-100">Add to
+                                                cart</button>
+
+                                            <div class="items-qua ">
+                                                <div class="quantity sign minus-btn" id="">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+                                                <div class="quantity number" id=""> </div>
+                                                <div class="quantity sign plus-btn" id="">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
+                                <a href="product_details.html">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-img">
+                                                <img src="public/images/books/gujarati.png" class="card-img-top"
+                                                    alt="...">
+                                            </div>
+                                            <a href="#wishlist" class="text-decoration-none wishlist">
+                                                <img src="public/images/books/heart.png" class="heart" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Exploring Society India and
+                                                Beyond Social Science Class 5 NCRT </h5>
+                                            <p class="card-text py-2"> NCRT </p>
+                                            <h5 class="text-color fs-4 text-color">
+                                                ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                            </h5>
+
+                                            <button id="" class="add-to-cart-btn btn btn-color w-100">Add to
+                                                cart</button>
+
+                                            <div class="items-qua ">
+                                                <div class="quantity sign minus-btn" id="">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+                                                <div class="quantity number" id=""> </div>
+                                                <div class="quantity sign plus-btn" id="">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
+                                <a href="product_details.html">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-img">
+                                                <img src="public/images/books/numberwiz.png" class="card-img-top"
+                                                    alt="...">
+                                            </div>
+                                            <a href="#wishlist" class="text-decoration-none wishlist">
+                                                <img src="public/images/books/heart.png" class="heart" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Exploring Society India and
+                                                Beyond Social Science Class 5 NCRT </h5>
+                                            <p class="card-text py-2"> NCRT </p>
+                                            <h5 class="text-color fs-4 text-color">
+                                                ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                            </h5>
+
+                                            <button id="" class="add-to-cart-btn btn btn-color w-100">Add to
+                                                cart</button>
+
+                                            <div class="items-qua ">
+                                                <div class="quantity sign minus-btn" id="">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+                                                <div class="quantity number" id=""> </div>
+                                                <div class="quantity sign plus-btn" id="">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
+                                <a href="product_details.html">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-img">
+                                                <img src="public/images/books/paryavaran.png" class="card-img-top"
+                                                    alt="...">
+                                            </div>
+                                            <a href="#wishlist" class="text-decoration-none wishlist">
+                                                <img src="public/images/books/heart.png" class="heart" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Exploring Society India and
+                                                Beyond Social Science Class 5 NCRT </h5>
+                                            <p class="card-text py-2"> NCRT </p>
+                                            <h5 class="text-color fs-4 text-color">
+                                                ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                            </h5>
+
+                                            <button id="" class="add-to-cart-btn btn btn-color w-100">Add to
+                                                cart</button>
+
+                                            <div class="items-qua ">
+                                                <div class="quantity sign minus-btn" id="">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+                                                <div class="quantity number" id=""> </div>
+                                                <div class="quantity sign plus-btn" id="">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
+                                <a href="product_details.html">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-img">
+                                                <img src="public/images/books/socialscience.png" class="card-img-top"
+                                                    alt="...">
+                                            </div>
+                                            <a href="#wishlist" class="text-decoration-none wishlist">
+                                                <img src="public/images/books/heart.png" class="heart" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Exploring Society India and
+                                                Beyond Social Science Class 5 NCRT </h5>
+                                            <p class="card-text py-2"> NCRT </p>
+                                            <h5 class="text-color fs-4 text-color">
+                                                ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                            </h5>
+
+                                            <button id="" class="add-to-cart-btn btn btn-color w-100">Add to
+                                                cart</button>
+
+                                            <div class="items-qua ">
+                                                <div class="quantity sign minus-btn" id="">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+                                                <div class="quantity number" id=""> </div>
+                                                <div class="quantity sign plus-btn" id="">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
+                                <a href="product_details.html">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-img">
+                                                <img src="public/images/books/wondorousworld.png" class="card-img-top"
+                                                    alt="...">
+                                            </div>
+                                            <a href="#wishlist" class="text-decoration-none wishlist">
+                                                <img src="public/images/books/heart.png" class="heart" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Exploring Society India and
+                                                Beyond Social Science Class 5 NCRT </h5>
+                                            <p class="card-text py-2"> NCRT </p>
+                                            <h5 class="text-color fs-4 text-color">
+                                                ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                            </h5>
+
+                                            <button id="" class="add-to-cart-btn btn btn-color w-100">Add to
+                                                cart</button>
+
+                                            <div class="items-qua ">
+                                                <div class="quantity sign minus-btn" id="">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+                                                <div class="quantity number" id=""> </div>
+                                                <div class="quantity sign plus-btn" id="">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
+                                <a href="product_details.html">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-img">
+                                                <img src="public/images/books/sanskrit.png" class="card-img-top"
+                                                    alt="...">
+                                            </div>
+                                            <a href="#wishlist" class="text-decoration-none wishlist">
+                                                <img src="public/images/books/heart.png" class="heart" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Exploring Society India and
+                                                Beyond Social Science Class 5 NCRT </h5>
+                                            <p class="card-text py-2"> NCRT </p>
+                                            <h5 class="text-color fs-4 text-color">
+                                                ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                            </h5>
+
+                                            <button id="" class="add-to-cart-btn btn btn-color w-100">Add to
+                                                cart</button>
+
+                                            <div class="items-qua ">
+                                                <div class="quantity sign minus-btn" id="">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+                                                <div class="quantity number" id=""> </div>
+                                                <div class="quantity sign plus-btn" id="">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 my-2">
+                                <a href="product_details.html">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-img">
+                                                <img src="public/images/books/sarangi.png" class="card-img-top"
+                                                    alt="...">
+                                            </div>
+                                            <a href="#wishlist" class="text-decoration-none wishlist">
+                                                <img src="public/images/books/heart.png" class="heart" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"> Exploring Society India and
+                                                Beyond Social Science Class 5 NCRT </h5>
+                                            <p class="card-text py-2"> NCRT </p>
+                                            <h5 class="text-color fs-4 text-color">
+                                                ₹80.00 <del class="ms-2 fs-5">₹100.00</del>
+                                            </h5>
+
+                                            <button id="" class="add-to-cart-btn btn btn-color w-100">Add to
+                                                cart</button>
+                                            <div class="items-qua ">
+                                                <div class="quantity sign minus-btn" id="">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+                                                <div class="quantity number" id=""> </div>
+                                                <div class="quantity sign plus-btn" id="">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -901,7 +927,6 @@
         </section>
     </main>
 
-    <!-------------------------- modal for Nav search ---------------------->
     <!-------------------------- modal for Nav search ---------------------->
     <div class="nav-search">
         <div class="offcanvas offcanvas-top" tabindex="-1" id="searchBarTop" aria-labelledby="searchBarTopLabel">
@@ -930,15 +955,18 @@
                             <ul class="navbar-nav  flex-row align-items-center justify-content-end mb-2 mb-lg-0">
                                 <li class="nav-item px-3 position-relative">
                                     <a href="wishlist.html" class="text-decoration-none text-black">
-                                    <i class="fa-solid fa-heart fs-5"></i>
-                                </a>
-                                    <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                                        <i class="fa-solid fa-heart fs-5"></i>
+                                    </a>
+                                    <span
+                                        class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
                                 </li>
                                 <li class="nav-item px-3 position-relative">
-                                    <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="javascript:void(0);" class="text-black">
+                                    <a data-bs-target="#exampleModal" data-bs-toggle="modal" href="javascript:void(0);"
+                                        class="text-black">
                                         <i class="fa-solid fa-cart-shopping fs-5"></i>
                                     </a>
-                                    <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                                    <span
+                                        class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
                                 </li>
                                 <!-- <li class="nav-item px-3">
                                     <i class="fa-solid fa-user-large fs-5"></i>
@@ -951,7 +979,7 @@
         </div>
     </div>
 
-    
+
     <!-- add to cart modal -->
     <div class="cart-modal">
         <div class="modal fade justify-content-end" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -1024,6 +1052,7 @@
             </div>
         </div>
     </div>
+
     <footer>
         <div class="container-fluid">
             <div class="footer-links border-bottom border-5">
@@ -1083,9 +1112,12 @@
                     <p class="fs-4"> 2024 Copyright eclassmates </p>
                 </div>
                 <div class="my-2 text-center">
-                    <a href="javascript:void(0);" class="text-decoration-none" > <i class="fa-brands fa-square-twitter fs-4"></i> </a>
-                    <a href="javascript:void(0);" class="text-decoration-none"> <i class="fa-brands fa-square-facebook fs-4"></i> </a>
-                    <a href="javascript:void(0);" class="text-decoration-none"> <i class="fa-brands fa-square-instagram fs-4"></i> </a>
+                    <a href="javascript:void(0);" class="text-decoration-none"> <i
+                            class="fa-brands fa-square-twitter fs-4"></i> </a>
+                    <a href="javascript:void(0);" class="text-decoration-none"> <i
+                            class="fa-brands fa-square-facebook fs-4"></i> </a>
+                    <a href="javascript:void(0);" class="text-decoration-none"> <i
+                            class="fa-brands fa-square-instagram fs-4"></i> </a>
                 </div>
             </div>
         </div>

@@ -9,7 +9,6 @@ html,
 body {
     /* height: 100%; */
     width: 100%;
-    font-size: 15px;
 }
 
 :root {
@@ -21,7 +20,7 @@ body {
 .btn-color {
     background-color: var(--color) !important;
     color: white !important;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
 }
 
@@ -109,6 +108,9 @@ p {
 }
 .navbar-toggler {
     border: none;
+}
+.navbar-toggler .navbar-brand{
+    margin-right: 0;
 }
 .navbar-toggler .navbar-brand img{
     width: 6.2rem !important;
@@ -466,7 +468,7 @@ footer a:hover {
     /* width: 30%; */
     background-color: lightgrey;
     /* border-radius: 30px; */
-    margin: 5% 0;
+    margin: 10% 0;
     padding: 10px;
     display: none;
     display: flex;
