@@ -36,9 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 1,
         spaceBetween: 5,
       },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 5,
+      },
       768: {
-        slidesPerView: 4,
-        spaceBetween: 10,
+        slidesPerView: 3,
+        spaceBetween: 0,
       },
       1024: {
         slidesPerView: 6,
@@ -126,6 +130,10 @@ var swiper = new Swiper(".myStationarySwiper", {
   breakpoints: {
     0: {
       slidesPerView: 1,
+      spaceBetween: 24,
+    },
+    576: {
+      slidesPerView: 2,
       spaceBetween: 24,
     },
     768: {
