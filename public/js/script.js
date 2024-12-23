@@ -27,9 +27,9 @@ nav_user.addEventListener("mouseleave", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Swiper initialization for different sliders
   var swiper = new Swiper(".mySwiper", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
     breakpoints: {
       0: {
@@ -123,10 +123,6 @@ var swiper = new Swiper(".myStationarySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   clickable: true,
-  // },
   breakpoints: {
     0: {
       slidesPerView: 1,
@@ -146,6 +142,28 @@ var swiper = new Swiper(".myStationarySwiper", {
     },
     1440: {
       slidesPerView: 4,
+      spaceBetween: 24,
+    },
+  },
+});
+
+var swiper = new Swiper(".myCategorySwiper", {
+  spaceBetween: 4,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 1,
+      spaceBetween: 24,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    1024: {
+      slidesPerView: 3,
       spaceBetween: 24,
     },
   },
@@ -411,24 +429,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       updateMinusButton();
     });
-
-    // plusBtns[index].addEventListener("click", function () {
-    //   if (td || detailCheckoutQty) {
-    //     // Allow updates in the .detail section
-    //     n += 1;
-    //     numberElements[index].textContent = n;
-    //     localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
-    //   } else {
-    //     // Normal case for product
-    //     n += 1;
-    //     numberElements[index].textContent = n;
-    //     btns[index].style.display = "none"; // Hide the Add to Cart button
-    //     items[index].style.display = "flex"; // Show quantity controls
-    //     localStorage.setItem(`quantity-${index}`, n); // Save quantity to localStorage
-    //     localStorage.setItem(`isCartVisible-${index}`, "true"); // Save visibility state
-    //   }
-    //   updateMinusButton();
-    // });
   });
 });
 
