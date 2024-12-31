@@ -8,21 +8,7 @@ window.addEventListener("scroll", () => {
     header.classList.remove("nav-scrolled");
   }
 });
-
-//user icon hover js
-var user = document.querySelector(".user");
-var nav_user = document.querySelector(".nav-user");
-
-user.addEventListener("mouseenter", function () {
-  nav_user.style.display = "flex";
-});
-nav_user.addEventListener("mouseenter", function () {
-  nav_user.style.display = "flex";
-});
-
-nav_user.addEventListener("mouseleave", function () {
-  nav_user.style.display = "none";
-});
+ 
 
 document.addEventListener("DOMContentLoaded", function () {
   // Swiper initialization for different sliders
