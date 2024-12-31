@@ -292,7 +292,8 @@ header .nav-user a {
 }
 
 .card-img {
-    height: 20rem;
+    /* height: 20rem; */
+    padding: .7rem;
     display: flex;
     justify-content: center;
     align-items: center;
