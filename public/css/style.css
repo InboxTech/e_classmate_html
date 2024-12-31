@@ -168,8 +168,10 @@ p {
     display: flex;
     align-items: center;
 }
-
-header .nav-user {
+header #nav-item{
+    position: relative;
+}
+header #nav-item .nav-user {
     width: 10rem;
     background-color: white;
     position: absolute;
@@ -184,8 +186,10 @@ header .nav-user {
     justify-content: center;
     display: none;
 }
-
-header .nav-user a {
+#nav-item:hover .nav-user{
+    display: flex;
+}
+header #nav-item .nav-user a {
     text-decoration: none;
     color: black;
 }
@@ -628,6 +632,9 @@ footer a:hover {
     color: white;
     background-color: var(--color);
     border-color: var(--color);
+}
+.ordered-product .rate{
+    cursor: pointer;
 }
 
 /******************************************************* order page css end ***********************************************************/
