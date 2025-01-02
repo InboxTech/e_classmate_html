@@ -306,7 +306,7 @@ header #nav-item .nav-user a {
 
 .card-img img {
     width: 100%;
-    aspect-ratio: 16/18;
+    aspect-ratio: 14/19;
     object-fit: contain;
 }
 
@@ -324,7 +324,7 @@ header #nav-item .nav-user a {
 }
 
 .card-body {
-    height: 17rem;
+    height: 15rem;
     position: relative;
 }
 
