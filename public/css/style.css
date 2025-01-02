@@ -296,7 +296,8 @@ header #nav-item .nav-user a {
 }
 
 .card-img {
-    height: 20rem;
+    /* height: 20rem; */
+    padding: .7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,6 +317,10 @@ header #nav-item .nav-user a {
     background-color: white;
     border-radius: 50%;
     padding: 5px;
+}
+
+.heart{
+    cursor: pointer;
 }
 
 .card-body {

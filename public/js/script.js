@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       0: {
-        slidesPerView: 1,
-        spaceBetween: 5,
+        slidesPerView: 2,
+        spaceBetween: 24,
       },
       576: {
         slidesPerView: 2,
@@ -127,7 +127,7 @@ var swiper = new Swiper(".myStationarySwiper", {
       spaceBetween: 24,
     },
     1440: {
-      slidesPerView: 4,
+      slidesPerView: 6,
       spaceBetween: 24,
     },
   },
